@@ -1,0 +1,73 @@
+# Cut/paste 1
+# Install command line tools not XCode when prompted
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Cut/paste 2
+brew install \
+    automake \
+    awscli \
+    bash \
+    caskroom/cask/brew-cask \
+    fortune \
+    gcal \
+    git \
+    graphviz \
+    htop \
+    libdvdcss \
+    libjpeg \
+    libmagic \
+    libmemcached \
+    libtiff \
+    mobile-shell \
+    mysql \
+    nmap \
+    openconnect \
+    p7zip \
+    pandoc \
+    pkg-config \
+    postgres \
+    postgis \
+    python \
+    redis \
+    rpl \
+    wget
+
+# Cut/paste 3
+brew cask install \
+    xquartz \
+    cord \
+    dia \
+    dosbox \
+    dropbox \
+    evernote \
+    firefox \
+    flash \
+    gimp \
+    gitx \
+    google-chrome \
+    google-hangouts \
+    handbrake \
+    heroku-toolbelt \
+    hipchat \
+    jumpcut \
+    keka \
+    mame \
+    node \
+    paintbrush \
+    pgadmin3 \
+    phantomjs \
+    silverlight \
+    skype \
+    slack \
+    sqlitebrowser \
+    steam \
+    stella \
+    sublime-text \
+    tcl \
+    textmate \
+    thunderbird \
+    trenchbroom \
+    vagrant \
+    virtualbox \
+    virtualc64 \
+    xquartz

@@ -1,0 +1,34 @@
+# Cut/paste 0 (Oh My ZSH)
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Cut/paste 1 (Solarized Light Terminal)
+curl https://raw.githubusercontent.com/tomislav/osx-terminal.app-colors-solarized/master/Solarized%20Light.terminal -o ~/Downloads/Solarized%20Light.terminal
+open ~/Downloads/Solarized%20Light.terminal
+
+# Cut/paste 2 (Corporate Ipsum Dashboard Widget)
+open http://www.apple.com/downloads/dashboard/developer/corporateipsum.html
+
+# Cut/paste 3 (Dotfiles)
+git clone https://aclark4life@bitbucket.org/aclark4life/dotfiles Dotfiles
+
+# Cut/paste 4 (Dotfiles)
+dotfiles -s
+
+# Cut/paste 5 (Cleanup & Perms)
+# Symlink to Dotfiles/.git not needed
+rm ~/.git
+chmod 600 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/aclark-key.pem
+
+# Cut/paste 6 (Dotfiles)
+# Change remote origin URL
+cd ~/Dotfiles
+git remote remove origin
+git remote add origin git@bitbucket.org:aclark4life/dotfiles.git
+git push --set-upstream origin master
+
+# Cut/paste 7 (SSH Connections)
+ssh bitbucket.org; ssh github.com; ssh gist.github.com
+
+# Cut/paste 8 (checkoutmanager)
+cm co

@@ -1,0 +1,52 @@
+# Cut/paste all
+#
+# Turn on dashboard-as-space
+defaults write com.apple.dashboard dashboard-enabled-state 2
+
+## Finder
+# New finder window opens home directory
+defaults write com.apple.finder NewWindowTarget "PfHm"
+defaults write com.apple.finder NewWindowTargetPath "file:///${HOME}/"
+# Sort desktop icons by name 
+defaults write com.apple.finder.plist DesktopViewSettings -dict IconViewSettings '<dict><key>arrangeBy</key><string>name</string><key>backgroundColorBlue</key><real>1</real><key>backgroundColorGreen</key><real>1</real><key>backgroundColorRed</key><real>1</real><key>backgroundType</key><integer>0</integer><key>gridOffsetX</key><real>0.0</real><key>gridOffsetY</key><real>0.0</real><key>gridSpacing</key><real>54</real><key>iconSize</key><real>64</real><key>labelOnBottom</key><true/><key>showIconPreview</key><true/><key>showItemInfo</key><false/><key>textSize</key><real>12</real><key>viewOptionsVersion</key><integer>1</integer></dict>'
+# Show all the drives on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop 1
+defaults write com.apple.finder ShowHardDrivesOnDesktop 1
+defaults write com.apple.finder ShowMountedServersOnDesktop 1
+defaults write com.apple.finder ShowRemovableMediaOnDesktop 1
+
+# Show the date on the clock
+defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
+
+# Organize system preferences alphabetically
+defaults write com.apple.systempreferences ShowAllMode 1
+
+# Add bluetooth icon to toolbar
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"  "/System/Library/CoreServices/Menu Extras/AirPort.menu"  "/System/Library/CoreServices/Menu Extras/Battery.menu"  "/System/Library/CoreServices/Menu Extras/Clock.menu"  "/System/Library/CoreServices/Menu Extras/User.menu"
+
+# CTRL-scroll to zoom in & out
+defaults write com.apple.universalaccess closeViewScrollWheelToggle 1
+
+# Jumpcut settings
+defaults write net.sf.Jumpcut displayNum 99
+defaults write net.sf.Jumpcut rememberNum 99
+defaults write net.sf.Jumpcut loadOnStartup 1
+defaults write net.sf.Jumpcut stickyBezel 1
+defaults write net.sf.Jumpcut wraparoundBezel 1
+defaults write net.sf.Jumpcut SUCheckAtStartup 1
+defaults write net.sf.Jumpcut "ShortcutRecorder mainHotkey" -dict keyCode 9 modifierFlags 1179648
+
+# Turn off screensaver lock
+sudo osascript -e 'tell application "System Events" to set require password to wake of security preferences to false'
+
+# Turn on locate db
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+# Turn off bouncing icons in dock
+defaults write com.apple.dock no-bouncing -bool TRUE
+
+# Change shell to zsh
+chsh -s /bin/zsh
+
+# XXX Mission Control Middle Mouse
+# 40 = { enabled = 1; value = { parameters = ( 4, 4, 131072 ); type = button; }; };

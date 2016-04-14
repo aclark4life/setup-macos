@@ -1,0 +1,18 @@
+# Cut/paste all
+pip install \
+    check-manifest \
+    checkoutmanager \
+    django \
+    dotfiles \
+    flake8 \
+    jarn.viewdoc \
+    mercurial \
+    picky \
+    pillow \
+    plock \
+    pyroma \
+    tmp \
+    twine \
+    vanity \
+    virtualenv \
+    yapf
