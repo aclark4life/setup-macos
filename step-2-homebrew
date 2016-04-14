@@ -8,6 +8,7 @@ brew install \
     awscli \
     bash \
     caskroom/cask/brew-cask \
+    coreutils \
     fortune \
     gcal \
     git \
