@@ -5,6 +5,7 @@ pip install \
     django \
     dotfiles \
     flake8 \
+    haxor-news \
     jarn.viewdoc \
     mercurial \
     picky \
