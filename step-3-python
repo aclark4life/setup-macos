@@ -1,5 +1,5 @@
 # Cut/paste all
-pip install \
+pip install -U \
     check-manifest \
     checkoutmanager \
     django \
