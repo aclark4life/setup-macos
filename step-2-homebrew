@@ -67,7 +67,6 @@ brew cask install \
     tcl \
     textmate \
     thunderbird \
-    trenchbroom \
     vagrant \
     virtualbox \
     virtualc64 \
