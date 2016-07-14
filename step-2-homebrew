@@ -11,6 +11,7 @@ brew install \
     coreutils \
     fortune \
     gcal \
+    gimp \
     git \
     graphviz \
     htop \
