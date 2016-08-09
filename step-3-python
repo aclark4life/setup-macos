@@ -12,6 +12,7 @@ pip install -U \
     pillow \
     plock \
     pyroma \
+    rst2pdf \
     tmp \
     twine \
     vanity \
