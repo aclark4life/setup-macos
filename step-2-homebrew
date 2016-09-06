@@ -22,6 +22,7 @@ brew install \
     mobile-shell \
     mysql \
     nmap \
+    npm \
     openconnect \
     p7zip \
     pandoc \
