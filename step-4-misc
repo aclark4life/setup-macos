@@ -27,11 +27,13 @@ git remote add origin git@bitbucket.org:aclark4life/dotfiles.git
 git push --set-upstream origin master
 
 # Cut/paste 7 (SSH Connections)
-ssh bitbucket.org; ssh github.com; ssh gist.github.com
+ssh bitbucket.org
+ssh gist.github.com
+ssh github.com
 
 # Cut/paste 8 (checkoutmanager)
 cm co
 
-# Cut/paste 9 (powerline fonts)
+# Cut/paste 9 (Powerline Fonts)
 cd ~/Developer/powerline/fonts
 ./install.sh
