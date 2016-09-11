@@ -47,6 +47,3 @@ defaults write com.apple.dock no-bouncing -bool TRUE
 
 # Change shell to zsh
 chsh -s /bin/zsh
-
-# XXX Mission Control Middle Mouse
-# 40 = { enabled = 1; value = { parameters = ( 4, 4, 131072 ); type = button; }; };
