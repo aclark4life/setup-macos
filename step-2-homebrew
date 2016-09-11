@@ -39,6 +39,7 @@ brew cask install \
     xquartz \
     cord \
     dia \
+    diskmaker-x \
     dosbox \
     dropbox \
     evernote \
