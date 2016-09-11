@@ -31,3 +31,6 @@ ssh bitbucket.org; ssh github.com; ssh gist.github.com
 
 # Cut/paste 8 (checkoutmanager)
 cm co
+
+# Cut/paste 9 (powerline fonts)
+cd ~/Developer/powerline
