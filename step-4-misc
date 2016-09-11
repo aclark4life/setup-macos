@@ -34,4 +34,4 @@ cm co
 
 # Cut/paste 9 (powerline fonts)
 cd ~/Developer/powerline/fonts
-./install
+./install.sh
