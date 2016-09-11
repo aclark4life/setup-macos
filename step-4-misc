@@ -18,7 +18,6 @@ dotfiles -s
 # Symlink to Dotfiles/.git not needed
 rm ~/.git
 chmod 600 ~/.ssh/id_rsa
-chmod 600 ~/.ssh/aclark-key.pem
 
 # Cut/paste 6 (Dotfiles)
 # Change remote origin URL
