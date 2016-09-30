@@ -56,7 +56,6 @@ brew cask install \
     jumpcut \
     keka \
     mame \
-    node \
     paintbrush \
     pgadmin3 \
     phantomjs \
