@@ -67,7 +67,6 @@ brew cask install \
     stella \
     sublime-text \
     tcl \
-    textmate \
     thunderbird \
     vagrant \
     virtualbox \
