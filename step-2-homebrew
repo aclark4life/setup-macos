@@ -73,4 +73,4 @@ brew cask install \
     vagrant \
     virtualbox \
     virtualc64 \
-    vlc \
+    vlc
