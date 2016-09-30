@@ -13,6 +13,7 @@ brew install \
     gcal \
     git \
     graphviz \
+    heroku \
     htop \
     libdvdcss \
     libjpeg \
@@ -51,7 +52,6 @@ brew cask install \
     google-chrome \
     google-hangouts \
     handbrake \
-    heroku-toolbelt \
     hipchat \
     jumpcut \
     keka \
@@ -74,4 +74,3 @@ brew cask install \
     virtualbox \
     virtualc64 \
     vlc \
-    xquartz
