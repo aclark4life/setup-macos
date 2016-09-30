@@ -27,6 +27,7 @@ brew install \
     openconnect \
     p7zip \
     pandoc \
+    phantomjs \
     pkg-config \
     postgres \
     postgis \
@@ -58,7 +59,6 @@ brew cask install \
     mame \
     paintbrush \
     pgadmin3 \
-    phantomjs \
     silverlight \
     skype \
     slack \
