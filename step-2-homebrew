@@ -51,6 +51,7 @@ brew cask install \
     github-desktop \
     gitx \
     google-chrome \
+    google-drive \
     google-hangouts \
     handbrake \
     hipchat \
