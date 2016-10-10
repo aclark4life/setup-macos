@@ -58,6 +58,7 @@ brew cask install \
     hipchat \
     jumpcut \
     keka \
+    macvim \
     mame \
     paintbrush \
     pgadmin3 \
