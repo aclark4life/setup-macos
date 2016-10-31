@@ -61,7 +61,6 @@ brew cask install \
     macvim \
     mame \
     paintbrush \
-    pgadmin3 \
     silverlight \
     skype \
     slack \
