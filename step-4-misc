@@ -13,7 +13,7 @@ open ~/Downloads/corporate-ipsum-1-1.zip
 git clone https://aclark4life@bitbucket.org/aclark4life/dotfiles Dotfiles
 
 # Cut/paste 4 (Dotfiles)
-dotfiles -s
+dotfiles -sf
 
 # Cut/paste 5 (Cleanup & Perms)
 # Symlink to Dotfiles/.git not needed
