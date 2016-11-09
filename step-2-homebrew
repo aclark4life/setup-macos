@@ -53,6 +53,7 @@ brew cask install \
     gitx \
     google-chrome \
     google-drive \
+    google-earth \
     google-hangouts \
     handbrake \
     hipchat \
