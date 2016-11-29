@@ -33,6 +33,7 @@ brew install \
     postgres \
     postgis \
     python \
+    python3 \
     redis \
     rpl \
     wget
@@ -47,7 +48,7 @@ brew cask install \
     dropbox \
     evernote \
     firefox \
-    flash \
+    flash-player \
     gimp \
     github-desktop \
     gitx \
