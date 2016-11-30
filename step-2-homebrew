@@ -41,6 +41,7 @@ brew install \
 # Cut/paste 3
 brew cask install \
     xquartz \
+    anybar \
     cord \
     dia \
     diskmaker-x \
@@ -72,6 +73,7 @@ brew cask install \
     sublime-text \
     tcl \
     thunderbird \
+    twitterrific \
     vagrant \
     virtualbox \
     virtualc64 \
