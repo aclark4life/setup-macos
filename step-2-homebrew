@@ -63,6 +63,7 @@ brew cask install \
     keka \
     macvim \
     mame \
+    nvalt \
     paintbrush \
     silverlight \
     skype \
