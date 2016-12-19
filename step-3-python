@@ -4,6 +4,7 @@ pip install -U \
     checkoutmanager \
     django \
     dotfiles \
+    em-keyboard \
     flake8 \
     haxor-news \
     jarn.viewdoc \
