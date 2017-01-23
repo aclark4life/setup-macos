@@ -11,6 +11,7 @@ pip install -U \
     mercurial \
     picky \
     pillow \
+    pipenv \
     plock \
     pyroma \
     rst2pdf \
