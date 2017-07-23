@@ -17,6 +17,7 @@ brew install \
     graphviz \
     heroku \
     htop \
+    hub \
     libdvdcss \
     libjpeg \
     libmagic \
