@@ -56,10 +56,8 @@ brew cask install \
     flash-player \
     gimp \
     github-desktop \
-    gitx \
     google-chrome \
-    google-drive \
-    google-earth \
+    google-earth-pro \
     google-hangouts \
     handbrake \
     hipchat \
