@@ -7,7 +7,6 @@ brew install \
     automake \
     awscli \
     bash \
-    caskroom/cask/brew-cask \
     certbot \
     coreutils \
     fortune \
