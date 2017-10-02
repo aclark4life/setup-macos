@@ -3,6 +3,9 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Cut/paste 2
+brew tap caskroom/cask
+
+# Cut/paste 3
 brew install \
     automake \
     awscli \
@@ -39,7 +42,7 @@ brew install \
     rpl \
     wget
 
-# Cut/paste 3
+# Cut/paste 4
 brew cask install \
     xquartz \
     anybar \
