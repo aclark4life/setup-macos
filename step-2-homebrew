@@ -59,6 +59,7 @@ brew cask install \
     google-chrome \
     google-earth-pro \
     google-hangouts \
+    google-photos-backup-and-sync \
     handbrake \
     hipchat \
     jumpcut \
