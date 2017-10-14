@@ -15,7 +15,14 @@ Jumpcut
 Terminal
 --------
 
-- Options -> Keep in Dock
+- Right click on Dock icon -> Options -> Keep in Dock
+- Terminal -> Preferences -> Profile -> Solarized%20… -> Text -> Droid Sans Mono for Powerline 15pt
+- Terminal -> Preferences -> Profile -> Solarized%20… -> Shell -> When the shell exits: [Close the window]
+- Terminal -> Preferences -> Profile -> Solarized%20… -> Shell -> Ask before closing: [Never]
+- Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Audible bell [ ]
+- Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Visual bell [ ]
+- Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Badge app and window Dock [ ]
+- Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Bounce app icon when in background [ ]
 
 System Preferences
 ------------------
