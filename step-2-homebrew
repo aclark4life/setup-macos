@@ -70,13 +70,11 @@ brew cask install \
     silverlight \
     skype \
     slack \
-    sqlitebrowser \
     steam \
     stella \
     sublime-text \
     tcl \
     thunderbird \
-    twitterrific \
     vagrant \
     virtualbox \
     virtualc64 \
