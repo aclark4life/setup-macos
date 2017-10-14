@@ -23,6 +23,7 @@ Terminal
 - Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Visual bell [ ]
 - Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Badge app and window Dock [ ]
 - Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Bounce app icon when in background [ ]
+- Shell -> Use Settings as Default
 
 System Preferences
 ------------------
