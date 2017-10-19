@@ -41,7 +41,8 @@ brew install \
     redis \
     rpl \
     telnet \
-    wget
+    wget \
+    webpack
 
 # Cut/paste 4
 brew cask install \
