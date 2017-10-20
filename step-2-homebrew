@@ -64,6 +64,7 @@ brew cask install \
     google-photos-backup-and-sync \
     handbrake \
     hipchat \
+    java \
     jumpcut \
     keka \
     macvim \
