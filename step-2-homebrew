@@ -20,6 +20,7 @@ brew install \
     heroku \
     htop \
     hub \
+    jsonpp \
     libdvdcss \
     libjpeg \
     libmagic \
