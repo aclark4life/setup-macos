@@ -73,6 +73,7 @@ brew cask install \
     paintbrush \
     silverlight \
     skype \
+    skype-for-business \
     slack \
     steam \
     stella \
