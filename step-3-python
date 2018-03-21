@@ -1,5 +1,5 @@
 # Cut/paste all
-pip install -U \
+pip3 install -U \
     check-manifest \
     checkoutmanager \
     django \
@@ -8,7 +8,6 @@ pip install -U \
     flake8 \
     haxor-news \
     jarn.viewdoc \
-    mercurial \
     picky \
     pillow \
     pipenv \
