@@ -10,6 +10,7 @@ brew install \
     automake \
     awscli \
     bash \
+    cbmbasic \
     certbot \
     coreutils \
     fortune \
