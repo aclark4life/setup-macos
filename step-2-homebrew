@@ -62,6 +62,7 @@ brew cask install \
     firefox \
     flash-player \
     gimp \
+    github \
     google-chrome \
     google-earth-pro \
     google-hangouts \
