@@ -83,6 +83,7 @@ brew cask install \
     slack \
     steam \
     stella \
+    storyboarder \
     sublime-text \
     tcl \
     thunderbird \
