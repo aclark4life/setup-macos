@@ -18,7 +18,6 @@ brew install \
     git \
     git-lfs \
     graphviz \
-    heroku \
     htop \
     hub \
     jsonpp \
