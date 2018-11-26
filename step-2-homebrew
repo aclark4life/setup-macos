@@ -33,7 +33,6 @@ brew install \
     openconnect \
     p7zip \
     pandoc \
-    phantomjs \
     pkg-config \
     postgres \
     postgis \
