@@ -1,6 +1,7 @@
 # Cut/paste all
 pip3 install -U \
     awscli \
+    awsebcli \
     check-manifest \
     checkoutmanager \
     django \
