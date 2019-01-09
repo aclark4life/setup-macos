@@ -10,7 +10,7 @@ open http://www.apple.com/downloads/dashboard/developer/corporateipsum.html
 open ~/Downloads/corporate-ipsum-1-1.zip
 
 # Cut/paste 3 (Dotfiles)
-git clone https://aclark4life@bitbucket.org/aclark4life/dotfiles Dotfiles
+git clone git@github.com:aclark4life/dotfiles.git
 
 # Cut/paste 4 (Dotfiles)
 dotfiles -sf
@@ -24,12 +24,11 @@ chmod 600 ~/.ssh/*
 # Change remote origin URL
 cd ~/Dotfiles
 git remote remove origin
-git remote add origin git@bitbucket.org:aclark4life/dotfiles.git
+git remote add origin git@github.com:aclark4life/dotfiles.git
 git push --set-upstream origin master
 
 # Cut/paste 7 (SSH Connections)
 ssh bitbucket.org
-ssh gist.github.com
 ssh github.com
 
 # Cut/paste 8 (checkoutmanager)
