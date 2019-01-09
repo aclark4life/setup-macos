@@ -10,7 +10,7 @@ open http://www.apple.com/downloads/dashboard/developer/corporateipsum.html
 open ~/Downloads/corporate-ipsum-1-1.zip
 
 # Cut/paste 3 (Dotfiles)
-git clone git@github.com:aclark4life/dotfiles.git
+git clone https://github.com/aclark4life/dotfiles.git
 
 # Cut/paste 4 (Dotfiles)
 dotfiles -sf
