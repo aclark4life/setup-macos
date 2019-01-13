@@ -21,6 +21,7 @@ brew install \
     htop \
     hub \
     jsonpp \
+    lastpass-cli \
     libdvdcss \
     libjpeg \
     libmagic \
