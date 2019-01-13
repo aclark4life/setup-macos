@@ -23,12 +23,8 @@ git remote remove origin
 git remote add origin git@github.com:aclark4life/dotfiles.git
 git push --set-upstream origin master
 
-# Cut/paste 7 (SSH Connections)
-ssh bitbucket.org
-ssh github.com
-
 # Cut/paste 8 (checkoutmanager)
-cm co
+up
 
 # Cut/paste 9 (Powerline Fonts)
 cd ~/Developer/powerline/fonts
