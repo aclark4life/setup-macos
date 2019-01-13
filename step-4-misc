@@ -5,10 +5,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 curl https://raw.githubusercontent.com/tomislav/osx-terminal.app-colors-solarized/master/Solarized%20Light.terminal -o ~/Downloads/Solarized%20Light.terminal
 open ~/Downloads/Solarized%20Light.terminal
 
-# Cut/paste 2 (Corporate Ipsum Dashboard Widget)
-open http://www.apple.com/downloads/dashboard/developer/corporateipsum.html
-open ~/Downloads/corporate-ipsum-1-1.zip
-
 # Cut/paste 3 (Dotfiles)
 git clone https://github.com/aclark4life/dotfiles.git
 
