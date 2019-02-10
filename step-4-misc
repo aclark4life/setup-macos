@@ -6,7 +6,7 @@ curl https://raw.githubusercontent.com/tomislav/osx-terminal.app-colors-solarize
 open ~/Downloads/Solarized%20Light.terminal
 
 # Cut/paste 3 (Dotfiles)
-git clone https://github.com/aclark4life/dotfiles.git
+git clone https://github.com/aclark4life/dotfiles.git Dotfiles
 
 # Cut/paste 4 (Dotfiles)
 dotfiles -sf
