@@ -20,6 +20,7 @@ brew install \
     graphviz \
     htop \
     hub \
+    jenkins \
     jsonpp \
     lastpass-cli \
     libdvdcss \
