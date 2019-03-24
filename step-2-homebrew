@@ -84,6 +84,7 @@ brew cask install \
     sublime-text \
     tcl \
     thunderbird \
+    universal-media-server \
     vagrant \
     virtualbox \
     virtualc64 \
