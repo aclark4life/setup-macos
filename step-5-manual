@@ -34,8 +34,8 @@ Terminal
 System Preferences
 ------------------
 
-Mission Control -> Keyboard and Mouse Shortcuts -> Mission Control -> Middle Mouse Button
-Trackpad -> More Gestures -> [ ] Swipe between pages
+Dock -> [ ] Show recent applications in Dock
 Keyboard -> Shortcuts -> Mission Control -> Move left a space -> cmd<-
 Keyboard -> Shortcuts -> Mission Control -> Move right a space -> cmd->
-Dock -> [ ] Show recent applications in Dock
+Mission Control -> Keyboard and Mouse Shortcuts -> Mission Control -> Middle Mouse Button
+Trackpad -> More Gestures -> [ ] Swipe between pages
