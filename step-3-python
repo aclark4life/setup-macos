@@ -13,6 +13,8 @@ pip3 install -U \
     picky \
     pillow \
     pipenv \
+    pip-run \
+    pipx \
     plock \
     pyroma \
     rst2pdf \
