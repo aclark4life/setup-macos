@@ -1,0 +1,92 @@
+# Cut/paste 1
+# Install command line tools not XCode when prompted
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Cut/paste 2
+brew tap caskroom/cask
+
+# Cut/paste 3
+brew install \
+    automake \
+    awscli \
+    bash \
+    cbmbasic \
+    certbot \
+    coreutils \
+    dcmtk \
+    dockutil \
+    fortune \
+    gcal \
+    git \
+    git-lfs \
+    graphviz \
+    htop \
+    hub \
+    jsonpp \
+    lastpass-cli \
+    libdvdcss \
+    libjpeg \
+    libmagic \
+    libmemcached \
+    libtiff \
+    mobile-shell \
+    mysql \
+    nmap \
+    npm \
+    openconnect \
+    p7zip \
+    pandoc \
+    pkg-config \
+    postgres \
+    postgis \
+    python \
+    python3 \
+    redis \
+    ruby \
+    rpl \
+    telnet \
+    tree \
+    wget \
+    webpack
+
+# Cut/paste 4
+brew cask install \
+    xquartz \
+    anybar \
+    cord \
+    dia \
+    diskmaker-x \
+    dosbox \
+    dropbox \
+    evernote \
+    firefox \
+    flash-player \
+    gimp \
+    github \
+    google-chrome \
+    google-earth-pro \
+    google-hangouts \
+    google-photos-backup-and-sync \
+    handbrake \
+    java \
+    jumpcut \
+    keka \
+    macvim \
+    mame \
+    opensc \
+    nvalt \
+    paintbrush \
+    silverlight \
+    skype \
+    slack \
+    steam \
+    stella \
+    storyboarder \
+    sublime-text \
+    tcl \
+    thunderbird \
+    universal-media-server \
+    vagrant \
+    virtualbox \
+    virtualc64 \
+    vlc
