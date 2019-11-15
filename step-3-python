@@ -1,4 +1,4 @@
-# Cut/paste all
+# Cut/paste
 pip3 install -U \
     awscli \
     awsebcli \
