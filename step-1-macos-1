@@ -1,4 +1,4 @@
-# Cut/paste 1
+# Cut/paste
 # Turn on dashboard-as-space
 defaults write com.apple.dashboard dashboard-enabled-state 2
 ## Finder
@@ -30,16 +30,3 @@ defaults write net.sf.Jumpcut SUCheckAtStartup 1
 defaults write net.sf.Jumpcut "ShortcutRecorder mainHotkey" -dict keyCode 9 modifierFlags 1179648
 # Turn off bouncing icons in dock
 defaults write com.apple.dock no-bouncing -bool TRUE
-
-# Cut/paste 2
-# Turn off screensaver lock
-sudo osascript -e 'tell application "System Events" to set require password to wake of security preferences to false'
-
-# Cut/paste 3
-# Turn on locate db
-sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
-
-# Cut/paste 4
-# Turn off screensaver lock
-# Change shell to zsh (no longer needed as of Catalina)
-#chsh -s /bin/zsh
