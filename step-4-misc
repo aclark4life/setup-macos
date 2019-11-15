@@ -25,7 +25,3 @@ git push --set-upstream origin master
 
 # Cut/paste 8 (checkoutmanager)
 up
-
-# Cut/paste 9 (Powerline Fonts)
-cd ~/Developer/powerline/fonts
-./install.sh
