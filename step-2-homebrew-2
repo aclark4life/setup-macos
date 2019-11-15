@@ -1,11 +1,4 @@
-# Cut/paste 1
-# Install command line tools not XCode when prompted
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Cut/paste 2
-brew tap caskroom/cask
-
-# Cut/paste 3
+# Cut/paste
 brew install \
     automake \
     awscli \
@@ -20,6 +13,7 @@ brew install \
     git \
     git-lfs \
     graphviz \
+    homebrew/cask-versions/adoptopenjdk8 \
     htop \
     hub \
     jsonpp \
