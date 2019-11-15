@@ -2,13 +2,7 @@
 pip3 install -U \
     awscli \
     awsebcli \
-    black \
     checkoutmanager \
     dotfiles \
-    flake8 \
-    pillow \
-    pyroma \
     tmp \
-    twine \
-    virtualenv \
-    yapf
+    virtualenv
