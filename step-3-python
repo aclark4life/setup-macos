@@ -2,25 +2,13 @@
 pip3 install -U \
     awscli \
     awsebcli \
-    check-manifest \
+    black \
     checkoutmanager \
-    django \
     dotfiles \
-    em-keyboard \
     flake8 \
-    haxor-news \
-    jarn.viewdoc \
-    picky \
     pillow \
-    pipenv \
-    pip-run \
-    pipx \
-    plock \
     pyroma \
-    rst2pdf \
-    sphinx \
     tmp \
     twine \
-    vanity \
     virtualenv \
     yapf
