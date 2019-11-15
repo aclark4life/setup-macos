@@ -30,8 +30,6 @@ defaults write net.sf.Jumpcut SUCheckAtStartup 1
 defaults write net.sf.Jumpcut "ShortcutRecorder mainHotkey" -dict keyCode 9 modifierFlags 1179648
 # Turn off bouncing icons in dock
 defaults write com.apple.dock no-bouncing -bool TRUE
-# Set screenshot location
-defaults write com.apple.screencapture location ~/Screenshots
 
 # Cut/paste 2
 # Turn off screensaver lock
@@ -43,5 +41,5 @@ sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 # Cut/paste 4
 # Turn off screensaver lock
-# Change shell to zsh
-chsh -s /bin/zsh
+# Change shell to zsh (no longer needed as of Catalina)
+#chsh -s /bin/zsh
