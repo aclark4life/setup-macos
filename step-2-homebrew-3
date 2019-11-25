@@ -1,0 +1,42 @@
+# Cut/paste
+brew cask install \
+    xquartz \
+    anybar \
+    cord \
+    dia \
+    diskmaker-x \
+    dosbox \
+    dropbox \
+    evernote \
+    firefox \
+    flash-player \
+    gimp \
+    github \
+    google-chrome \
+    google-earth-pro \
+    google-hangouts \
+    google-photos-backup-and-sync \
+    handbrake \
+    java \
+    jumpcut \
+    keka \
+    macvim \
+    mame \
+    microsoft-teams \
+    opensc \
+    nvalt \
+    paintbrush \
+    silverlight \
+    skype \
+    slack \
+    steam \
+    stella \
+    storyboarder \
+    sublime-text \
+    tcl \
+    thunderbird \
+    universal-media-server \
+    vagrant \
+    virtualbox \
+    virtualc64 \
+    vlc
