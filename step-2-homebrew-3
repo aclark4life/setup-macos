@@ -1,6 +1,5 @@
 # Cut/paste
 brew cask install \
-    xquartz \
     anybar \
     cord \
     dia \
@@ -22,6 +21,7 @@ brew cask install \
     keka \
     macvim \
     mame \
+    microsoft-edge \
     microsoft-teams \
     opensc \
     nvalt \
@@ -39,4 +39,6 @@ brew cask install \
     vagrant \
     virtualbox \
     virtualc64 \
-    vlc
+    vlc \
+    xquartz
+
