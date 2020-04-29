@@ -17,6 +17,7 @@ brew install \
     homebrew/cask-versions/adoptopenjdk8 \
     htop \
     hub \
+    imagemagick \
     jsonpp \
     lastpass-cli \
     libdvdcss \
