@@ -30,6 +30,7 @@ brew install \
     nmap \
     npm \
     openconnect \
+    openmotif \
     p7zip \
     pandoc \
     pkg-config \
