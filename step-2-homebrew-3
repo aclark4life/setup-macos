@@ -1,14 +1,10 @@
 # Cut/paste
 brew cask install \
-    anybar \
     cord \
     dia \
     diskmaker-x \
     dosbox \
-    dropbox \
-    evernote \
     firefox \
-    flash-player \
     gimp \
     github \
     google-chrome \
@@ -42,4 +38,3 @@ brew cask install \
     virtualc64 \
     vlc \
     xquartz
-
