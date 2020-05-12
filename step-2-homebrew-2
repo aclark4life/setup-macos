@@ -44,4 +44,5 @@ brew install \
     telnet \
     tree \
     wget \
-    webpack
+    webpack \
+    zork
