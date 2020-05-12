@@ -18,6 +18,7 @@ brew install \
     htop \
     hub \
     imagemagick \
+    imake \
     jsonpp \
     lastpass-cli \
     libdvdcss \
