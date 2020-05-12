@@ -12,6 +12,7 @@ brew install \
     dockutil \
     fortune \
     gcal \
+    gdb \
     git \
     git-lfs \
     graphviz \
