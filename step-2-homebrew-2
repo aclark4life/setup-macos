@@ -21,6 +21,7 @@ brew install \
     hub \
     imagemagick \
     imake \
+    jack \
     jsonpp \
     lastpass-cli \
     libdvdcss \
