@@ -33,9 +33,9 @@ include base.mk
 #PROJECT = project
 #APP = app
 .DEFAULT_GOAL=commit-push
-install: pip-install
+install: pip-install brew-bundle
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
 
-brew:
+brew-bundle:
 	brew bundle
