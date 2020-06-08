@@ -29,6 +29,8 @@ Oh My Zsh
 Dotfiles
 --------
 
+Requires token via GitHub -> Settings -> Developer settings -> Personal access tokens
+
 ::
 
     git clone https://github.com/aclark4life/dotfiles.git Dotfiles
