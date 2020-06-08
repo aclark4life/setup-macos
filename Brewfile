@@ -1,6 +1,7 @@
 brew "fortune"
 brew "gdal"
 brew "mysql"
+brew "node-sass"
 brew "npm"
 brew "postgresql"
 brew "postgis"
