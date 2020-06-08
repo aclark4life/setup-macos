@@ -36,3 +36,6 @@ include base.mk
 install: pip-install
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
+
+brew:
+	brew bundle
