@@ -1,3 +1,4 @@
 awscli
 awsebcli
+tmp
 virtualenv
