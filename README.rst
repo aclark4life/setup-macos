@@ -26,6 +26,22 @@ Oh My Zsh
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
+Dotfiles
+--------
+
+::
+
+    git clone https://github.com/aclark4life/dotfiles.git Dotfiles
+    dotfiles -sf
+    rm ~/.git
+    chmod 600 ~/.ssh/*
+    cd ~/Dotfiles
+    git remote remove origin
+    git remote add origin git@github.com:aclark4life/dotfiles.git
+    git push --set-upstream origin master
+
+
+
 ::
 
     make setup
