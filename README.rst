@@ -1,2 +1,6 @@
 Setup macOS
 ===========
+
+::
+
+    make setup
