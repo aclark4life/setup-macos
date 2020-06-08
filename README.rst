@@ -73,16 +73,20 @@ System Preferences
 Terminal
 ~~~~~~~~
 
+- Terminal -> Preferences -> Profile -> Default -> Text -> Droid Sans Mono for Powerline 15pt
+- Terminal -> Preferences -> Profile -> Default -> Shell -> When the shell exits: [Close the window]
+- Terminal -> Preferences -> Profile -> Default -> Shell -> Ask before closing: [Never]
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Audible bell [ ]
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Visual bell [ ]
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Badge app and window Dock [ ]
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Bounce app icon when in background [ ]
+- Terminal -> Preferences -> Profile -> Default -> Cursor -> Cursor -> [Black]
+- Terminal -> Shell -> Use Settings as Default
+
+Dock
+~~~~
+
 - Right click on Terminal Dock icon -> Options -> Keep in Dock
-- Terminal -> Preferences -> Profile -> Solarized%20… -> Text -> Droid Sans Mono for Powerline 15pt
-- Terminal -> Preferences -> Profile -> Solarized%20… -> Shell -> When the shell exits: [Close the window]
-- Terminal -> Preferences -> Profile -> Solarized%20… -> Shell -> Ask before closing: [Never]
-- Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Audible bell [ ]
-- Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Visual bell [ ]
-- Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Badge app and window Dock [ ]
-- Terminal -> Preferences -> Profile -> Solarized%20… -> Advanced -> Bell -> Bounce app icon when in background [ ]
-- Terminal -> Preferences -> Profile -> Solarized%20… -> Cursor -> Cursor -> [Black]
-- Shell -> Use Settings as Default
 
 Chrome
 ~~~~~~
