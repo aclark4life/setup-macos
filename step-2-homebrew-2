@@ -29,7 +29,6 @@ brew install \
     libmemcached \
     libtiff \
     mobile-shell \
-    npm \
     openconnect \
     openmotif \
     p7zip \
