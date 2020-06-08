@@ -10,7 +10,6 @@ brew install \
     coreutils \
     dcmtk \
     dockutil \
-    fortune \
     gcal \
     gdb \
     git \
@@ -46,4 +45,3 @@ brew install \
     tree \
     wget \
     webpack \
-    zork
