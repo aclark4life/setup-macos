@@ -1,3 +1,0 @@
-# Cut/paste
-curl https://raw.githubusercontent.com/tomislav/osx-terminal.app-colors-solarized/master/Solarized%20Light.terminal -o ~/Downloads/Solarized%20Light.terminal
-open ~/Downloads/Solarized%20Light.terminal
