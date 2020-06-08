@@ -53,8 +53,10 @@ After dotfiles, "up" alias is available (up: aliased to pushd ~/Dotfiles; git pu
     up
 
 
-More Python
------------
+More Python and Homebrew
+------------------------
+
+(*Via requirements.txt and Brewfile!*)
 
 After GitHub, ~/Developer contains many repositories, including this one.
 
