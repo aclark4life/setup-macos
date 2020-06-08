@@ -1,3 +1,0 @@
-# Cut/paste
-# Install command line tools not XCode when prompted
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
