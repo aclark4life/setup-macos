@@ -1,8 +1,0 @@
-# Cut/paste
-pip3 install -U \
-    awscli \
-    awsebcli \
-    checkoutmanager \
-    dotfiles \
-    tmp \
-    virtualenv
