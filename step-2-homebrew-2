@@ -30,16 +30,12 @@ brew install \
     libmemcached \
     libtiff \
     mobile-shell \
-    mysql \
-    nmap \
     npm \
     openconnect \
     openmotif \
     p7zip \
     pandoc \
     pkg-config \
-    postgres \
-    postgis \
     pulseaudio \
     python \
     python3 \
