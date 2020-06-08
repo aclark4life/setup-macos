@@ -1,4 +1,6 @@
+brew "fortune"
 brew "gdal"
 brew "mysql"
 brew "postgresql"
 brew "postgis"
+brew "zork"
