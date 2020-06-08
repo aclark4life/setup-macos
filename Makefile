@@ -9,6 +9,6 @@ include base.mk
 #PROJECT = project
 #APP = app
 .DEFAULT_GOAL=commit-push
-#install: pip-install
+install: pip-install
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
