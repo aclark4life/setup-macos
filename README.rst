@@ -43,11 +43,24 @@ Requires token via GitHub -> Settings -> Developer settings -> Personal access t
     git push --set-upstream origin master
 
 
-More Python
------------
+GitHub
+------
+
+After dotfiles, "up" alias is available (up: aliased to pushd ~/Dotfiles; git pull; git commit -a -m 'Update'; git push; popd; checkoutmanager co; checkoutmanager up; checkoutmanager missing).
 
 ::
 
+    up
+
+
+More Python
+-----------
+
+After GitHub, ~/Developer contains many repositories, including this one.
+
+::
+
+    cd ~/Developer/setup/
     make install
 
 Misc
