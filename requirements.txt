@@ -1,5 +1,6 @@
 awscli
 awsebcli
 black
+flake8
 tmp
 virtualenv
