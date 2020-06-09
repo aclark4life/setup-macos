@@ -1,5 +1,9 @@
-Setup macOS
-===========
+Setup macOS (Catalina)
+======================
+
+**In just a few easy steps! (Kidding. Not easy, but not too bad either.)**
+
+First, install Homebrew.
 
 Homebrew
 --------
@@ -7,6 +11,8 @@ Homebrew
 ::
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Second, install Python 3 with dotfiles and checkoutmanager to get dotfiles and other repositories from GitHub.
 
 
 Python
@@ -16,6 +22,8 @@ Python
 
     brew install python3
     pip3 install dotfiles checkoutmanager
+
+Thirs
 
 
 Oh My Zsh
