@@ -3,7 +3,7 @@ Setup macOS (Catalina)
 
 **In just a few easy steps! (Kidding… never easy enough, but not too bad either.)**
 
-First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package Manager for macOS (or Linux)". Install seemingly unlimited number of useful softwares with it.
+First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package Manager for macOS (or Linux)". With it, you can easily install a seemingly endless amount of useful softwares with it.
 
 Homebrew
 --------
