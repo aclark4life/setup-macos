@@ -1,4 +1,5 @@
 awscli
 awsebcli
+black
 tmp
 virtualenv
