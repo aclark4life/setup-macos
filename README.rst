@@ -23,8 +23,7 @@ Python
     brew install python3
     pip3 install dotfiles checkoutmanager
 
-Thirs
-
+Third, install Oh My Zsh. "Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration." 
 
 Oh My Zsh
 ---------
