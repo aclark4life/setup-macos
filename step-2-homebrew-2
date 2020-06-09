@@ -14,7 +14,6 @@ brew install \
     gdb \
     git \
     git-lfs \
-    graphviz \
     homebrew/cask-versions/adoptopenjdk8 \
     htop \
     hub \
