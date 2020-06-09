@@ -1,5 +1,6 @@
 brew "fortune"
 brew "gdal"
+brew "graphviz"
 brew "mysql"
 brew "node@12"
 brew "postgresql"
