@@ -1,7 +1,7 @@
 Setup macOS (Catalina)
 ======================
 
-**In just a few easy steps! (Kidding. Not easy, but not too bad either.)**
+**In just a few easy steps! (Kidding… never easy enough, but not too bad either.)**
 
 First, install Homebrew.
 
