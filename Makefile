@@ -33,9 +33,20 @@ include base.mk
 #PROJECT = project
 #APP = app
 .DEFAULT_GOAL=commit-push
-install: pip-install brew-bundle
+install: pip-install brew-bundle defaults
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
 
 brew-bundle:
 	brew bundle
+
+defaults: defaults-jumpcut
+
+defaults-jumpcut:
+	defaults write net.sf.Jumpcut displayNum 99
+	defaults write net.sf.Jumpcut rememberNum 99
+	defaults write net.sf.Jumpcut loadOnStartup 1
+	defaults write net.sf.Jumpcut SUCheckAtStartup 1
+	# defaults write net.sf.Jumpcut stickyBezel 1
+	# defaults write net.sf.Jumpcut wraparoundBezel 1
+	# defaults write net.sf.Jumpcut "ShortcutRecorder mainHotkey" -dict keyCode 9 modifierFlags 1179648
