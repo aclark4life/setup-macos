@@ -40,7 +40,7 @@ install: pip-install brew-bundle defaults
 brew-bundle:
 	brew bundle
 
-defaults: defaults-jumpcut
+defaults: defaults-finder defaults-jumpcut
 
 defaults-jumpcut:
 	defaults write net.sf.Jumpcut displayNum 99
@@ -50,3 +50,7 @@ defaults-jumpcut:
 	# defaults write net.sf.Jumpcut stickyBezel 1
 	# defaults write net.sf.Jumpcut wraparoundBezel 1
 	# defaults write net.sf.Jumpcut "ShortcutRecorder mainHotkey" -dict keyCode 9 modifierFlags 1179648
+defaults-finder:
+	# New Finder Window opens HOME
+	defaults write com.apple.finder NewWindowTarget "PfHm"
+	defaults write com.apple.finder NewWindowTargetPath "file:///${HOME}/"
