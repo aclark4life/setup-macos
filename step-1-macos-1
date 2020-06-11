@@ -1,8 +1,3 @@
-# Cut/paste
-## Finder
-# New finder window opens home directory
-defaults write com.apple.finder NewWindowTarget "PfHm"
-defaults write com.apple.finder NewWindowTargetPath "file:///${HOME}/"
 # Sort desktop icons by name 
 defaults write com.apple.finder.plist DesktopViewSettings -dict IconViewSettings '<dict><key>arrangeBy</key><string>name</string><key>backgroundColorBlue</key><real>1</real><key>backgroundColorGreen</key><real>1</real><key>backgroundColorRed</key><real>1</real><key>backgroundType</key><integer>0</integer><key>gridOffsetX</key><real>0.0</real><key>gridOffsetY</key><real>0.0</real><key>gridSpacing</key><real>54</real><key>iconSize</key><real>64</real><key>labelOnBottom</key><true/><key>showIconPreview</key><true/><key>showItemInfo</key><false/><key>textSize</key><real>12</real><key>viewOptionsVersion</key><integer>1</integer></dict>'
 # Show all the drives on the desktop
