@@ -1,6 +1,4 @@
 # Cut/paste
-# Turn on dashboard-as-space
-defaults write com.apple.dashboard dashboard-enabled-state 2
 ## Finder
 # New finder window opens home directory
 defaults write com.apple.finder NewWindowTarget "PfHm"
