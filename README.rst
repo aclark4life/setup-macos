@@ -105,8 +105,8 @@ Modify Terminal settings
 - Terminal -> Preferences -> Profile -> Default -> Cursor -> Cursor -> [Black]
 - Terminal -> Shell -> Use Settings as Default
 
-Chrome
-~~~~~~
+Install Chrome extensions
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Install LastPass browser extension
 - Install ColorZilla browser extension
