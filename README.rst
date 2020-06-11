@@ -105,11 +105,6 @@ Modify Terminal settings
 - Terminal -> Preferences -> Profile -> Default -> Cursor -> Cursor -> [Black]
 - Terminal -> Shell -> Use Settings as Default
 
-Dock
-~~~~
-
-- Right click on Terminal Dock icon -> Options -> Keep in Dock
-
 Chrome
 ~~~~~~
 
