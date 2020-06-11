@@ -33,14 +33,14 @@ include base.mk
 #PROJECT = project
 #APP = app
 .DEFAULT_GOAL=commit-push
-install: pip-install brew-bundle defaults
+install: pip-install brew-bundle setup
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
 
 brew-bundle:
 	brew bundle
 
-defaults: defaults-finder defaults-jumpcut
+setup: defaults-finder defaults-jumpcut osascript launchctl
 
 defaults-jumpcut:
 	defaults write net.sf.Jumpcut displayNum 99
@@ -50,7 +50,16 @@ defaults-jumpcut:
 	# defaults write net.sf.Jumpcut stickyBezel 1
 	# defaults write net.sf.Jumpcut wraparoundBezel 1
 	# defaults write net.sf.Jumpcut "ShortcutRecorder mainHotkey" -dict keyCode 9 modifierFlags 1179648
+
 defaults-finder:
 	# New Finder Window opens HOME
 	defaults write com.apple.finder NewWindowTarget "PfHm"
 	defaults write com.apple.finder NewWindowTargetPath "file:///${HOME}/"
+
+osascript:
+	# Turn off screenlock
+	sudo osascript -e 'tell application "System Events" to set require password to wake of security preferences to false'
+
+launchctl:
+	# Turn on locatedb
+	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
