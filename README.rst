@@ -72,16 +72,16 @@ After GitHub, ~/Developer contains many repositories, including this one.
     cd ~/Developer/setup/
     make install
 
-Misc
-----
+Manual steps
+------------
 
-Applications
-~~~~~~~~~~~~
+Install applications
+~~~~~~~~~~~~~~~~~~~~
 
 - Install `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
 
-System Preferences
-~~~~~~~~~~~~~~~~~~
+Modify System Preferences
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Dock -> [ ] Show recent applications in Dock
 - Keyboard -> Shortcuts -> Mission Control -> Move left a space -> cmd<-
@@ -92,8 +92,8 @@ System Preferences
 - Users & Groups -> Alex Clark -> Login Items -> + Jumpcut
 - Users & Groups -> Login Options -> Automatic Login -> Alex Clark
 
-Terminal
-~~~~~~~~
+Modify Terminal settings
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Terminal -> Preferences -> Profile -> Default -> Text -> Droid Sans Mono for Powerline 15pt
 - Terminal -> Preferences -> Profile -> Default -> Shell -> When the shell exits: [Close the window]
