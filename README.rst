@@ -111,6 +111,7 @@ Modify Terminal settings
 Install Chrome extensions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Install LastPass browser extension
-- Install ColorZilla browser extension
-- Install MeasureIt browser extension
+- ColorZilla
+- Corporate Ipsum
+- LastPass
+- MeasureIt
