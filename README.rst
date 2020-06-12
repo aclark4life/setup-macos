@@ -85,13 +85,13 @@ Install applications
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*[ ] == Unset*
+*[_] == Unset*
 
-- Accessibility -> Zoom -> [☑️] Use scroll gesture with modifier keys to zoom: ^Control
-- Dock -> [ ] Show recent applications in Dock
+- Accessibility -> Zoom -> [✔︎] Use scroll gesture with modifier keys to zoom: ^Control
+- Dock -> [_] Show recent applications in Dock
 - Mission Control -> Keyboard and Mouse Shortcuts -> Mission Control -> Middle Mouse Button
-- Security & Privacy -> General -> A login password has been set for this user -> [ ] Require password
-- Trackpad -> More Gestures -> [ ] Swipe between pages
+- Security & Privacy -> General -> A login password has been set for this user -> [_] Require password
+- Trackpad -> More Gestures -> [_] Swipe between pages
 - Users & Groups -> Alex Clark -> Login Items -> + pCloud Drive
 - Users & Groups -> Alex Clark -> Login Items -> + Jumpcut
 - Users & Groups -> Login Options -> Automatic Login -> Alex Clark
@@ -99,15 +99,15 @@ Modify System Preferences
 Modify Terminal settings
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-*[ ] == Unset*
+*[_] == Unset*
 
 - Terminal -> Preferences -> Profile -> Default -> Text -> Droid Sans Mono for Powerline 15pt
 - Terminal -> Preferences -> Profile -> Default -> Shell -> When the shell exits: [Close the window]
 - Terminal -> Preferences -> Profile -> Default -> Shell -> Ask before closing: [Never]
-- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Audible bell [ ]
-- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Visual bell [ ]
-- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Badge app and window Dock [ ]
-- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Bounce app icon when in background [ ]
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Audible bell [_]
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Visual bell [_]
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Badge app and window Dock [_]
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Bounce app icon when in background [_]
 - Terminal -> Shell -> Use Settings as Default
 
 Install Chrome extensions
