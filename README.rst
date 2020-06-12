@@ -53,7 +53,7 @@ Requires token via GitHub -> Settings -> Developer settings -> Personal access t
 GitHub
 ------
 
-After dotfiles, "up" alias is available (up: aliased to pushd ~/Dotfiles; git pull; git commit -a -m 'Update'; git push; popd; checkoutmanager co; checkoutmanager up; checkoutmanager missing).
+After dotfiles, "up" alias is available (``up: aliased to pushd ~/Dotfiles; git pull; git commit -a -m 'Update'; git push; popd; checkoutmanager co; checkoutmanager up; checkoutmanager missing``).
 
 ::
 
