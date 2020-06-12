@@ -97,6 +97,8 @@ Modify System Preferences
 Modify Terminal settings
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+*[ ] == Unset*
+
 - Terminal -> Preferences -> Profile -> Default -> Text -> Droid Sans Mono for Powerline 15pt
 - Terminal -> Preferences -> Profile -> Default -> Shell -> When the shell exits: [Close the window]
 - Terminal -> Preferences -> Profile -> Default -> Shell -> Ask before closing: [Never]
@@ -104,7 +106,6 @@ Modify Terminal settings
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Visual bell [ ]
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Badge app and window Dock [ ]
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Bounce app icon when in background [ ]
-- Terminal -> Preferences -> Profile -> Default -> Cursor -> Cursor -> [Black]
 - Terminal -> Shell -> Use Settings as Default
 
 Install Chrome extensions
