@@ -40,7 +40,7 @@ install: pip-install brew-bundle setup
 brew-bundle:
 	brew bundle
 
-setup: defaults-finder defaults-jumpcut osascript launchctl
+setup: defaults-finder defaults-jumpcut launchctl
 
 defaults-jumpcut:
 	defaults write net.sf.Jumpcut displayNum 99
@@ -55,10 +55,6 @@ defaults-finder:
 	# New Finder Window opens HOME
 	defaults write com.apple.finder NewWindowTarget "PfHm"
 	defaults write com.apple.finder NewWindowTargetPath "file:///${HOME}/"
-
-osascript:
-	# Turn off screenlock
-	sudo osascript -e 'tell application "System Events" to set require password to wake of security preferences to false'
 
 launchctl:
 	# Turn on locatedb
