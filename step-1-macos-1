@@ -9,8 +9,6 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop 1
 defaults write com.apple.systempreferences ShowAllMode 1
 # Add bluetooth icon to toolbar
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"  "/System/Library/CoreServices/Menu Extras/AirPort.menu"  "/System/Library/CoreServices/Menu Extras/Battery.menu"  "/System/Library/CoreServices/Menu Extras/Clock.menu"  "/System/Library/CoreServices/Menu Extras/User.menu"
-# CTRL-scroll to zoom in & out
-defaults write com.apple.universalaccess closeViewScrollWheelToggle 1
 # Turn off bouncing icons in dock
 defaults write com.apple.dock no-bouncing -bool TRUE
 # Hide notifications
