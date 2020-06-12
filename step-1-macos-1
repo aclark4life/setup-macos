@@ -5,8 +5,6 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop 1
 defaults write com.apple.finder ShowHardDrivesOnDesktop 1
 defaults write com.apple.finder ShowMountedServersOnDesktop 1
 defaults write com.apple.finder ShowRemovableMediaOnDesktop 1
-# Show the date on the clock
-defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
 # Organize system preferences alphabetically
 defaults write com.apple.systempreferences ShowAllMode 1
 # Add bluetooth icon to toolbar

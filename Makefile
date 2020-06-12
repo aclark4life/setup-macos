@@ -40,7 +40,7 @@ install: pip-install brew-bundle setup
 brew-bundle:
 	brew bundle
 
-setup: defaults-finder defaults-jumpcut launchctl
+setup: defaults-finder defaults-jumpcut launchctl clock
 
 defaults-jumpcut:
 	defaults write net.sf.Jumpcut displayNum 99
@@ -59,3 +59,7 @@ defaults-finder:
 launchctl:
 	# Turn on locatedb
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+clock:
+	# Show date on clock
+	defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
