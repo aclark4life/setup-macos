@@ -1,3 +1,4 @@
+brew "ffmpeg"
 brew "fortune"
 brew "gdal"
 brew "graphviz"
