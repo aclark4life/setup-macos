@@ -81,8 +81,8 @@ Install applications
 
 *No Homebrew Cask for these*
 
-- `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
 - `Audacity <https://www.audacityteam.org/download/mac/>`_
+- `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
 
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,6 +115,6 @@ Install Chrome extensions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - ColorZilla
-- Corporate Ipsum
+- `Corporate Ipsum <https://chrome.google.com/webstore/detail/corporate-ipsum/lfmadckmfehehmdnmhaebniooenedcbb?hl=en>`_
 - LastPass
 - MeasureIt
