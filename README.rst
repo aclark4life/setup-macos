@@ -82,7 +82,7 @@ Install applications
 *No Homebrew Cask for these*
 
 - `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
-- `Audacity <https://www.audacityteam.org/download/mac/`_
+- `Audacity <https://www.audacityteam.org/download/mac/>`_
 
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
