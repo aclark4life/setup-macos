@@ -79,6 +79,8 @@ Manual steps
 Install applications
 ~~~~~~~~~~~~~~~~~~~~
 
+*No Homebrew Cask for these*
+
 - Install `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
 
 Modify System Preferences
