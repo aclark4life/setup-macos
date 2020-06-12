@@ -81,6 +81,8 @@ Install applications
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+[ ] == Unset
+
 - Dock -> [ ] Show recent applications in Dock
 - Keyboard -> Shortcuts -> Mission Control -> Move left a space -> cmd<-
 - Keyboard -> Shortcuts -> Mission Control -> Move right a space -> cmd->
@@ -89,6 +91,7 @@ Modify System Preferences
 - Users & Groups -> Alex Clark -> Login Items -> + pCloud Drive
 - Users & Groups -> Alex Clark -> Login Items -> + Jumpcut
 - Users & Groups -> Login Options -> Automatic Login -> Alex Clark
+- Security & Privacy -> General -> A login password has been set for this user -> [ ] Require password
 
 Modify Terminal settings
 ~~~~~~~~~~~~~~~~~~~~~~~~
