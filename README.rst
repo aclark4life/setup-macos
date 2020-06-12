@@ -3,35 +3,33 @@ Setup macOS (Catalina)
 
 **In just a few easy steps! (Kidding… never easy enough, but not too bad either.)**
 
-First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package Manager for macOS (or Linux)". With it, you can easily install a seemingly endless amount of useful softwares with it.
-
 Homebrew
 --------
+
+First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package Manager for macOS (or Linux)". With it, you can easily install a seemingly endless amount of useful softwares with it.
 
 ::
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-Second, install Python 3 with dotfiles and checkoutmanager to get dotfiles and other repositories from GitHub.
-
-
 Python
 ------
+
+Second, install Python 3 with dotfiles and checkoutmanager to get dotfiles and other repositories from GitHub.
 
 ::
 
     brew install python3
     pip3 install dotfiles checkoutmanager
 
-Third, install Oh My Zsh. "Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration." 
-
 Oh My Zsh
 ---------
+
+Third, install Oh My Zsh. "Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration." 
 
 ::
 
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 
 Dotfiles
 --------
