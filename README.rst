@@ -87,6 +87,7 @@ Modify System Preferences
 
 *[ ] == Unset*
 
+- Accessibility -> Zoom -> [☑️] Use scroll gesture with modifier keys to zoom: ^Control
 - Dock -> [ ] Show recent applications in Dock
 - Mission Control -> Keyboard and Mouse Shortcuts -> Mission Control -> Middle Mouse Button
 - Security & Privacy -> General -> A login password has been set for this user -> [ ] Require password
