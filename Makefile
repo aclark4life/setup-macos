@@ -63,3 +63,90 @@ launchctl:
 clock:
 	# Show date on clock
 	defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
+
+brew-install-optional:
+	brew install \
+		automake \
+		awscli \
+		bash \
+		cbmbasic \
+		certbot \
+		clang-format \
+		composer \
+		coreutils \
+		dcmtk \
+		dockutil \
+		gcal \
+		gdb \
+		git \
+		git-lfs \
+		homebrew/cask-versions/adoptopenjdk8 \
+		htop \
+		hub \
+		imagemagick \
+		imake \
+		jack \
+		jsonpp \
+		lastpass-cli \
+		libdvdcss \
+		libjpeg \
+		libmagic \
+		libmemcached \
+		libtiff \
+		mobile-shell \
+		openconnect \
+		openmotif \
+		p7zip \
+		pandoc \
+		pkg-config \
+		pulseaudio \
+		python \
+		python3 \
+		redis \
+		ruby \
+		rpl \
+		telnet \
+		tree \
+		wget \
+		webpack \
+
+brew-cask-optional:
+	brew cask install \
+		cord \
+		dia \
+		diskmaker-x \
+		dosbox \
+		firefox \
+		gimp \
+		github \
+		google-chrome \
+		google-earth-pro \
+		google-hangouts \
+		google-photos-backup-and-sync \
+		handbrake \
+		java \
+		jumpcut \
+		keka \
+		macvim \
+		mame \
+		microsoft-edge \
+		microsoft-teams \
+		opensc \
+		nomachine \
+		nvalt \
+		paintbrush \
+		silverlight \
+		skype \
+		slack \
+		steam \
+		stella \
+		storyboarder \
+		sublime-text \
+		tcl \
+		thunderbird \
+		universal-media-server \
+		vagrant \
+		virtualbox \
+		virtualc64 \
+		vlc \
+		xquartz
