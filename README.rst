@@ -85,12 +85,6 @@ Install applications
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+--------------------------------------+--------------------------------------+
-| [*]                                  | Set                                  |
-+--------------------------------------+--------------------------------------+
-| []                                   | Unset                                |
-+--------------------------------------+--------------------------------------+
-
 - Accessibility -> Zoom -> [*] Use scroll gesture with modifier keys to zoom: ^Control
 - Dock -> [] Show recent applications in Dock
 - Mission Control -> Keyboard and Mouse Shortcuts -> Mission Control -> Middle Mouse Button
@@ -102,12 +96,6 @@ Modify System Preferences
 
 Modify Terminal settings
 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-+--------------------------------------+--------------------------------------+
-| [*]                                  | Set                                  |
-+--------------------------------------+--------------------------------------+
-| []                                   | Unset                                |
-+--------------------------------------+--------------------------------------+
 
 - Terminal -> Preferences -> Profile -> Default -> Shell -> When the shell exits: [Close the window]
 - Terminal -> Preferences -> Profile -> Default -> Shell -> Ask before closing: [Never]
