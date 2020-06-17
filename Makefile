@@ -117,7 +117,6 @@ brew-cask-optional:
 		diskmaker-x \
 		dosbox \
 		firefox \
-		gimp \
 		github \
 		google-chrome \
 		google-earth-pro \
