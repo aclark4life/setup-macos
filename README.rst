@@ -10,7 +10,7 @@ First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package M
 
 ::
 
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 Python
 ------
