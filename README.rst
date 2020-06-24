@@ -1,4 +1,4 @@
-Setup macOS (Catalina)
+Setup macOS (Big Sur)
 ======================
 
 **In just a few easy steps! (Kidding… never easy enough, but not too bad either.)**
@@ -19,8 +19,8 @@ Second, install Python 3 with dotfiles and checkoutmanager to get dotfiles and o
 
 ::
 
-    brew install python3
-    pip3 install dotfiles checkoutmanager
+    brew install python@3.8
+    /usr/local/bin/pip3 install dotfiles checkoutmanager
 
 Oh My Zsh
 ---------
