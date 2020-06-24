@@ -81,6 +81,7 @@ Install applications
 
 - `Audacity <https://www.audacityteam.org/download/mac/>`_
 - `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
+- Cisco AnyConnect Secure Mobility Client
 
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
