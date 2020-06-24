@@ -20,7 +20,7 @@ Second, install Python 3 with dotfiles and checkoutmanager to get dotfiles and o
 ::
 
     brew install python@3.8
-    /usr/local/bin/pip3 install dotfiles checkoutmanager
+    /usr/local/opt/python@3.8/bin/pip3 install dotfiles checkoutmanager
 
 Oh My Zsh
 ---------
