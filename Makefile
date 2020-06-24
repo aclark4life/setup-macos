@@ -40,7 +40,7 @@ install: pip-install brew-bundle setup
 brew-bundle:
 	brew bundle
 
-setup: defaults-finder defaults-jumpcut launchctl clock
+setup: defaults-finder defaults-jumpcut clock
 
 defaults-jumpcut:
 	defaults write net.sf.Jumpcut displayNum 99
