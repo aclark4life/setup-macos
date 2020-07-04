@@ -33,8 +33,7 @@ include base.mk
 #PROJECT = project
 #APP = app
 .DEFAULT_GOAL=commit-push
-#install: pip-install brew-bundle setup
-install: brew-bundle setup
+install: pip-install brew-bundle setup
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
 
@@ -146,3 +145,6 @@ brew-cask-optional:
 		virtualc64 \
 		vlc \
 		xquartz
+
+pip-install:
+	pip3 install -r requirements.txt
