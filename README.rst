@@ -109,6 +109,7 @@ Modify Terminal settings
 Install Chrome extensions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+- `AdBlock <https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom/related?hl=en-US>`_
 - `ColorZilla <https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en>`_
 - `Corporate Ipsum <https://chrome.google.com/webstore/detail/corporate-ipsum/lfmadckmfehehmdnmhaebniooenedcbb?hl=en>`_
 - `LastPass <https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=en-US>`_
