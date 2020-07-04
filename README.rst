@@ -120,5 +120,6 @@ Start brew services
 ::
 
     brew services start postgresql
+    brew services start mysql
 
 
