@@ -146,5 +146,5 @@ brew-cask-optional:
 		vlc \
 		xquartz
 
-pip-install:
+pip-install-default:
 	pip3 install -r requirements.txt
