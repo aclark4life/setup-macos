@@ -114,12 +114,11 @@ Install Chrome extensions
 - `LastPass <https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=en-US>`_
 - `MeasureIt <https://chrome.google.com/webstore/detail/measure-it/jocbgkoackihphodedlefohapackjmna?hl=en>`_
 
-Start brew services
--------------------
+Start services
+--------------
 
 ::
 
     brew services start postgresql
     brew services start mysql
-
-
+    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist

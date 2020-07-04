@@ -41,7 +41,7 @@ install: brew-bundle setup
 brew-bundle:
 	brew bundle
 
-setup: defaults-finder defaults-jumpcut clock
+setup: defaults-finder defaults-jumpcut defaults-clock
 
 defaults-jumpcut:
 	defaults write net.sf.Jumpcut displayNum 99
@@ -57,11 +57,7 @@ defaults-finder:
 	defaults write com.apple.finder NewWindowTarget "PfHm"
 	defaults write com.apple.finder NewWindowTargetPath "file:///${HOME}/"
 
-launchctl:
-	# Turn on locatedb
-	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
-
-clock:
+defaults-clock:
 	# Show date on clock
 	defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
 
