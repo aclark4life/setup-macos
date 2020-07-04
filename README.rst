@@ -120,6 +120,7 @@ Start services
 
 ::
 
-    brew services start postgresql
+    brew services start jack
     brew services start mysql
+    brew services start postgresql
     sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
