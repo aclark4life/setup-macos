@@ -1,3 +1,5 @@
+brew "autoconf"
+brew "automake"
 brew "carla"
 brew "dockutil"
 brew "ffmpeg"
