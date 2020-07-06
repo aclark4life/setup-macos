@@ -156,3 +156,4 @@ defaults-dock:
 	defaults write com.apple.dock show-recents -bool FALSE
 	dockutil --add /Applications/Google\ Chrome.app
 	dockutil --add /System/Applications/Utilities/Terminal.app
+	dockutil --add /Applications/Microsoft\ Outlook.app
