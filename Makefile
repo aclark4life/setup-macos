@@ -67,7 +67,6 @@ defaults-dock:
 	dockutil --remove 'Keynote'
 	dockutil --remove 'Numbers'
 	dockutil --remove 'Pages'
-	killall Dock
 
 defaults-screencapture:
 	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
