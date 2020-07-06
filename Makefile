@@ -33,16 +33,16 @@ include base.mk
 #PROJECT = project
 #APP = app
 .DEFAULT_GOAL=commit-push
-install: pip-install brew-bundle setup
+install: pip-install brew-bundle defaults-write
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
 
 brew-bundle:
 	brew bundle
 
-setup: defaults-finder defaults-jumpcut defaults-clock defaults-dock
+defaults-write: clock dock finder jumpcut screencapture
 
-defaults-jumpcut:
+jumpcut:
 	defaults write net.sf.Jumpcut displayNum 99
 	defaults write net.sf.Jumpcut rememberNum 99
 	defaults write net.sf.Jumpcut loadOnStartup 1
@@ -51,12 +51,12 @@ defaults-jumpcut:
 	# defaults write net.sf.Jumpcut wraparoundBezel 1
 	# defaults write net.sf.Jumpcut "ShortcutRecorder mainHotkey" -dict keyCode 9 modifierFlags 1179648
 
-defaults-finder:
+finder:
 	# New Finder Window opens HOME
 	defaults write com.apple.finder NewWindowTarget "PfHm"
 	defaults write com.apple.finder NewWindowTargetPath "file:///${HOME}/"
 
-defaults-clock:
+clock:
 	# Show date on clock
 	defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
 
@@ -150,10 +150,13 @@ pip-install-default:
 	pip3 install -r requirements.txt
 
 
-defaults-dock:
+dock:
 	defaults delete com.apple.dock
 	killall Dock
 	defaults write com.apple.dock show-recents -bool FALSE
 	dockutil --add /Applications/Google\ Chrome.app
 	dockutil --add /System/Applications/Utilities/Terminal.app
 	dockutil --add /Applications/Microsoft\ Outlook.app
+
+screencapture:
+	defaults write com.apple.screencapture location
