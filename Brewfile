@@ -1,5 +1,6 @@
 brew "automake"
 brew "carla"
+brew "coreutils"
 brew "dockutil"
 brew "ffmpeg"
 brew "fortune"
