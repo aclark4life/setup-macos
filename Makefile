@@ -151,7 +151,8 @@ pip-install-default:
 
 
 defaults-dock:
-	-defaults delete com.apple.dock
+	defaults delete com.apple.dock
+	killall Dock
 	defaults write com.apple.dock show-recents -bool FALSE
 	dockutil --add /Applications/Google\ Chrome.app
 	dockutil --add /System/Applications/Utilities/Terminal.app
