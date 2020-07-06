@@ -40,7 +40,7 @@ install: pip-install brew-bundle setup
 brew-bundle:
 	brew bundle
 
-setup: defaults-finder defaults-jumpcut defaults-clock
+setup: defaults-finder defaults-jumpcut defaults-clock defaults-dock
 
 defaults-jumpcut:
 	defaults write net.sf.Jumpcut displayNum 99
@@ -150,7 +150,8 @@ pip-install-default:
 	pip3 install -r requirements.txt
 
 
-dock:
-	defaults delete com.apple.dock
+defaults-dock:
+	-defaults delete com.apple.dock
+	defaults write com.apple.dock show-recents -bool FALSE
 	dockutil --add /Applications/Google\ Chrome.app
 	dockutil --add /System/Applications/Utilities/Terminal.app
