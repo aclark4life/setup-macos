@@ -148,3 +148,8 @@ brew-cask-optional:
 
 pip-install-default:
 	pip3 install -r requirements.txt
+
+
+dock:
+	defaults delete com.apple.dock; killall Dock
+	dockutil --add /Applications/Google\ Chrome.app 
