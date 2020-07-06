@@ -159,4 +159,4 @@ dock:
 	dockutil --add /Applications/Microsoft\ Outlook.app
 
 screencapture:
-	defaults write com.apple.screencapture location
+	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
