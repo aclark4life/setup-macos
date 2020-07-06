@@ -157,6 +157,9 @@ dock:
 	dockutil --add /Applications/Google\ Chrome.app
 	dockutil --add /System/Applications/Utilities/Terminal.app
 	dockutil --add /Applications/Microsoft\ Outlook.app
+	dockutil --remove 'Keynote'
+	dockutil --remove 'Numbers'
+	dockutil --remove 'Pages'
 
 screencapture:
 	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
