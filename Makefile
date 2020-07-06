@@ -33,7 +33,7 @@ include base.mk
 #PROJECT = project
 #APP = app
 .DEFAULT_GOAL=commit-push
-install: pip-install brew-bundle defaults-write
+install: pip-install brew-bundle defaults-write start-services
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
 
@@ -57,7 +57,30 @@ defaults-clock:
 	# Show date on clock
 	defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
 
-brew-install-optional:
+defaults-dock:
+	defaults delete com.apple.dock
+	killall Dock
+	defaults write com.apple.dock show-recents -bool FALSE
+	dockutil --add /Applications/Google\ Chrome.app
+	dockutil --add /System/Applications/Utilities/Terminal.app
+	dockutil --add /Applications/Microsoft\ Outlook.app
+	dockutil --remove 'Keynote'
+	dockutil --remove 'Numbers'
+	dockutil --remove 'Pages'
+
+defaults-screencapture:
+	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
+
+start-services:
+	brew services start mysql
+	brew services start postgresql
+	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+pip-install-default:
+	pip3 install -r requirements.txt
+
+# XXX Move to Brewfile
+brew-install:
 	brew install \
 		automake \
 		awscli \
@@ -68,7 +91,6 @@ brew-install-optional:
 		composer \
 		coreutils \
 		dcmtk \
-		dockutil \
 		gcal \
 		gdb \
 		git \
@@ -103,7 +125,8 @@ brew-install-optional:
 		wget \
 		webpack \
 
-brew-cask-optional:
+# XXX Move to Brewfile
+brew-cask-install:
 	brew cask install \
 		cord \
 		dia \
@@ -139,24 +162,4 @@ brew-cask-optional:
 		universal-media-server \
 		vagrant \
 		virtualbox \
-		virtualc64 \
-		vlc \
-		xquartz
-
-pip-install-default:
-	pip3 install -r requirements.txt
-
-
-defaults-dock:
-	defaults delete com.apple.dock
-	killall Dock
-	defaults write com.apple.dock show-recents -bool FALSE
-	dockutil --add /Applications/Google\ Chrome.app
-	dockutil --add /System/Applications/Utilities/Terminal.app
-	dockutil --add /Applications/Microsoft\ Outlook.app
-	dockutil --remove 'Keynote'
-	dockutil --remove 'Numbers'
-	dockutil --remove 'Pages'
-
-defaults-screencapture:
-	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
+		virtualc64
