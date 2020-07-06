@@ -6,7 +6,7 @@ Setup macOS (Big Sur)
 Homebrew
 --------
 
-First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package Manager for macOS (or Linux)". With it, you can easily install a seemingly endless amount of useful softwares with it.
+First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package Manager for macOS (or Linux)". With it, you can easily install a seemingly endless amount of useful software with it (now with bash installer!)
 
 ::
 
