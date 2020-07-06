@@ -47,9 +47,6 @@ jumpcut:
 	defaults write net.sf.Jumpcut rememberNum 99
 	defaults write net.sf.Jumpcut loadOnStartup 1
 	defaults write net.sf.Jumpcut SUCheckAtStartup 1
-	# defaults write net.sf.Jumpcut stickyBezel 1
-	# defaults write net.sf.Jumpcut wraparoundBezel 1
-	# defaults write net.sf.Jumpcut "ShortcutRecorder mainHotkey" -dict keyCode 9 modifierFlags 1179648
 
 finder:
 	# New Finder Window opens HOME
