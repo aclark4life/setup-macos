@@ -106,6 +106,11 @@ Modify Terminal settings
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Bounce app icon when in background []
 - Terminal -> Shell -> Use Settings as Default
 
+Modify Outlook settings
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Outlook -> Organize -> Focused Inbox []
+
 Install Chrome extensions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
