@@ -61,16 +61,16 @@ defaults-dock:
 	defaults delete com.apple.dock
 	killall Dock
 	defaults write com.apple.dock show-recents -bool FALSE
-	dockutil --add /Applications/Google\ Chrome.app
-	dockutil --add /System/Applications/Utilities/Terminal.app
-	dockutil --add /Applications/Microsoft\ Outlook.app
-	dockutil --add /Applications/Cisco/Cisco\ AnyConnect\ Secure\ Mobility\ Client.app 
-	dockutil --remove 'Keynote'
-	dockutil --remove 'Numbers'
-	dockutil --remove 'Pages'
+	# dockutil --add /Applications/Google\ Chrome.app
+	# dockutil --add /System/Applications/Utilities/Terminal.app
+	# dockutil --add /Applications/Microsoft\ Outlook.app
+	# dockutil --add /Applications/Cisco/Cisco\ AnyConnect\ Secure\ Mobility\ Client.app 
+	# dockutil --remove 'Keynote'
+	# dockutil --remove 'Numbers'
+	# dockutil --remove 'Pages'
 
 defaults-screencapture:
-	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
+	# defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
 
 start-services:
 	brew services start mysql
