@@ -45,7 +45,6 @@ brew-install:
 		bash \
 		cbmbasic \
 		certbot \
-		clang-format \
 		composer \
 		coreutils \
 		dcmtk \
