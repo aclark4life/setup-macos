@@ -82,6 +82,7 @@ Install applications
 - `Audacity <https://www.audacityteam.org/download/mac/>`_
 - `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
 - Cisco AnyConnect Secure Mobility Client
+- GarageBand
 
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,7 +115,6 @@ Modify Outlook settings
 Install Chrome extensions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `AdBlock <https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom/related?hl=en-US>`_
 - `ColorZilla <https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en>`_
 - `Corporate Ipsum <https://chrome.google.com/webstore/detail/corporate-ipsum/lfmadckmfehehmdnmhaebniooenedcbb?hl=en>`_
 - `LastPass <https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=en-US>`_
