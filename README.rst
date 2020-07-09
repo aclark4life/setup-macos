@@ -144,9 +144,20 @@ General
 
   - [Default Working Directory]
 
-
 Profile
 +++++++
+
+Text
+'''''
+
+- CMD++++
+- Terminal -> Shell -> Use Settings as Default
+
+Window
+'''''''''
+
+- 80x24 -> 160x48
+- Terminal -> Shell -> Use Settings as Default
 
 Shell
 '''''
@@ -161,15 +172,3 @@ Advanced
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Visual bell 
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Badge app and window Dock 
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Bounce app icon when in background 
-
-Text
-'''''
-
-- CMD++++
-- Terminal -> Shell -> Use Settings as Default
-
-Window
-'''''''''
-
-- 80x24 -> 160x48
-- Terminal -> Shell -> Use Settings as Default
