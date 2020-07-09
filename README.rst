@@ -132,6 +132,17 @@ Users & Groups
 Modify Terminal Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+- New tabs open with:
+
+  - [Same Profile]
+  - [Default Working Directory]
+
+General
++++++++
+
+
+
+
 - Terminal -> Shell -> Use Settings as Default
 
 Shell
