@@ -132,18 +132,13 @@ Users & Groups
 Modify Terminal Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+General
++++++++
+
 - New tabs open with:
 
   - [Same Profile]
   - **[Default Working Directory]**
-
-General
-+++++++
-
-
-
-
-- Terminal -> Shell -> Use Settings as Default
 
 Shell
 +++++
@@ -159,8 +154,22 @@ Advanced
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Badge app and window Dock 
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Bounce app icon when in background 
 
+Modify Terminal
+~~~~~~~~~~~~~~~
+
+Adjust font
++++++++++++
+
+- CMD++++
+- Terminal -> Shell -> Use Settings as Default
+
+Adjust window size
+++++++++++++++++++
+
+- 80x24 -> 160x48
+- Terminal -> Shell -> Use Settings as Default
+
 Modify Outlook settings
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 - Outlook -> Organize -> Focused Inbox []
-
