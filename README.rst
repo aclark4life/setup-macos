@@ -68,8 +68,8 @@ After GitHub, ~/Developer contains many repositories, including this one.
     cd ~/Developer/setup/
     make install
 
-Manual steps
-------------
+Additional manual steps
+-----------------------
 
 Install applications
 ~~~~~~~~~~~~~~~~~~~~
@@ -80,6 +80,14 @@ Install applications
 - `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
 - Cisco AnyConnect Secure Mobility Client
 - GarageBand
+
+Install Chrome extensions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- `ColorZilla <https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en>`_
+- `Corporate Ipsum <https://chrome.google.com/webstore/detail/corporate-ipsum/lfmadckmfehehmdnmhaebniooenedcbb?hl=en>`_
+- `LastPass <https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=en-US>`_
+- `MeasureIt <https://chrome.google.com/webstore/detail/measure-it/jocbgkoackihphodedlefohapackjmna?hl=en>`_
 
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -144,10 +152,3 @@ Modify Outlook settings
 
 - Outlook -> Organize -> Focused Inbox []
 
-Install Chrome extensions
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- `ColorZilla <https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en>`_
-- `Corporate Ipsum <https://chrome.google.com/webstore/detail/corporate-ipsum/lfmadckmfehehmdnmhaebniooenedcbb?hl=en>`_
-- `LastPass <https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=en-US>`_
-- `MeasureIt <https://chrome.google.com/webstore/detail/measure-it/jocbgkoackihphodedlefohapackjmna?hl=en>`_
