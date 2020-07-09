@@ -130,7 +130,7 @@ Users & Groups
 - Users & Groups -> Login Options -> Automatic Login -> Alex Clark
 
 Modify Terminal Preferences
-~~~~~~~~~~~~~~~~~~~~~~~---~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Terminal -> Shell -> Use Settings as Default
 
