@@ -158,14 +158,14 @@ Advanced
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Badge app and window Dock 
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Bounce app icon when in background 
 
-Adjust font
-+++++++++++
+Text
+++++
 
 - CMD++++
 - Terminal -> Shell -> Use Settings as Default
 
-Adjust window size
-++++++++++++++++++
+Window
+++++++
 
 - 80x24 -> 160x48
 - Terminal -> Shell -> Use Settings as Default
