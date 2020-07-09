@@ -99,13 +99,20 @@ Modify System Preferences
 Modify Terminal settings
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+Shell
++++++
+
 - Terminal -> Preferences -> Profile -> Default -> Shell -> When the shell exits: [Close the window]
 - Terminal -> Preferences -> Profile -> Default -> Shell -> Ask before closing: [Never]
-- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Audible bell []
-- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Visual bell []
-- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Badge app and window Dock []
-- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> Bounce app icon when in background []
 - Terminal -> Shell -> Use Settings as Default
+
+Advanced
+++++++++
+
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Audible bell 
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Visual bell 
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Badge app and window Dock 
+- Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Bounce app icon when in background 
 
 Modify Outlook settings
 ~~~~~~~~~~~~~~~~~~~~~~~
