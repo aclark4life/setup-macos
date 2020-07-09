@@ -129,15 +129,16 @@ Users & Groups
 - Users & Groups -> Alex Clark -> Login Items -> + Jumpcut
 - Users & Groups -> Login Options -> Automatic Login -> Alex Clark
 
-Modify Terminal settings
-~~~~~~~~~~~~~~~~~~~~~~~~
+Modify Terminal Preferences
+~~~~~~~~~~~~~~~~~~~~~~~---~
+
+- Terminal -> Shell -> Use Settings as Default
 
 Shell
 +++++
 
 - Terminal -> Preferences -> Profile -> Default -> Shell -> When the shell exits: [Close the window]
 - Terminal -> Preferences -> Profile -> Default -> Shell -> Ask before closing: [Never]
-- Terminal -> Shell -> Use Settings as Default
 
 Advanced
 ++++++++
