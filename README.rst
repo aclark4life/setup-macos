@@ -68,9 +68,6 @@ After GitHub, ~/Developer contains many repositories, including this one.
     cd ~/Developer/setup/
     make install
 
-.. image:: screenshot.png
-    :align: center
-
 Manual steps
 ------------
 
