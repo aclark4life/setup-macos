@@ -90,7 +90,7 @@ Modify System Preferences
 - Accessibility -> Zoom -> [*] Use scroll gesture with modifier keys to zoom: ^Control
 - Dock -> [] Show recent applications in Dock
 - Mission Control -> Keyboard and Mouse Shortcuts -> Mission Control -> Middle Mouse Button
-- Security & Privacy -> General -> A login password has been set for this user -> [] Require password
+- Security & Privacy -> General -> A login password has been set for this user -> [] Require password ___ after sleep or screen saver begins
 - Trackpad -> More Gestures -> [] Swipe between pages
 - Users & Groups -> Alex Clark -> Login Items -> + pCloud Drive
 - Users & Groups -> Alex Clark -> Login Items -> + Jumpcut
