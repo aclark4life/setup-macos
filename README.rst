@@ -107,7 +107,7 @@ Mission Control
 Security & Privacy 
 ++++++++++++++++++
 
-- Security & Privacy -> General -> A login password has been set for this user -> [] Require password ___ after sleep or screen saver begins
+- Security & Privacy -> General -> A login password has been set for this user -> [] Require password ________ after sleep or screen saver begins
 
 Trackpad
 ++++++++
