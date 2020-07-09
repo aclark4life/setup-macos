@@ -84,11 +84,39 @@ Install applications
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Accessibility
++++++++++++++
+
 - Accessibility -> Zoom -> [*] Use scroll gesture with modifier keys to zoom: ^Control
+
+Dock
+++++
+
 - Dock -> [] Show recent applications in Dock
+
+Keyboard
+++++++++
+
+- [*] Show keyboard and emoji viewers in menu bar
+
+Mission Control
++++++++++++++++
+
 - Mission Control -> Keyboard and Mouse Shortcuts -> Mission Control -> Middle Mouse Button
+
+Security & Privacy 
+++++++++++++++++++
+
 - Security & Privacy -> General -> A login password has been set for this user -> [] Require password ___ after sleep or screen saver begins
+
+Trackpad
+++++++++
+
 - Trackpad -> More Gestures -> [] Swipe between pages
+
+Users & Groups
+++++++++++++++
+
 - Users & Groups -> Alex Clark -> Login Items -> + pCloud Drive
 - Users & Groups -> Alex Clark -> Login Items -> + Jumpcut
 - Users & Groups -> Login Options -> Automatic Login -> Alex Clark
