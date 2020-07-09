@@ -142,8 +142,7 @@ General
 
 - New tabs open with:
 
-  - [Same Profile]
-  - **[Default Working Directory]**
+  - [Default Working Directory]
 
 Shell
 +++++
