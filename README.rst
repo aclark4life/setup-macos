@@ -89,6 +89,11 @@ Install Chrome extensions
 - `LastPass <https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=en-US>`_
 - `MeasureIt <https://chrome.google.com/webstore/detail/measure-it/jocbgkoackihphodedlefohapackjmna?hl=en>`_
 
+Modify Outlook settings
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Outlook -> Organize -> Focused Inbox []
+
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -168,8 +173,3 @@ Adjust window size
 
 - 80x24 -> 160x48
 - Terminal -> Shell -> Use Settings as Default
-
-Modify Outlook settings
-~~~~~~~~~~~~~~~~~~~~~~~
-
-- Outlook -> Organize -> Focused Inbox []
