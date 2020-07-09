@@ -144,14 +144,18 @@ General
 
   - [Default Working Directory]
 
+
+Profile
++++++++
+
 Shell
-+++++
+'''''
 
 - Terminal -> Preferences -> Profile -> Default -> Shell -> When the shell exits: [Close the window]
 - Terminal -> Preferences -> Profile -> Default -> Shell -> Ask before closing: [Never]
 
 Advanced
-++++++++
+'''''''''
 
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Audible bell 
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Visual bell 
@@ -159,13 +163,13 @@ Advanced
 - Terminal -> Preferences -> Profile -> Default -> Advanced -> Bell -> [] Bounce app icon when in background 
 
 Text
-++++
+'''''
 
 - CMD++++
 - Terminal -> Shell -> Use Settings as Default
 
 Window
-++++++
+'''''''''
 
 - 80x24 -> 160x48
 - Terminal -> Shell -> Use Settings as Default
