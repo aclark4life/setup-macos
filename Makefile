@@ -104,7 +104,6 @@ brew-cask-install:
 		microsoft-edge \
 		microsoft-teams \
 		opensc \
-		nomachine \
 		nvalt \
 		paintbrush \
 		silverlight \
