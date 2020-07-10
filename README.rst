@@ -110,7 +110,9 @@ Dock
 Keyboard
 ++++++++
 
-- [*] Show keyboard and emoji viewers in menu bar
+- Keyboard -> [*] Show keyboard and emoji viewers in menu bar
+- Shortcuts -> Mission Control -> [*] Move left a space [CMD<-]
+- Shortcuts -> Mission Control -> [*] Move right a space [CMD->]
 
 Mission Control
 +++++++++++++++
