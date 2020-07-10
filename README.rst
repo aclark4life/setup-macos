@@ -1,4 +1,4 @@
-Setup macOS (Big Sur)
+Setup macOS (Catalina)
 ======================
 
 **In just a few easy steps! (Kidding… never easy enough, but not too bad either.)**
@@ -106,6 +106,16 @@ Dock
 ++++
 
 - Dock -> [] Show recent applications in Dock
+
+Energy Saver
+++++++++++++
+
+- Battery -> [] Put hard disks to sleep when possible
+- Battery -> [] Slightly dim the display when on battery power
+- Battery -> Turn display off after [Never]
+- Power Adapter -> [] Put hard disks to sleep when possible
+- Power Adapter -> [] Slightly dim the display when on battery power
+- Power Adapter -> Turn display off after [Never]
 
 Keyboard
 ++++++++
