@@ -123,7 +123,7 @@ brew-cask-install:
 brew-bundle:
 	brew bundle
 
-defaults-write: defaults-clock defaults-dock defaults-finder defaults-jumpcut defaults-screencapture
+defaults-write: defaults-clock defaults-finder defaults-jumpcut defaults-screencapture
 
 defaults-jumpcut:
 	defaults write net.sf.Jumpcut displayNum 99
@@ -140,6 +140,17 @@ defaults-clock:
 	# Show date on clock
 	defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
 
+
+# dockutil --add "/Applications/Google Chrome.app"
+# Traceback (most recent call last):
+#   File "/usr/local/bin/dockutil", line 669, in <module>
+#     main()
+#   File "/usr/local/bin/dockutil", line 370, in main
+#     if addItem(pl, real_add_path, replace_label, position, before_item, after_item, section, displayas, showas, arrangement, tile_type, label_name):
+#   File "/usr/local/bin/dockutil", line 545, in addItem
+#     for existing_dock_item in (pl[section]):
+# KeyError: 'persistent-apps'
+# make: *** [defaults-dock] Error 1
 defaults-dock:
 	defaults delete com.apple.dock
 	killall Dock
