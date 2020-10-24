@@ -3,7 +3,7 @@ Setup macOS (Catalina)
 
 **In just a few easy steps!**
 
-(Kidding… never easy enough, but not too bad either.)**
+(Kidding… never easy enough, but not too bad either.)
 
 Homebrew
 --------
