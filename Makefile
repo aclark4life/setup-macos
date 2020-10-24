@@ -173,4 +173,4 @@ start-services:
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 pip-install:
-	/usr/local/opt/python@3.8/bin/pip3 install -r requirements.txt
+	/usr/local/opt/python@3.9/bin/pip3 install -r requirements.txt
