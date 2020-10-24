@@ -76,7 +76,7 @@ Additional manual steps
 Install applications
 ~~~~~~~~~~~~~~~~~~~~
 
-*No Homebrew Cask for these*
+*No Cask available*
 
 - `Audacity <https://www.audacityteam.org/download/mac/>`_
 - `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
