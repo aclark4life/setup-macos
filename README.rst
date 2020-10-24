@@ -40,7 +40,7 @@ Requires token via GitHub -> Settings -> Developer settings -> Personal access t
 
 ::
 
-    git clone https://github.com/aclark4life/dotfiles.git Dotfiles
+    git clone https://aclark4life@github.com/aclark4life/dotfiles.git Dotfiles
     dotfiles -sf
     rm ~/.git
     chmod 600 ~/.ssh/*
