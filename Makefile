@@ -50,6 +50,7 @@ brew-install:
 		dcmtk \
 		gcal \
 		gdb \
+		gh \
 		git \
 		git-lfs \
 		homebrew/cask-versions/adoptopenjdk8 \
