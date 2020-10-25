@@ -165,7 +165,7 @@ defaults-dock:
 	dockutil --remove 'Pages'
 
 defaults-screencapture:
-	# defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
+	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
 
 start-services:
 	brew services start mysql

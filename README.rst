@@ -137,6 +137,7 @@ Mission Control
 +++++++++++++++
 
 - Mission Control -> Keyboard and Mouse Shortcuts -> Mission Control -> Middle Mouse Button
+- Mission Control -> [] Displays have separate spaces
 
 Security & Privacy 
 ++++++++++++++++++
