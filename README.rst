@@ -171,7 +171,7 @@ Profile
 Text
 '''''
 
-- CMD++++
+- CMD + + + + +
 - Terminal -> Shell -> Use Settings as Default
 
 Window
