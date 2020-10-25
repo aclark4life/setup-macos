@@ -177,7 +177,7 @@ Text
 Window
 '''''''''
 
-- 80x24 -> 160x48
+- 80x24 -> 120x36
 - Terminal -> Shell -> Use Settings as Default
 
 Shell
