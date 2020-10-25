@@ -89,6 +89,15 @@ Install Chrome extensions
 - `ColorZilla <https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en>`_
 - `MeasureIt <https://chrome.google.com/webstore/detail/measure-it/jocbgkoackihphodedlefohapackjmna?hl=en>`_
 
+Modify Chrome settings
+~~~~~~~~~~~~~~~~~~~~~~
+
+- Settings -> Autofill -> Passwords -> Offer to save passwords []
+- Settings -> Autofill -> Passwords -> Auto Sign-in []
+- Settings -> Autofill -> Payment methods -> Save and fill payment methods []
+- Settings -> Autofill -> Payment methods -> Allow sites to check if you have payment methods saved []
+- Settings -> Autofill -> Addresses and more -> Save and fill addresses []
+
 Modify Outlook settings
 ~~~~~~~~~~~~~~~~~~~~~~~
 
