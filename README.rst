@@ -92,6 +92,7 @@ Install Chrome extensions
 Modify Chrome settings
 ~~~~~~~~~~~~~~~~~~~~~~
 
+- Settings -> Appearance -> Show home button [*]
 - Settings -> Autofill -> Passwords -> Offer to save passwords []
 - Settings -> Autofill -> Passwords -> Auto Sign-in []
 - Settings -> Autofill -> Payment methods -> Save and fill payment methods []
