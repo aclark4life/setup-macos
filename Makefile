@@ -117,7 +117,6 @@ brew-cask-install:
 		thunderbird \
 		universal-media-server \
 		vagrant \
-		virtualbox \
 		virtualc64
 
 brew-bundle:
