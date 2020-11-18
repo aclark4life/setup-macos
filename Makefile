@@ -108,7 +108,6 @@ brew-cask-install:
 		paintbrush \
 		silverlight \
 		skype \
-		slack \
 		steam \
 		stella \
 		storyboarder \
@@ -116,7 +115,6 @@ brew-cask-install:
 		tcl \
 		thunderbird \
 		universal-media-server \
-		vagrant \
 		virtualc64
 
 brew-bundle:
