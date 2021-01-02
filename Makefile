@@ -69,7 +69,6 @@ brew-install:
 		openconnect \
 		openmotif \
 		p7zip \
-		pandoc \
 		pkg-config \
 		pulseaudio \
 		python \
