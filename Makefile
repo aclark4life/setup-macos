@@ -76,7 +76,6 @@ brew-install:
 		redis \
 		ruby \
 		rpl \
-		telnet \
 		tree \
 		wget \
 		webpack \
