@@ -78,7 +78,7 @@ Install applications
 
 *No Cask available*
 
-- `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_
+- `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_ (https://gist.github.com/tomgross/bae4f30023272d8c8c0d920b62720c6b)
 - Cisco AnyConnect Secure Mobility Client
 - Avid Pro Tools First
 - Adobe Acrobat
