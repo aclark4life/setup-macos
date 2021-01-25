@@ -171,7 +171,7 @@ start-services:
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 pip-install:
-	/usr/local/opt/python@3.9/bin/pip3 install -r requirements.txt
+	/usr/local/opt/python@3.8/bin/pip3 install -r requirements.txt
 
 brew-cask-install-pcloud:
 	# https://gist.github.com/tomgross/bae4f30023272d8c8c0d920b62720c6b#file-pcloud-drive-rb
