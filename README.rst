@@ -95,7 +95,7 @@ Install Chrome extensions
 Modify Chrome settings
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- Settings → Appearance → Show home button [*]
+- Settings → Appearance → Show home button [✓]
 - Settings → Autofill → Passwords → Offer to save passwords []
 - Settings → Autofill → Passwords → Auto Sign-in []
 - Settings → Autofill → Payment methods → Save and fill payment methods []
@@ -113,7 +113,7 @@ Modify System Preferences
 Accessibility
 +++++++++++++
 
-- Accessibility → Zoom → [*] Use scroll gesture with modifier keys to zoom: ^Control
+- Accessibility → Zoom → [✓] Use scroll gesture with modifier keys to zoom: ^Control
 
 Dock
 ++++
@@ -133,9 +133,9 @@ Energy Saver
 Keyboard
 ++++++++
 
-- Keyboard → [*] Show keyboard and emoji viewers in menu bar
-- Shortcuts → Mission Control → [*] Move left a space [CMD<-]
-- Shortcuts → Mission Control → [*] Move right a space [CMD→]
+- Keyboard → [✓] Show keyboard and emoji viewers in menu bar
+- Shortcuts → Mission Control → [✓] Move left a space [CMD←]
+- Shortcuts → Mission Control → [✓] Move right a space [CMD→]
 
 Mission Control
 +++++++++++++++
