@@ -116,6 +116,7 @@ brew-cask-install:
 		virtualc64
 
 brew-bundle:
+	# Install Brewfile brews
 	brew bundle
 
 defaults-write: defaults-clock defaults-finder defaults-jumpcut defaults-screencapture
@@ -171,3 +172,8 @@ start-services:
 
 pip-install:
 	/usr/local/opt/python@3.9/bin/pip3 install -r requirements.txt
+
+brew-cask-install-pcloud:
+	# https://gist.github.com/tomgross/bae4f30023272d8c8c0d920b62720c6b#file-pcloud-drive-rb
+	curl -O https://gist.githubusercontent.com/tomgross/bae4f30023272d8c8c0d920b62720c6b/raw/c2a3c2a40cb7ad6d6853a4f4dba78b1461e60ca5/pcloud-drive.rb
+	brew install cask pcloud-drive.rb
