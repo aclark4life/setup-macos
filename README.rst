@@ -95,17 +95,17 @@ Install Chrome extensions
 Modify Chrome settings
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- Settings → Appearance → Show home button [✓]
-- Settings → Autofill → Passwords → Offer to save passwords []
-- Settings → Autofill → Passwords → Auto Sign-in []
-- Settings → Autofill → Payment methods → Save and fill payment methods []
-- Settings → Autofill → Payment methods → Allow sites to check if you have payment methods saved []
-- Settings → Autofill → Addresses and more → Save and fill addresses []
+- Settings → Appearance → Show home button ☑︎
+- Settings → Autofill → Passwords → Offer to save passwords ☐
+- Settings → Autofill → Passwords → Auto Sign-in ☐
+- Settings → Autofill → Payment methods → Save and fill payment methods ☐
+- Settings → Autofill → Payment methods → Allow sites to check if you have payment methods saved ☐
+- Settings → Autofill → Addresses and more → Save and fill addresses ☐
 
 Modify Outlook settings
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-- Outlook → Organize → Focused Inbox []
+- Outlook → Organize → Focused Inbox ☐
 
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,45 +113,45 @@ Modify System Preferences
 Accessibility
 +++++++++++++
 
-- Accessibility → Zoom → [✓] Use scroll gesture with modifier keys to zoom: ^Control
+- Accessibility → Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: ^Control
 
 Dock
 ++++
 
-- Dock → [] Show recent applications in Dock
+- Dock → ☐ Show recent applications in Dock
 
 Energy Saver
 ++++++++++++
 
-- Battery → [] Put hard disks to sleep when possible
-- Battery → [] Slightly dim the display when on battery power
+- Battery → ☐ Put hard disks to sleep when possible
+- Battery → ☐ Slightly dim the display when on battery power
 - Battery → Turn display off after [Never]
-- Power Adapter → [] Put hard disks to sleep when possible
-- Power Adapter → [] Slightly dim the display when on battery power
+- Power Adapter → ☐ Put hard disks to sleep when possible
+- Power Adapter → ☐ Slightly dim the display when on battery power
 - Power Adapter → Turn display off after [Never]
 
 Keyboard
 ++++++++
 
-- Keyboard → [✓] Show keyboard and emoji viewers in menu bar
-- Shortcuts → Mission Control → [✓] Move left a space [CMD←]
-- Shortcuts → Mission Control → [✓] Move right a space [CMD→]
+- Keyboard → ☑︎ Show keyboard and emoji viewers in menu bar
+- Shortcuts → Mission Control → ☑︎ Move left a space [CMD←]
+- Shortcuts → Mission Control → ☑︎ Move right a space [CMD→]
 
 Mission Control
 +++++++++++++++
 
 - Mission Control → Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
-- Mission Control → [] Displays have separate spaces
+- Mission Control → ☐ Displays have separate spaces
 
 Security & Privacy 
 ++++++++++++++++++
 
-- Security & Privacy → General → A login password has been set for this user → [] Require password ________ after sleep or screen saver begins
+- Security & Privacy → General → A login password has been set for this user → ☐ Require password ________ after sleep or screen saver begins
 
 Trackpad
 ++++++++
 
-- Trackpad → More Gestures → [] Swipe between pages
+- Trackpad → More Gestures → ☐ Swipe between pages
 
 Users & Groups
 ++++++++++++++
@@ -194,7 +194,7 @@ Shell
 Advanced
 '''''''''
 
-- Terminal → Preferences → Profile → Default → Advanced → Bell → [] Audible bell 
-- Terminal → Preferences → Profile → Default → Advanced → Bell → [] Visual bell 
-- Terminal → Preferences → Profile → Default → Advanced → Bell → [] Badge app and window Dock 
-- Terminal → Preferences → Profile → Default → Advanced → Bell → [] Bounce app icon when in background 
+- Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Audible bell 
+- Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Visual bell 
+- Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Badge app and window Dock 
+- Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Bounce app icon when in background 
