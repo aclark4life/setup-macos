@@ -33,7 +33,7 @@ include base.mk
 #PROJECT = project
 #APP = app
 .DEFAULT_GOAL=commit-push
-install: pip-install brew-bundle defaults-write start-services
+install: defaults-write start-services
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
 
@@ -166,7 +166,7 @@ defaults-screencapture:
 	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
 
 start-services:
-	brew services start mysql
+#	brew services start mysql
 	brew services start postgresql
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
