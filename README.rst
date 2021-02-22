@@ -198,3 +198,8 @@ Advanced
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Visual bell 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Badge app and window Dock 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Bounce app icon when in background 
+
+Google Chrome
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- chrome://flags/ → Tab Hover Cards → Disabled
