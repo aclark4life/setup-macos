@@ -92,8 +92,8 @@ Install Chrome extensions
 - `MeasureIt <https://chrome.google.com/webstore/detail/measure-it/jocbgkoackihphodedlefohapackjmna?hl=en>`_
 - `AdBlock <https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom/related?hl=en-US>`_
 
-Modify Chrome settings
-~~~~~~~~~~~~~~~~~~~~~~
+Modify Google Chrome settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Settings → Appearance → Show home button ☑︎
 - Settings → Autofill → Passwords → Offer to save passwords ☐
@@ -101,6 +101,7 @@ Modify Chrome settings
 - Settings → Autofill → Payment methods → Save and fill payment methods ☐
 - Settings → Autofill → Payment methods → Allow sites to check if you have payment methods saved ☐
 - Settings → Autofill → Addresses and more → Save and fill addresses ☐
+- File → Open Location → chrome://flags/ → Tab Hover Cards → Disabled
 
 Modify Outlook settings
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -198,8 +199,3 @@ Advanced
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Visual bell 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Badge app and window Dock 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Bounce app icon when in background 
-
-Google Chrome
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- chrome://flags/ → Tab Hover Cards → Disabled
