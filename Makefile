@@ -37,49 +37,6 @@ install: brew-bundle defaults-write start-services
 #serve: django-serve
 #virtualenv: python-virtualenv-3-7
 
-# XXX Move to Brewfile
-brew-install:
-	brew install \
-		automake \
-		awscli \
-		bash \
-		cbmbasic \
-		certbot \
-		composer \
-		coreutils \
-		dcmtk \
-		gcal \
-		gdb \
-		git \
-		git-lfs \
-		homebrew/cask-versions/adoptopenjdk8 \
-		htop \
-		hub \
-		imagemagick \
-		imake \
-		jack \
-		jsonpp \
-		lastpass-cli \
-		libdvdcss \
-		libjpeg \
-		libmagic \
-		libmemcached \
-		libtiff \
-		mobile-shell \
-		openconnect \
-		openmotif \
-		p7zip \
-		pkg-config \
-		pulseaudio \
-		python \
-		python3 \
-		redis \
-		ruby \
-		rpl \
-		tree \
-		wget \
-		webpack \
-
 brew-bundle:
 	# Install Brewfile brews
 	brew bundle
