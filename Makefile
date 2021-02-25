@@ -80,41 +80,6 @@ brew-install:
 		wget \
 		webpack \
 
-# XXX Move to Brewfile
-brew-cask-install:
-	brew cask install \
-		cord \
-		dia \
-		diskmaker-x \
-		dosbox \
-		firefox \
-		github \
-		google-chrome \
-		google-earth-pro \
-		google-hangouts \
-		google-photos-backup-and-sync \
-		handbrake \
-		java \
-		jumpcut \
-		keka \
-		macvim \
-		mame \
-		microsoft-edge \
-		microsoft-teams \
-		opensc \
-		nvalt \
-		paintbrush \
-		silverlight \
-		skype \
-		steam \
-		stella \
-		storyboarder \
-		sublime-text \
-		tcl \
-		thunderbird \
-		universal-media-server \
-		virtualc64
-
 brew-bundle:
 	# Install Brewfile brews
 	brew bundle
