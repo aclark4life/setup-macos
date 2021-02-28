@@ -8,6 +8,7 @@
 #brew "gdb"
 #brew "git"
 #brew "git-lfs"
+brew "gradle"
 #brew "homebrew/cask-versions/adoptopenjdk8"
 #brew "htop"
 #brew "hub"
