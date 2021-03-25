@@ -34,7 +34,7 @@ brew "jsonpp"
 #brew "ruby"
 #brew "rpl"
 #brew "tree"
-#brew "wget"
+brew "wget"
 #brew "webpack"
 
 #brew "automake"
