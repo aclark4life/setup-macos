@@ -78,7 +78,7 @@ Install applications
 
 *No Cask available*
 
-- `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_ (``make brew-cask-install-pcloud`` now available via `this gist <https://gist.github.com/tomgross/bae4f30023272d8c8c0d920b62720c6b>`_)
+- `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_ (``make brew-install-cask-pcloud`` now available via `this <https://github.com/tomgross/homebrew-pcloud>`_)
 - Cisco AnyConnect Secure Mobility Client
 - Avid Pro Tools First
 - Adobe Acrobat
