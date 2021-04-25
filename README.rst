@@ -94,12 +94,12 @@ Install Chrome extensions
 Modify Google Chrome settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Settings → Appearance → Show home button ☑︎
-- Settings → Autofill → Passwords → Offer to save passwords ☐
-- Settings → Autofill → Passwords → Auto Sign-in ☐
-- Settings → Autofill → Payment methods → Save and fill payment methods ☐
-- Settings → Autofill → Payment methods → Allow sites to check if you have payment methods saved ☐
-- Settings → Autofill → Addresses and more → Save and fill addresses ☐
+- Settings → Appearance → ☑︎ Show home button
+- Settings → Autofill → ☐ Passwords → Offer to save passwords
+- Settings → Autofill → ☐ Passwords → Auto Sign-in
+- Settings → Autofill → ☐ Payment methods → Save and fill payment methods
+- Settings → Autofill → ☐ Payment methods → Allow sites to check if you have payment methods saved
+- Settings → Autofill → ☐ Addresses and more → Save and fill addresses
 - File → Open Location → chrome://flags/ → Tab Hover Cards → Disabled
 
 Modify Outlook settings
