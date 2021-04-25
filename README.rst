@@ -132,8 +132,8 @@ Keyboard
 ++++++++
 
 - Keyboard → ☑︎ Show keyboard and emoji viewers in menu bar
-- Shortcuts → Mission Control → ☑︎ Move left a space [CMD←]
-- Shortcuts → Mission Control → ☑︎ Move right a space [CMD→]
+- Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
+- Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
 
 Mission Control
 +++++++++++++++
@@ -174,7 +174,7 @@ Profile
 Text
 '''''
 
-- CMD + + + + +
+- ⌘ ++++++++
 - Terminal → Shell → Use Settings as Default
 
 Window
