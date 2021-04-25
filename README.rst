@@ -1,5 +1,5 @@
-Setup macOS (Catalina)
-======================
+Setup macOS (Big Sur)
+=====================
 
 **In just a few easy steps!**
 
