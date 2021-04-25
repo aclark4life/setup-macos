@@ -120,8 +120,8 @@ Dock
 
 - Dock → ☐ Show recent applications in Dock
 
-Energy Saver
-++++++++++++
+Battery
++++++++
 
 - Battery → ☐ Put hard disks to sleep when possible
 - Battery → ☐ Slightly dim the display when on battery power
