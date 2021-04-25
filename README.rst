@@ -105,7 +105,7 @@ Modify Google Chrome settings
 Modify Outlook settings
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-- Outlook → Organize → Focused Inbox ☐
+- Outlook → Organize → ☐ Focused Inbox
 
 Modify System Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
