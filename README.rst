@@ -123,12 +123,10 @@ Dock
 Battery
 +++++++
 
-- Battery → ☐ Put hard disks to sleep when possible
+- Battery → [Never] Turn display off after
 - Battery → ☐ Slightly dim the display when on battery power
-- Battery → Turn display off after [Never]
-- Power Adapter → ☐ Put hard disks to sleep when possible
-- Power Adapter → ☐ Slightly dim the display when on battery power
-- Power Adapter → Turn display off after [Never]
+- Power Adapter → [Never] Turn display off after
+- Power Adapter → ☐ Enable Power Nap while on battery power
 
 Keyboard
 ++++++++
