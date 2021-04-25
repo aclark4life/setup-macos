@@ -186,8 +186,8 @@ Window
 Shell
 '''''
 
-- Terminal → Preferences → Profile → Default → Shell → When the shell exits: [Close the window]
-- Terminal → Preferences → Profile → Default → Shell → Ask before closing: [Never]
+- Terminal → Preferences → Profile → Default → Shell → [Close the window] When the shell exits
+- Terminal → Preferences → Profile → Default → Shell → [Never] Ask before closing
 
 Advanced
 '''''''''
