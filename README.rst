@@ -196,3 +196,8 @@ Advanced
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Visual bell 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Badge app and window Dock 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Bounce app icon when in background 
+
+Install Edge extensions
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- `LastPass <https://microsoftedge.microsoft.com/addons/detail/lastpass-free-password-m/bbcinlkgjjkejfdpemiealijmmooekmp?source=sfw>`_
