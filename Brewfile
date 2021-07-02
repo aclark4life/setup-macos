@@ -3,7 +3,7 @@
 #brew "certbot"
 #brew "composer"
 #brew "coreutils"
-#brew "dcmtk"
+brew "dcmtk"
 #brew "gcal"
 #brew "gdb"
 #brew "git"
