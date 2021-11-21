@@ -14,24 +14,24 @@ First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package M
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+Oh My Zsh
+---------
+
+Second, install Oh My Zsh. "Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration." 
+
+::
+
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 Python
 ------
 
-Second, install Python 3 with dotfiles and checkoutmanager to get dotfiles and other repositories from GitHub.
+Third, install Python 3 with dotfiles and checkoutmanager to get dotfiles and other repositories from GitHub.
 
 ::
 
     brew install python@3.9
     /usr/local/opt/python@3.9/bin/pip3 install dotfiles checkoutmanager
-
-Oh My Zsh
----------
-
-Third, install Oh My Zsh. "Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration." 
-
-::
-
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 Dotfiles
 --------
