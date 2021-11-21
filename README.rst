@@ -47,7 +47,7 @@ Requires token via GitHub → Settings → Developer settings → Personal acces
     cd ~/Dotfiles
     git remote remove origin
     git remote add origin git@github.com:aclark4life/dotfiles.git
-    git push --set-upstream origin master
+    git push --set-upstream origin main
 
 
 GitHub
