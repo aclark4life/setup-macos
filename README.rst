@@ -26,7 +26,7 @@ Second, install Oh My Zsh. "Oh My Zsh is a delightful, open source, community-dr
 Python
 ------
 
-Third, install Python 3 with dotfiles and checkoutmanager to get dotfiles and other repositories from GitHub.
+Third, install Python with `dotfiles <https://pypi.org/project/dotfiles/>`_ and `checkoutmanager <https://pypi.org/project/checkoutmanager/>`_ to get dotfiles and other repositories from GitHub.
 
 ::
 
