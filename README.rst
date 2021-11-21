@@ -82,7 +82,7 @@ Run up:
 Everything Else
 ---------------
 
-After GitHub, my `~/Developer` directory contains many repositories including this one.
+After GitHub, my ``~/Developer`` directory contains many repositories including this one.
 
 ::
 
