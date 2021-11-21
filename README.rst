@@ -79,20 +79,20 @@ Run up:
     up
 
 
-Everything else
+Everything Else
 ---------------
 
-After GitHub, ~/Developer contains many repositories, including this one.
+After GitHub, my `~/Developer` directory contains many repositories including this one.
 
 ::
 
     cd ~/Developer/setup/
     make install
 
-Additional manual steps
+Additional Manual Steps
 -----------------------
 
-Install applications
+Install Applications
 ~~~~~~~~~~~~~~~~~~~~
 
 *No Cask available*
