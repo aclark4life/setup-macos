@@ -95,3 +95,8 @@ start-services:
 brew-install-cask-pcloud:
 	brew install --cask tomgross/pcloud/pcloud
 
+edit:
+	vi README.rst
+
+.PHONY: e
+e: edit
