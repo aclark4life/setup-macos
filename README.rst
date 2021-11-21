@@ -40,7 +40,7 @@ Third, install Python with `dotfiles <https://pypi.org/project/dotfiles/>`_ and 
 Dotfiles
 --------
 
-Requires token via GitHub → Settings → Developer settings → Personal access tokens
+Requires personal access token via `GitHub → Settings → Developer settings → Personal access tokens <https://github.com/settings/tokens>`_.
 
 ::
 
