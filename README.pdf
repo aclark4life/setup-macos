@@ -165,7 +165,7 @@ endobj
 endobj
 25 0 obj
 <<
-/Author () /CreationDate (D:20211121080439+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20211121080439+05'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+/Author () /CreationDate (D:20211121080821+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20211121080821+05'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
   /Subject (\(unspecified\)) /Title (Setup macOS \(Big Sur\)) /Trapped /False
 >>
 endobj
@@ -201,18 +201,18 @@ endobj
 endobj
 32 0 obj
 <<
-/Dest [ 19 0 R /XYZ 62.69291 638.6236 0 ] /Next 33 0 R /Parent 26 0 R /Prev 31 0 R /Title (Everything else)
+/Dest [ 19 0 R /XYZ 62.69291 638.6236 0 ] /Next 33 0 R /Parent 26 0 R /Prev 31 0 R /Title (Everything Else)
 >>
 endobj
 33 0 obj
 <<
 /Count 21 /Dest [ 19 0 R /XYZ 62.69291 542.4236 0 ] /First 34 0 R /Last 54 0 R /Parent 26 0 R /Prev 32 0 R 
-  /Title (Additional manual steps)
+  /Title (Additional Manual Steps)
 >>
 endobj
 34 0 obj
 <<
-/Dest [ 19 0 R /XYZ 62.69291 509.4236 0 ] /Next 35 0 R /Parent 33 0 R /Title (Install applications)
+/Dest [ 19 0 R /XYZ 62.69291 509.4236 0 ] /Next 35 0 R /Parent 33 0 R /Title (Install Applications)
 >>
 endobj
 35 0 obj
@@ -540,7 +540,7 @@ endstream
 endobj
 57 0 obj
 <<
-/Length 8553
+/Length 8597
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
@@ -596,14 +596,13 @@ Q
 q
 1 0 0 1 62.69291 617.6236 cm
 q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Everything else) Tj T* ET
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Everything Else) Tj T* ET
 Q
 Q
 q
 1 0 0 1 62.69291 599.6236 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (After GitHub, ~/Developer contains many repositories, including this one.) Tj T* ET
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (After GitHub, my ) Tj /F3 10 Tf (~/Developer) Tj /F1 10 Tf ( directory contains many repositories including this one.) Tj T* ET
 Q
 Q
 q
@@ -630,13 +629,13 @@ Q
 q
 1 0 0 1 62.69291 521.4236 cm
 q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Additional manual steps) Tj T* ET
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Additional Manual Steps) Tj T* ET
 Q
 Q
 q
 1 0 0 1 62.69291 491.4236 cm
 q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Install applications) Tj T* ET
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Install Applications) Tj T* ET
 Q
 Q
 q
@@ -2146,17 +2145,17 @@ xref
 0000008330 00000 n 
 0000008412 00000 n 
 0000013133 00000 n 
-0000021738 00000 n 
-0000031704 00000 n 
-0000039264 00000 n 
-0000039332 00000 n 
-0000039366 00000 n 
-0000039400 00000 n 
-0000039434 00000 n 
+0000021782 00000 n 
+0000031748 00000 n 
+0000039308 00000 n 
+0000039376 00000 n 
+0000039410 00000 n 
+0000039444 00000 n 
+0000039478 00000 n 
 trailer
 <<
 /ID 
-[<30ae9218a31af122eb8944e1b61f8cb7><30ae9218a31af122eb8944e1b61f8cb7>]
+[<a996b440e5008f9866d56068be4de586><a996b440e5008f9866d56068be4de586>]
 % ReportLab generated PDF document -- digest (http://www.reportlab.com)
 
 /Info 25 0 R
@@ -2164,5 +2163,5 @@ trailer
 /Size 65
 >>
 startxref
-39468
+39512
 %%EOF
