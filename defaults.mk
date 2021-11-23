@@ -1,8 +1,7 @@
-install: defaults-write
-
-defaults-write: defaults-clock defaults-finder defaults-jumpcut defaults-screencapture
+install: defaults-clock defaults-finder defaults-jumpcut defaults-screencapture
 
 defaults-jumpcut:
+	# Jumpcut
 	defaults write net.sf.Jumpcut displayNum 99
 	defaults write net.sf.Jumpcut rememberNum 99
 	defaults write net.sf.Jumpcut loadOnStartup 1
@@ -18,6 +17,7 @@ defaults-clock:
 	defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
 
 defaults-dock:
+	# Dock
 	defaults delete com.apple.dock
 	killall Dock
 	defaults write com.apple.dock show-recents -bool FALSE
@@ -33,4 +33,5 @@ defaults-dock:
 	killall Dock
 
 defaults-screencapture:
+	# Screenshots
 	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
