@@ -102,11 +102,9 @@ System Preferences
 - Battery → ☐ Slightly dim the display when on battery power
 - Displays → Display → ☐ Automatically adjust brightness (hell no!)
 - Dock → ☐ Show recent applications in Dock
-- Keyboard → ☑︎ Show keyboard and emoji viewers in menu bar
-
-  - Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
-  - Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
-
+- Keyboard → Input Sources → ☑︎ Show input menu in menu bar
+- Keyboard → Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
+- Keyboard → Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
 - Mission Control → Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
 - Mission Control → ☐ Displays have separate spaces
 - Power Adapter → [Never] Turn display off after
