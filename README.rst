@@ -98,16 +98,19 @@ System Preferences
 ++++++++++++++++++
 
 - Accessibility → Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: ^Control
-- Dock → ☐ Show recent applications in Dock
 - Battery → [Never] Turn display off after
 - Battery → ☐ Slightly dim the display when on battery power
-- Power Adapter → [Never] Turn display off after
-- Power Adapter → ☐ Enable Power Nap while on battery power
+- Displays → Display → ☐ Automatically adjust brightness (hell no!)
+- Dock → ☐ Show recent applications in Dock
 - Keyboard → ☑︎ Show keyboard and emoji viewers in menu bar
-- Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
-- Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
+
+    - Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
+    - Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
+
 - Mission Control → Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
 - Mission Control → ☐ Displays have separate spaces
+- Power Adapter → [Never] Turn display off after
+- Power Adapter → ☐ Enable Power Nap while on battery power
 - Security & Privacy → General → A login password has been set for this user → ☐ Require password → after sleep or screen saver begins
 - Trackpad → More Gestures → ☐ Swipe between pages
 - Users & Groups → Alex Clark → Login Items → + pCloud Drive
