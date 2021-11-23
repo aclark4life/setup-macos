@@ -120,9 +120,7 @@ Terminal Preferences
 General
 '''''''
 
-- New tabs open with:
-
-  - [Default Working Directory]
+- New tabs open with: [Default Working Directory]
 
 Profiles → Text
 '''''''''''''''
