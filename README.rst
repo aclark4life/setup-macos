@@ -79,9 +79,9 @@ Run ``up``:
 Everything Else
 ---------------
 
-After the GitHub step, my ``~/Developer`` directory contains many repositories including this one. ``make install`` targetlooks like this: `install: defaults pip-install homebrew`
+After the GitHub step, my ``~/Developer`` directory contains many repositories including this one. ``make install`` targetlooks like this: ``install: defaults pip-install homebrew``.
 
-The homebrew target includes casks and casks include pcloud thanks to `this <https://github.com/tomgross/homebrew-pcloud>`_.
+The homebrew target includes casks and casks include pCloud thanks to `this <https://github.com/tomgross/homebrew-pcloud>`_.
 
 ::
 
