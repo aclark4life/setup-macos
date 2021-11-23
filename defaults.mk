@@ -1,4 +1,4 @@
-defaults: defaults-clock defaults-finder defaults-jumpcut defaults-screencapture
+defaults: defaults-clock defaults-finder defaults-jumpcut
 
 defaults-clock:
 	# Show date on clock
@@ -15,7 +15,3 @@ defaults-jumpcut:
 	defaults write net.sf.Jumpcut rememberNum 99
 	defaults write net.sf.Jumpcut loadOnStartup 1
 	defaults write net.sf.Jumpcut SUCheckAtStartup 1
-
-defaults-screencapture:
-	# Screenshots
-	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
