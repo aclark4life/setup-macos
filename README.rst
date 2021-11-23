@@ -108,7 +108,7 @@ System Preferences
 - Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
 - Mission Control → Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
 - Mission Control → ☐ Displays have separate spaces
-- Security & Privacy → General → A login password has been set for this user → ☐ Require password ________ after sleep or screen saver begins
+- Security & Privacy → General → A login password has been set for this user → ☐ Require password → after sleep or screen saver begins
 - Trackpad → More Gestures → ☐ Swipe between pages
 - Users & Groups → Alex Clark → Login Items → + pCloud Drive
 - Users & Groups → Alex Clark → Login Items → + Jumpcut
