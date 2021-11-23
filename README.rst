@@ -57,9 +57,7 @@ Requires personal access token via `GitHub → Settings → Developer settings �
 GitHub
 ------
 
-After dotfiles, `up` alias available from (my private) `~/Dotfiles/zshrc`
-
-`up` aliased to: 
+After dotfiles, `up` alias available from (my private) `~/Dotfiles/zshrc`. `up` aliased to: 
 
 ::
 
@@ -72,12 +70,11 @@ After dotfiles, `up` alias available from (my private) `~/Dotfiles/zshrc`
     checkoutmanager up
     checkoutmanager missing
 
-Run up:
+Run `up`:
 
 ::
 
     up
-
 
 Everything Else
 ---------------
