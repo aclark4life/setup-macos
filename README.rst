@@ -81,50 +81,15 @@ Everything Else
 
 After GitHub, my ``~/Developer`` directory contains many repositories including this one.
 
+`this <https://github.com/tomgross/homebrew-pcloud>`_
+
 ::
 
     cd ~/Developer/setup/
     make install
 
-Additional Manual Steps
------------------------
-
-Install Applications
-~~~~~~~~~~~~~~~~~~~~
-
-*No Cask available*
-
-- `pCloud <https://www.pcloud.com/how-to-install-pcloud-drive-mac-os.html?download=mac>`_ (``make brew-install-cask-pcloud`` now available via `this <https://github.com/tomgross/homebrew-pcloud>`_)
-- Cisco AnyConnect Secure Mobility Client
-- Avid Pro Tools
-- Adobe Acrobat
-
-Install Chrome extensions
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- `LastPass <https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=en-US>`_
-- `Corporate Ipsum <https://chrome.google.com/webstore/detail/corporate-ipsum/lfmadckmfehehmdnmhaebniooenedcbb?hl=en>`_
-- `ColorZilla <https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en>`_
-- `MeasureIt <https://chrome.google.com/webstore/detail/measure-it/jocbgkoackihphodedlefohapackjmna?hl=en>`_
-
-Modify Google Chrome settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- Settings → Appearance → ☑︎ Show home button
-- Settings → Autofill → ☐ Passwords → Offer to save passwords
-- Settings → Autofill → ☐ Passwords → Auto Sign-in
-- Settings → Autofill → ☐ Payment methods → Save and fill payment methods
-- Settings → Autofill → ☐ Payment methods → Allow sites to check if you have payment methods saved
-- Settings → Autofill → ☐ Addresses and more → Save and fill addresses
-- File → Open Location → chrome://flags/ → Tab Hover Cards → Disabled
-
-Modify Outlook settings
-~~~~~~~~~~~~~~~~~~~~~~~
-
-- Outlook → Organize → ☐ Focused Inbox
-
-Modify System Preferences
-~~~~~~~~~~~~~~~~~~~~~~~~~
+System Preferences
+~~~~~~~~~~~~~~~~~~
 
 Accessibility
 +++++++++++++
@@ -174,8 +139,8 @@ Users & Groups
 - Users & Groups → Alex Clark → Login Items → + Jumpcut
 - Users & Groups → Login Options → Automatic Login → Alex Clark
 
-Modify Terminal Preferences
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Terminal Preferences
+~~~~~~~~~~~~~~~~~~~~
 
 General
 +++++++
@@ -213,7 +178,7 @@ Advanced
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Badge app and window Dock 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Bounce app icon when in background 
 
-Install Edge extensions
-~~~~~~~~~~~~~~~~~~~~~~~
+Edge Extensions
+~~~~~~~~~~~~~~~
 
 - `LastPass <https://microsoftedge.microsoft.com/addons/detail/lastpass-free-password-m/bbcinlkgjjkejfdpemiealijmmooekmp?source=sfw>`_
