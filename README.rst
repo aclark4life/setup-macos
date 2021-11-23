@@ -79,106 +79,77 @@ Run `up`:
 Everything Else
 ---------------
 
-After GitHub, my ``~/Developer`` directory contains many repositories including this one.
+After the GitHub step, my ``~/Developer`` directory contains many repositories including this one. `make install` targetlooks like this: `install: defaults pip-install homebrew`
 
-`this <https://github.com/tomgross/homebrew-pcloud>`_
+The homebrew target includes casks and casks include pcloud thanks to `this <https://github.com/tomgross/homebrew-pcloud>`_.
 
 ::
 
     cd ~/Developer/setup/
     make install
 
-System Preferences
-~~~~~~~~~~~~~~~~~~
 
-Accessibility
-+++++++++++++
+Manual steps
+~~~~~~~~~~~~
+
+Now we get into whatever is left after automation. Ideally these could be done with `defaults write` but have not been yet.
+
+System Preferences
+++++++++++++++++++
 
 - Accessibility → Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: ^Control
-
-Dock
-++++
-
 - Dock → ☐ Show recent applications in Dock
-
-Battery
-+++++++
-
 - Battery → [Never] Turn display off after
 - Battery → ☐ Slightly dim the display when on battery power
 - Power Adapter → [Never] Turn display off after
 - Power Adapter → ☐ Enable Power Nap while on battery power
-
-Keyboard
-++++++++
-
 - Keyboard → ☑︎ Show keyboard and emoji viewers in menu bar
 - Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
 - Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
-
-Mission Control
-+++++++++++++++
-
 - Mission Control → Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
 - Mission Control → ☐ Displays have separate spaces
-
-Security & Privacy 
-++++++++++++++++++
-
 - Security & Privacy → General → A login password has been set for this user → ☐ Require password ________ after sleep or screen saver begins
-
-Trackpad
-++++++++
-
 - Trackpad → More Gestures → ☐ Swipe between pages
-
-Users & Groups
-++++++++++++++
-
 - Users & Groups → Alex Clark → Login Items → + pCloud Drive
 - Users & Groups → Alex Clark → Login Items → + Jumpcut
 - Users & Groups → Login Options → Automatic Login → Alex Clark
 
 Terminal Preferences
-~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++
 
 General
-+++++++
+'''''''
 
 - New tabs open with:
 
   - [Default Working Directory]
 
-Profile
-+++++++
-
-Text
-'''''
-
+Profiles → Text
+'''''''''''''''
 - ⌘ ++++++++
 - Terminal → Shell → Use Settings as Default
 
-Window
-'''''''''
+Profiles → Window
+'''''''''''''''''
 
 - 80x24 → 120x36
 - Terminal → Shell → Use Settings as Default
 
-Shell
-'''''
+Profiles → Shell
+''''''''''''''''
 
 - Terminal → Preferences → Profile → Default → Shell → [Close the window] When the shell exits
 - Terminal → Preferences → Profile → Default → Shell → [Never] Ask before closing
 
-Advanced
-'''''''''
+Profiles → Advanced
+'''''''''''''''''''
 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Audible bell 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Visual bell 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Badge app and window Dock 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Bounce app icon when in background 
 
-Edge Extensions
-~~~~~~~~~~~~~~~
+Install Edge Extensions
++++++++++++++++++++++++
 
 - `LastPass <https://microsoftedge.microsoft.com/addons/detail/lastpass-free-password-m/bbcinlkgjjkejfdpemiealijmmooekmp?source=sfw>`_
