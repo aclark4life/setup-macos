@@ -104,8 +104,8 @@ System Preferences
 - Dock → ☐ Show recent applications in Dock
 - Keyboard → ☑︎ Show keyboard and emoji viewers in menu bar
 
-    - Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
-    - Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
+  - Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
+  - Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
 
 - Mission Control → Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
 - Mission Control → ☐ Displays have separate spaces
