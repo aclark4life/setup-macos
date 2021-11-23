@@ -92,7 +92,7 @@ The homebrew target includes casks and casks include pCloud thanks to `this <htt
 Manual steps
 ~~~~~~~~~~~~
 
-Now we get into whatever tasks are left after automation. Ideally these could be done with `defaults write` but have not been yet.
+Now we get into whatever tasks are left after automation. Ideally these could be done with ``defaults write`` but have not been yet.
 
 System Preferences
 ++++++++++++++++++
