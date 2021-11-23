@@ -1,7 +1,7 @@
 awscli
 awsebcli
-buku
-black
-flake8
-tmp
-virtualenv
+# buku
+# black
+# flake8
+# tmp
+# virtualenv

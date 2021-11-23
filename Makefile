@@ -57,3 +57,5 @@ include base.mk
 
 
 include defaults.mk
+
+install: defaults pip-install
