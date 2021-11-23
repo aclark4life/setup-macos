@@ -58,4 +58,7 @@ include base.mk
 
 include defaults.mk
 
-install: defaults pip-install
+homebrew:
+	brew bundle
+
+install: defaults pip-install homebrew
