@@ -1,8 +1,15 @@
-# https://github.com/aclark4life/project-makefile
+# Project Makefile
+# ================
 #
-# The MIT License (MIT)
+# A generic makefile for projects
 #
-# Copyright (c) 2016–2020 Alex Clark
+# - https://github.com/project-makefile/project-makefile
+#
+#
+# License
+# ------------------------------------------------------------------------------ 
+#
+# Copyright 2016—2021 Jeffrey A. Clark, "Alex"
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -22,81 +29,28 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+
+#
+#
+# Includes
+# ------------------------------------------------------------------------------ 
+#
 include base.mk
-
-#-------------------------------------------------------------------------------
 #
-# Custom Overrides
+# Overrides
+# ------------------------------------------------------------------------------ 
 #
-# https://stackoverflow.com/a/49804748
-
-#PROJECT = project
-#APP = app
-.DEFAULT_GOAL=commit-push
-install: pip-install brew-bundle defaults-write start-services
-#serve: django-serve
-#virtualenv: python-virtualenv-3-7
-
-brew-bundle:
-	# Install Brewfile brews
-	brew bundle
-
-defaults-write: defaults-clock defaults-finder defaults-jumpcut defaults-screencapture
-
-defaults-jumpcut:
-	defaults write net.sf.Jumpcut displayNum 99
-	defaults write net.sf.Jumpcut rememberNum 99
-	defaults write net.sf.Jumpcut loadOnStartup 1
-	defaults write net.sf.Jumpcut SUCheckAtStartup 1
-
-defaults-finder:
-	# New Finder Window opens HOME
-	defaults write com.apple.finder NewWindowTarget "PfHm"
-	defaults write com.apple.finder NewWindowTargetPath "file:///${HOME}/"
-
-defaults-clock:
-	# Show date on clock
-	defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
-
-
-# dockutil --add "/Applications/Google Chrome.app"
-# Traceback (most recent call last):
-#   File "/usr/local/bin/dockutil", line 669, in <module>
-#     main()
-#   File "/usr/local/bin/dockutil", line 370, in main
-#     if addItem(pl, real_add_path, replace_label, position, before_item, after_item, section, displayas, showas, arrangement, tile_type, label_name):
-#   File "/usr/local/bin/dockutil", line 545, in addItem
-#     for existing_dock_item in (pl[section]):
-# KeyError: 'persistent-apps'
-# make: *** [defaults-dock] Error 1
-defaults-dock:
-	defaults delete com.apple.dock
-	killall Dock
-	defaults write com.apple.dock show-recents -bool FALSE
-	dockutil --add "/Applications/Google Chrome.app"
-	dockutil --add "/System/Applications/Utilities/Terminal.app"
-	dockutil --add "/Applications/Microsoft Outlook.app"
-	dockutil --add "/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app"
-	dockutil --add "/Applications/MIDIrouter.app"
-	dockutil --remove 'Keynote'
-	dockutil --remove 'Numbers'
-	dockutil --remove 'Pages'
-	defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
-	killall Dock
-
-defaults-screencapture:
-	defaults write com.apple.screencapture location /Users/alexclark/pCloud\ Drive/Screenshots
-
-start-services:
-#	brew services start mysql
-	brew services start postgresql
-	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
-
-brew-install-cask-pcloud:
-	brew install --cask tomgross/pcloud/pcloud
-
-edit:
-	vi README.rst
-
-.PHONY: e
-e: edit
+# E.g.
+#
+# Uncomment next line to customize the default goal
+#.DEFAULT_GOAL := commit-push
+#
+# Uncomment next line to customize the project name
+#PROJECT_NAME := my_project
+#
+# Uncomment next line to customize the commit message
+#COMMIT_MESSAGE := Update
+#
+# Uncomment next two lines to add a "phony" target
+#.PHONY: serve
+#serve: django-serve-webpack
