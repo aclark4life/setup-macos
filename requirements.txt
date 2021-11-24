@@ -1,5 +1,6 @@
 awscli
 awsebcli
+tmp
 # buku
 # black
 # flake8
