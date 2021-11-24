@@ -1,6 +1,5 @@
 awscli
 awsebcli
-pyenv
 # buku
 # black
 # flake8
