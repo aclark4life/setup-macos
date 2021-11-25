@@ -1,9 +1,2 @@
-awscli
-awsebcli
 black
 tmp
-# buku
-# black
-# flake8
-# tmp
-# virtualenv
