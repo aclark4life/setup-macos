@@ -1,3 +1,5 @@
+brew "awscli"
+brew "awsebcli"
 #brew "bash"
 #brew "cbmbasic"
 #brew "certbot"
