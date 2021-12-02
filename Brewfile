@@ -123,5 +123,6 @@ cask "sublime-text"
 #cask "xquartz"
 #cask "universal-media-server"
 
+cask "microsoft-remote-desktop"
 cask "zoom"
 cask "tomgross/pcloud/pcloud"
