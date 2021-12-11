@@ -122,6 +122,7 @@ cask "sublime-text"
 #cask "wireshark"
 #cask "xquartz"
 #cask "universal-media-server"
+cask "zork"
 
 cask "microsoft-remote-desktop"
 cask "zoom"
