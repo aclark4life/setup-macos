@@ -57,7 +57,7 @@ Requires personal access token via `GitHub → Settings → Developer settings �
 GitHub
 ------
 
-After dotfiles, `up` alias available from my `~/Dotfiles/zshrc`.
+After dotfiles, ``up`` alias available from my `~/Dotfiles/zshrc`.
 
 ::
 
