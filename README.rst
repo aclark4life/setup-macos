@@ -57,20 +57,7 @@ Requires personal access token via `GitHub → Settings → Developer settings �
 GitHub
 ------
 
-After dotfiles, `up` alias available from (my private) `~/Dotfiles/zshrc`. `up` aliased to: 
-
-::
-
-    pushd ~/Dotfiles
-    git pull
-    git commit -a -m 'Update'
-    git push
-    popd
-    checkoutmanager co
-    checkoutmanager up
-    checkoutmanager missing
-
-Run ``up``:
+After dotfiles, `up` alias available from my `~/Dotfiles/zshrc`.
 
 ::
 
@@ -88,11 +75,8 @@ The homebrew target includes casks and casks include pCloud thanks to `this <htt
     cd ~/Developer/setup/
     make install
 
-
 Manual steps
 ~~~~~~~~~~~~
-
-Now we get into whatever tasks are left after automation. Ideally these could be done with ``defaults write`` but have not been yet.
 
 System Preferences
 ++++++++++++++++++
@@ -147,8 +131,3 @@ Profiles → Advanced
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Visual bell 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Badge app and window Dock 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Bounce app icon when in background 
-
-Install Edge Extensions
-+++++++++++++++++++++++
-
-- `LastPass <https://microsoftedge.microsoft.com/addons/detail/lastpass-free-password-m/bbcinlkgjjkejfdpemiealijmmooekmp?source=sfw>`_
