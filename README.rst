@@ -35,7 +35,7 @@ Third, install Python with `dotfiles <https://pypi.org/project/dotfiles/>`_ and 
 
 **Just a few more steps!**
 
-(Hang in here… some of these apply to me only so you can skip.)
+(Hang in here… )
 
 Dotfiles
 --------
