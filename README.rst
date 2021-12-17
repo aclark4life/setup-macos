@@ -77,8 +77,8 @@ System Preferences
 - Users & Groups → Alex Clark → Login Items → + Jumpcut
 - Users & Groups → Login Options → Automatic Login → Alex Clark
 
-Terminal Preferences
-~~~~~~~~~~~~~~~~~~~~
+Terminal → Preferences…
+~~~~~~~~~~~~~~~~~~~~~~~
 
 General
 '''''''
