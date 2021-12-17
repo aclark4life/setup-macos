@@ -58,7 +58,7 @@ Requires `dotfiles <https://pypi.org/project/dotfiles/>`_ and GitHub Personal ac
 Developer
 ~~~~~~~~~~~~~~~~~~~
 
-Updates dotfiles and installs repositories defined in `.checkoutmanager.cfg <https://github.com/reinout/checkoutmanager/blob/master/checkoutmanager/sample.cfg>`_ via ``up`` alias.
+Update dotfiles and repositories defined in `.checkoutmanager.cfg <https://github.com/reinout/checkoutmanager/blob/master/checkoutmanager/sample.cfg>`_ via ``up`` alias.
 
 
 .. image:: screenshot.png
