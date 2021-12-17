@@ -59,10 +59,21 @@ Requires `dotfiles <https://pypi.org/project/dotfiles/>`_ and GitHub Personal ac
 System Preferences
 ~~~~~~~~~~~~~~~~~~
 
+Accessibility
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Accessibility → Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: ^Control
+
+Accessibility
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Battery → [Never] Turn display off after
 - Battery → ☐ Slightly dim the display when on battery power
+
+Accessibility
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Displays → Display → ☐ Automatically adjust brightness (hell no!)
+
+Accessibility
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Dock → ☐ Show recent applications in Dock
 - Keyboard → Input Sources → ☑︎ Show input menu in menu bar
 - Keyboard → Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
