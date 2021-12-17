@@ -1,9 +1,7 @@
 Setup macOS
 ===========
 
-**In just a few easy steps!**
-
-Kidding… never easy enough, but not too bad either.
+In just a few easy steps! Kidding… never easy enough, but not too bad either.
 
 Homebrew
 --------
@@ -34,9 +32,10 @@ Third, install `Python <https://www.python.org/>`_.
 
     brew install python@3.9
 
-**Just a few more steps!**
+Everything Else
+---------------
 
-Hang in here…
+Just a few more steps! Hang in here…
 
 ..  /usr/local/opt/python@3.9/bin/pip3 install dotfiles checkoutmanager
 
