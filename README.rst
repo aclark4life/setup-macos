@@ -63,6 +63,8 @@ Developer
 Installs repositories defined in `.checkoutmanager.cfg <https://github.com/reinout/checkoutmanager/blob/master/checkoutmanager/sample.cfg`_ via `up` alias.
 
 
+.. image:: screenshot.png
+
 
 ::
 
