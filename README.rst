@@ -53,6 +53,8 @@ Requires personal access token via `GitHub → Settings → Developer settings �
     git remote add origin git@github.com:aclark4life/dotfiles.git
     git push --set-upstream origin main
 
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 
 GitHub
 ------
