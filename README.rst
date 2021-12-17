@@ -35,31 +35,19 @@ Third, install `Python <https://www.python.org/>`_ via `pipx <https://pypa.githu
 Everything Else
 ---------------
 
-Just a few more steps! Hang in here…
+Just a few more steps! Hang in there.
+
+Dotfiles
+~~~~~~~~
 
 ..  /usr/local/opt/python@3.9/bin/pip3 install dotfiles checkoutmanager
 
-Dotfiles
---------
-
-Requires personal access token via `GitHub → Settings → Developer settings → Personal access tokens <https://github.com/settings/tokens>`_. Also requires login to `Safari → https://lastpass.com <https://lastpass.com>`_ for GitHub credentials.
+.. Requires personal access token via `GitHub → Settings → Developer settings → Personal access tokens <https://github.com/settings/tokens>`_. Also requires login to `Safari → https://lastpass.com <https://lastpass.com>`_ for GitHub credentials.
 
 ::
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup/main/dotfiles.sh)"
 
-
-GitHub
-------
-
-After dotfiles, ``up`` alias available from my `~/Dotfiles/zshrc`.
-
-::
-
-    up
-
-Everything Else
----------------
 
 ::
 
