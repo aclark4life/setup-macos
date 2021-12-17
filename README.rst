@@ -40,7 +40,7 @@ Just a few more steps! Hang in there.
 Firefox + LastPass
 ~~~~~~~~~~~~~~~~~~
 
-Install `Firefox <https://mozilla.org>`_  then install the `LastPass Password Manager Add-On <https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/>`_
+Install `Firefox <https://mozilla.org>`_  then install the `LastPass Password Manager Add-On <https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/>`_.
 
 ::
 
