@@ -56,11 +56,8 @@ Requires `dotfiles <https://pypi.org/project/dotfiles/>`_ and GitHub Personal ac
     pipx install dotfiles
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup/main/dotfiles.sh)"
 
-Manual steps
-~~~~~~~~~~~~
-
 System Preferences
-++++++++++++++++++
+~~~~~~~~~~~~~~~~~~
 
 - Accessibility → Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: ^Control
 - Battery → [Never] Turn display off after
@@ -81,7 +78,7 @@ System Preferences
 - Users & Groups → Login Options → Automatic Login → Alex Clark
 
 Terminal Preferences
-++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~
 
 General
 '''''''
