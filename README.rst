@@ -8,7 +8,7 @@ Kidding… never easy enough, but not too bad either.
 Homebrew
 --------
 
-`Homebrew <https://brew.sh>`_ is "The Missing Package Manager for macOS (or Linux)".
+First, install `Homebrew <https://brew.sh>`_. 
 
 ::
 
@@ -17,7 +17,7 @@ Homebrew
 Oh My Zsh
 ---------
 
-"Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration."
+Second, install `Oh My ZSH <https://ohmyz.sh/>`_.
 
 ::
 
@@ -26,7 +26,9 @@ Oh My Zsh
 Python
 ------
 
-Third, install Python with `dotfiles <https://pypi.org/project/dotfiles/>`_ and `checkoutmanager <https://pypi.org/project/checkoutmanager/>`_ to get dotfiles and other repositories from GitHub.
+Third, install `Python <https://www.python.org/>`_.
+
+.. with `dotfiles <https://pypi.org/project/dotfiles/>`_ and `checkoutmanager <https://pypi.org/project/checkoutmanager/>`_ to get dotfiles and other repositories from GitHub.
 
 ::
 
