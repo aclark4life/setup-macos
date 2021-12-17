@@ -56,6 +56,16 @@ Requires `dotfiles <https://pypi.org/project/dotfiles/>`_ and GitHub Personal ac
     pipx install dotfiles
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup/main/dotfiles.sh)"
 
+
+Developer
+~~~~~~~~~~~~~~~~~~~
+
+::
+
+    pipx install checkoutmanager
+    checkoutmanager co
+
+
 System Preferences
 ~~~~~~~~~~~~~~~~~~
 
