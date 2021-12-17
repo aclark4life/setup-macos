@@ -8,7 +8,7 @@ Kidding… never easy enough, but not too bad either.
 Homebrew
 --------
 
-First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package Manager for macOS (or Linux)". With it, you can easily install a seemingly endless amount of useful software with it (now with bash installer!)
+`Homebrew <https://brew.sh>`_ is "The Missing Package Manager for macOS (or Linux)".
 
 ::
 
@@ -17,7 +17,7 @@ First, install Homebrew. `Homebrew <https://brew.sh>`_ is "The Missing Package M
 Oh My Zsh
 ---------
 
-Second, install Oh My Zsh. "Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration." 
+"Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration."
 
 ::
 
