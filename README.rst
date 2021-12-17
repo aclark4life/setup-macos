@@ -33,11 +33,12 @@ Third, install `Python <https://www.python.org/>`_.
 ::
 
     brew install python@3.9
-    /usr/local/opt/python@3.9/bin/pip3 install dotfiles checkoutmanager
 
 **Just a few more steps!**
 
-(Hang in here… )
+Hang in here…
+
+..  /usr/local/opt/python@3.9/bin/pip3 install dotfiles checkoutmanager
 
 Dotfiles
 --------
