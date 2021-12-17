@@ -60,10 +60,14 @@ Requires `dotfiles <https://pypi.org/project/dotfiles/>`_ and GitHub Personal ac
 Developer
 ~~~~~~~~~~~~~~~~~~~
 
+Installs repositories defined in `.checkoutmanager.cfg <https://github.com/reinout/checkoutmanager/blob/master/checkoutmanager/sample.cfg`_ via `up` alias.
+
+
+
 ::
 
     pipx install checkoutmanager
-    checkoutmanager co
+    up
 
 
 System Preferences
