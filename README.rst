@@ -21,16 +21,16 @@ Second, install `Oh My ZSH <https://ohmyz.sh/>`_.
 
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-Python
-------
+Python + pipx
+-------------
 
-Third, install `Python <https://www.python.org/>`_.
+Third, install `Python <https://www.python.org/>`_ via `pipx <https://pypa.github.io/pipx/`_.
 
 .. with `dotfiles <https://pypi.org/project/dotfiles/>`_ and `checkoutmanager <https://pypi.org/project/checkoutmanager/>`_ to get dotfiles and other repositories from GitHub.
 
 ::
 
-    brew install python@3.9
+    brew install pipx
 
 Everything Else
 ---------------
