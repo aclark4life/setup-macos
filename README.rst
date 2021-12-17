@@ -24,7 +24,7 @@ Second, install `Oh My ZSH <https://ohmyz.sh/>`_.
 Python + pipx
 -------------
 
-Third, install `Python <https://www.python.org/>`_ via `pipx <https://pypa.github.io/pipx/`_.
+Third, install `Python <https://www.python.org/>`_ via `pipx <https://pypa.github.io/pipx/>`_.
 
 .. with `dotfiles <https://pypi.org/project/dotfiles/>`_ and `checkoutmanager <https://pypi.org/project/checkoutmanager/>`_ to get dotfiles and other repositories from GitHub.
 
