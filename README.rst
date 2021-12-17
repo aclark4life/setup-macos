@@ -63,27 +63,45 @@ Accessibility
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Accessibility → Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: ^Control
 
-Accessibility
+Battery
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Battery → [Never] Turn display off after
 - Battery → ☐ Slightly dim the display when on battery power
 
-Accessibility
+Displays
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Displays → Display → ☐ Automatically adjust brightness (hell no!)
 
-Accessibility
+Dock
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Dock → ☐ Show recent applications in Dock
+
+Keyboard
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Keyboard → Input Sources → ☑︎ Show input menu in menu bar
 - Keyboard → Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
 - Keyboard → Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
+
+Mission Control
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Mission Control → Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
 - Mission Control → ☐ Displays have separate spaces
+
+Power Adapter
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Power Adapter → [Never] Turn display off after
 - Power Adapter → ☐ Enable Power Nap while on battery power
+
+Security & Privacy
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Security & Privacy → General → A login password has been set for this user → ☐ Require password → after sleep or screen saver begins
+
+Trackpad
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Trackpad → More Gestures → ☐ Swipe between pages
+
+Users & Groups
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 - Users & Groups → Alex Clark → Login Items → + pCloud Drive
 - Users & Groups → Alex Clark → Login Items → + Jumpcut
 - Users & Groups → Login Options → Automatic Login → Alex Clark
