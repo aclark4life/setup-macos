@@ -1,1 +1,4 @@
-Brewfile.lock.json
+bin/
+lib/
+pyvenv.cfg
+__pycache__
