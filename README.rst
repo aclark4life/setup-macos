@@ -49,18 +49,12 @@ Install `Firefox <https://mozilla.org>`_  then install the `LastPass Password Ma
 Dotfiles
 ~~~~~~~~
 
-Requires personal access token via `GitHub → Settings → Developer settings → Personal access tokens <https://github.com/settings/tokens>`_. Also requires login to `Safari → https://lastpass.com <https://lastpass.com>`_ for GitHub credentials.
+Requires `dotfiles <https://pypi.org/project/dotfiles/>`_ and GitHub Personal access token from `GitHub → Settings → Developer settings → Personal access tokens <https://github.com/settings/tokens>`_.
 
 ::
 
     pipx install dotfiles
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup/main/dotfiles.sh)"
-
-
-::
-
-    cd ~/Developer/setup/
-    make install
 
 Manual steps
 ~~~~~~~~~~~~
