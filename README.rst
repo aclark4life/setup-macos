@@ -26,8 +26,6 @@ Python + pipx
 
 Third, install `Python <https://www.python.org/>`_ via `pipx <https://pypa.github.io/pipx/>`_.
 
-.. with `dotfiles <https://pypi.org/project/dotfiles/>`_ and `checkoutmanager <https://pypi.org/project/checkoutmanager/>`_ to get dotfiles and other repositories from GitHub.
-
 ::
 
     brew install pipx
@@ -60,7 +58,7 @@ Requires `dotfiles <https://pypi.org/project/dotfiles/>`_ and GitHub Personal ac
 Developer
 ~~~~~~~~~~~~~~~~~~~
 
-Installs repositories defined in `.checkoutmanager.cfg <https://github.com/reinout/checkoutmanager/blob/master/checkoutmanager/sample.cfg`_ via `up` alias.
+Installs repositories defined in `.checkoutmanager.cfg <https://github.com/reinout/checkoutmanager/blob/master/checkoutmanager/sample.cfg>`_ via `up` alias.
 
 
 .. image:: screenshot.png
