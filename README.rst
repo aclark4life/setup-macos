@@ -1,5 +1,5 @@
-Setup macOS (Big Sur)
-=====================
+Setup macOS
+===========
 
 **In just a few easy steps!**
 
