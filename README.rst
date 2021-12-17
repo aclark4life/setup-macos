@@ -37,15 +37,21 @@ Everything Else
 
 Just a few more steps! Hang in there.
 
-Dotfiles
-~~~~~~~~
-
-..  /usr/local/opt/python@3.9/bin/pip3 install dotfiles checkoutmanager
-
-.. Requires personal access token via `GitHub → Settings → Developer settings → Personal access tokens <https://github.com/settings/tokens>`_. Also requires login to `Safari → https://lastpass.com <https://lastpass.com>`_ for GitHub credentials.
+`Firefox <https://mozilla.org>`_ + `LastPass <https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
+    brew install --cask firefox
+
+Dotfiles
+~~~~~~~~
+
+Requires personal access token via `GitHub → Settings → Developer settings → Personal access tokens <https://github.com/settings/tokens>`_. Also requires login to `Safari → https://lastpass.com <https://lastpass.com>`_ for GitHub credentials.
+
+::
+
+    pipx install dotfiles
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup/main/dotfiles.sh)"
 
 
