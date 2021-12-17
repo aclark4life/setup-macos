@@ -37,8 +37,10 @@ Everything Else
 
 Just a few more steps! Hang in there.
 
-`Firefox <https://mozilla.org>`_ + `LastPass <https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/>`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Firefox + LastPass
+~~~~~~~~~~~~~~~~~~
+
+Install `Firefox <https://mozilla.org>`_  then install the `LastPass Password Manager Add-On <https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/>`_
 
 ::
 
