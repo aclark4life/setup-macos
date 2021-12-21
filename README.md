@@ -7,7 +7,7 @@ In just a few easy steps! Kidding. Never easy enough, but not too bad either.
 First, install Homebrew.
 
 ```console
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ## Oh My Zsh
@@ -15,7 +15,7 @@ First, install Homebrew.
 Second, install Oh My ZSH.
 
 ```console
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 ## Python + pipx
@@ -23,7 +23,7 @@ Second, install Oh My ZSH.
 Third, install Python via pipx. 
 
 ```console
-    brew install pipx
+brew install pipx
 ```
 
 ## Everything Else
@@ -35,7 +35,7 @@ Just a few more steps! Hang in there.
 Install Firefox then install the [LastPass Password Manager Add-On](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager).
 
 ```console
-    brew install --cask firefox
+brew install --cask firefox
 ```
 
 ### Dotfiles
@@ -44,8 +44,8 @@ Requires [dotfiles](https://pypi.org/project/dotfiles) and GitHub Personal acces
 
 
 ```console
-    pipx install dotfiles
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup/main/dotfiles.sh)"
+pipx install dotfiles
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup/main/dotfiles.sh)"
 ```
 
 ### Developer
@@ -55,8 +55,8 @@ Update dotfiles and repositories defined in [.checkoutmanager.cfg](https://githu
 ![screenshot](screenshot.png)
 
 ```console
-    pipx install checkoutmanager
-    up
+pipx install checkoutmanager
+up
 ```
 
 ### System Preferences
