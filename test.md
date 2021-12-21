@@ -1,4 +1,0 @@
-```console
-
-cut/paste me
-```
