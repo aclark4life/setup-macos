@@ -63,7 +63,7 @@ up
 
 #### Accessibility
 
-- Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: [^Control]
+- Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: `[^Control]`
 
 #### Battery
 
