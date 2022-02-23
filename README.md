@@ -42,7 +42,6 @@ brew install --cask firefox
 
 Requires [dotfiles](https://pypi.org/project/dotfiles) and GitHub Personal access token from [GitHub → Settings → Developer settings → Personal access tokens](https://github.com/settings/tokens).
 
-
 ```console
 pipx install dotfiles
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup/main/dotfiles.sh)"
@@ -59,13 +58,15 @@ pipx install checkoutmanager
 up
 ```
 
-### System Preferences
+## System Preferences
 
-#### Accessibility
+OK I lied. More manual steps.
+
+### Accessibility
 
 - Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: [^Control]
 
-#### Battery
+### Battery
 
 - Battery → Turn display off after [Never]
 - Battery → ☐ Slightly dim the display when on battery power
@@ -73,67 +74,67 @@ up
 - Power Adapter → Turn display off after [Never]
 - Power Adapter → ☐ Enable Power Nap while plugged into a power adapter
 
-#### Desktop & Screen Saver
+### Desktop & Screen Saver
 
 - Desktop
 
-#### Displays
+### Displays
 
 - ☐ Automatically adjust brightness
 
-#### Dock & Menu Bar
+### Dock & Menu Bar
 
 - Dock & Menu Bar → ☐ Show recent applications in Dock
 
-#### Keyboard
+### Keyboard
 
 - Input Sources → ☑︎ Show input menu in menu bar
 - Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
 - Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
 
-#### Mission Control
+### Mission Control
 
 - Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
 - ☐ Displays have separate spaces
 
-#### Security & Privacy
+### Security & Privacy
 
 - General → A login password has been set for this user → ☐ Require password
 
-#### Trackpad
+### Trackpad
 
 - More Gestures → ☐ Swipe between pages
 
-#### Users & Groups
+### Users & Groups
 
 - Alex Clark → Login Items → + pCloud Drive
 - Alex Clark → Login Items → + Jumpcut
 - Login Options → Automatic Login → Alex Clark
 
-### Terminal
+## Terminal
 
 - ⌘ ++++
 - Terminal → Shell → Use Settings as Default
 
-#### Preferences…
+### Preferences…
 
-##### General
+#### General
 
 - New tabs open with: [Default Working Directory]
 
-##### Profiles → Advanced → Bell
+#### Profiles → Advanced → Bell
 
 - ☐ Audible bell 
 - ☐ Visual bell 
 - ☐ Badge app and window Dock 
 - ☐ Bounce app icon when in background 
 
-##### Profiles → Shell
+#### Profiles → Shell
 
 - [Close the window] When the shell exits
 - [Never] Ask before closing
 
-##### Profiles → Window
+#### Profiles → Window
 
 - Window Size → Columns → 120
 - Window Size → Rows → 36
