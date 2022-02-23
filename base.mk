@@ -488,7 +488,7 @@ sphinx-build-default:
 	sphinx-build -b html -d _build/doctrees . _build/html
 
 sphinx-init:
-	$(MAKE) pip-install-sphinx
+	$(MAKE) sphinx-install
 	sphinx-quickstart -q -p $(PROJECT_NAME) -a $(USER) -v 0.0.1 $(RANDIR)
 	mv $(RANDIR)/* .
 	rmdir $(RANDIR)
@@ -536,7 +536,7 @@ wagtail-init-default:
 	@$(MAKE) django-webpack-init
 	git add frontend
 	@$(MAKE) django-npm-install
-	@$(MAKE) migrate
+	@$(MAKE) django-migrate
 	@$(MAKE) su
 	@echo "$$HOME_PAGE" > home/templates/home/home_page.html
 
@@ -557,19 +557,73 @@ wagtail-init-hub:
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 #
 
-# --------------------------------------------------------------------------------
+# django --------------------------------------------------------------------------------
+
+.PHONY: loaddata
+loaddata: django-loaddata
+
+.PHONY: load
+load: loaddata
+
+.PHONY: migrate
+migrate: django-migrate
+
+.PHONY: npm-install
+npm-install: django-npm-install
+
+.PHONY: serve
+serve: django-serve
+
+.PHONY: static
+static: django-static
+
+.PHONY: su
+su: django-su
+
+.PHONY: test
+test: django-test
+
+.PHONY: user
+user: django-user
+
+# readme --------------------------------------------------------------------------------
 
 .PHONY: build
 build: readme-build
+
 .PHONY: b
 b: build
 
-# --------------------------------------------------------------------------------
+.PHONY: edit
+edit: readme-edit
+
+.PHONY: e
+e: edit
+
+.PHONY: open
+open: readme-open
+
+.PHONY: o
+o: open
+
+# git --------------------------------------------------------------------------------
 
 .PHONY: ce
 ce: git-commit-edit git-push
+
 .PHONY: cp
 cp: git-commit-push
+
+# pip --------------------------------------------------------------------------------
+
+.PHONY: freeze
+freeze: pip-freeze
+
+.PHONY: install
+install: pip-install
+
+.PHONY: install-test
+install-test: pip-install-test
 
 # --------------------------------------------------------------------------------
 
@@ -585,57 +639,13 @@ d: deploy
 
 # --------------------------------------------------------------------------------
 
-.PHONY: edit
-edit: readme-edit
-.PHONY: e
-e: edit
-
-# --------------------------------------------------------------------------------
-
-.PHONY: freeze
-freeze: pip-freeze
-
-# --------------------------------------------------------------------------------
-
 .PHONY: h
 h: help
 
 # --------------------------------------------------------------------------------
 
-.PHONY: install
-install: pip-install
-
-# --------------------------------------------------------------------------------
-
-.PHONY: loaddata
-loaddata: django-loaddata
-
-# --------------------------------------------------------------------------------
-
-.PHONY: npm-install
-npm-install: django-npm-install
-
-# --------------------------------------------------------------------------------
-
-.PHONY: open
-open: readme-open
-.PHONY: o
-o: open
-
-# --------------------------------------------------------------------------------
-
 .PHONY: r
 r: rand
-
-# --------------------------------------------------------------------------------
-
-.PHONY: serve
-serve: django-serve
-
-# --------------------------------------------------------------------------------
-
-.PHONY: test
-test: django-test
 
 # Overrides
 # ------------------------------------------------------------------------------  
