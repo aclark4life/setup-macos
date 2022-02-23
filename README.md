@@ -109,23 +109,23 @@ up
 - ⌘ ++++
 - Terminal → Shell → Use Settings as Default
 
-### Terminal → Preferences…
+#### Preferences…
 
-#### General
+##### General
 
 - New tabs open with: [Default Working Directory]
 
-#### Profiles → Window
+##### Profiles → Window
 
 - Window Size → Columns → 120
 - Window Size → Rows → 36
 
-#### Profiles → Shell
+##### Profiles → Shell
 
 - Terminal → Preferences → Profile → Default → Shell → [Close the window] When the shell exits
 - Terminal → Preferences → Profile → Default → Shell → [Never] Ask before closing
 
-#### Profiles → Advanced → Bell
+##### Profiles → Advanced → Bell
 
 - ☐ Audible bell 
 - ☐ Visual bell 
