@@ -65,16 +65,13 @@ up
 
 - Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: [^Control]
 
-#### Battery → Battery
+#### Battery
 
-- Turn display off after [Never]
-- ☐ Slightly dim the display when on battery power (hell no!)
-- ☐ Enable Power Nap while on battery power
-
-#### Battery → Power Adapter
-
-- Turn display off after [Never]
-- ☐ Enable Power Nap while plugged into a power adapter
+- Battery → Turn display off after [Never]
+- Battery → ☐ Slightly dim the display when on battery power (hell no!)
+- Battery → ☐ Enable Power Nap while on battery power
+- Power Adapter → Turn display off after [Never]
+- Power Adapter → ☐ Enable Power Nap while plugged into a power adapter
 
 #### Displays
 
