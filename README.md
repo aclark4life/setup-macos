@@ -63,44 +63,40 @@ up
 
 #### Accessibility
 
-- Accessibility → Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: ^Control
+- Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: ^Control
 
 #### Battery
 
-- Battery → Battery → Turn display off after [Never]
-- Battery → ☐ Slightly dim the display when on battery power
+- Battery → Turn display off after [Never]
+- Battery → ☐ Slightly dim the display when on battery power (hell no!)
+- Battery → ☐ Enable Power Nap while on battery power
 
 #### Displays
 
-- Displays → Display → ☐ Automatically adjust brightness (hell no!)
+- ☐ Automatically adjust brightness (hell no!)
 
-#### Dock
+#### Dock & Menu Bar
 
-- Dock → ☐ Show recent applications in Dock
+- Dock & Menu Bar → ☐ Show recent applications in Dock
 
 #### Keyboard
 
-- Keyboard → Input Sources → ☑︎ Show input menu in menu bar
-- Keyboard → Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
-- Keyboard → Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
+- Input Sources → ☑︎ Show input menu in menu bar
+- Shortcuts → Mission Control → ☑︎ Move left a space [⌘←]
+- Shortcuts → Mission Control → ☑︎ Move right a space [⌘→]
 
 #### Mission Control
 
-- Mission Control → Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
-- Mission Control → ☐ Displays have separate spaces
-
-#### Power Adapter
-
-- Power Adapter → [Never] Turn display off after
-- Power Adapter → ☐ Enable Power Nap while on battery power
+- Keyboard and Mouse Shortcuts → Mission Control → Middle Mouse Button
+- ☐ Displays have separate spaces
 
 #### Security & Privacy
 
-- Security & Privacy → General → A login password has been set for this user → ☐ Require password → after sleep or screen saver begins
+- General → A login password has been set for this user → ☐ Require password
 
 #### Trackpad
 
-- Trackpad → More Gestures → ☐ Swipe between pages
+- More Gestures → ☐ Swipe between pages
 
 #### Users & Groups
 
