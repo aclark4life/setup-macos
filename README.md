@@ -67,7 +67,7 @@ up
 
 #### Battery
 
-- Battery → [Never] Turn display off after
+- Battery → Battery → Turn display off after [Never]
 - Battery → ☐ Slightly dim the display when on battery power
 
 #### Displays
