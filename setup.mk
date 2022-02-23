@@ -1,4 +1,4 @@
-defaults:
+defaults-write:
 	# defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
 	# defaults write com.apple.finder NewWindowTarget "PfHm"
 	# defaults write com.apple.finder NewWindowTargetPath "file:///${HOME}/"
@@ -7,5 +7,5 @@ defaults:
 	defaults write net.sf.Jumpcut rememberNum 99
 	defaults write net.sf.Jumpcut loadOnStartup 1
 	defaults write net.sf.Jumpcut SUCheckAtStartup 1
-pip-install:
+brew-install:
 	brew bundle install
