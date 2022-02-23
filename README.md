@@ -115,19 +115,19 @@ up
 
 - New tabs open with: [Default Working Directory]
 
-##### Profiles → Window
-
-- Window Size → Columns → 120
-- Window Size → Rows → 36
-
-##### Profiles → Shell
-
-- [Close the window] When the shell exits
-- [Never] Ask before closing
-
 ##### Profiles → Advanced → Bell
 
 - ☐ Audible bell 
 - ☐ Visual bell 
 - ☐ Badge app and window Dock 
 - ☐ Bounce app icon when in background 
+
+##### Profiles → Shell
+
+- [Close the window] When the shell exits
+- [Never] Ask before closing
+
+##### Profiles → Window
+
+- Window Size → Columns → 120
+- Window Size → Rows → 36
