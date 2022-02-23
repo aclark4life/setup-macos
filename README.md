@@ -156,5 +156,6 @@ make defaults-write
 ## Python + pipx (Developer)
 
 ```
-pipx install awscli awsebcli
+pipx install awscli
+pipx install awsebcli
 ```
