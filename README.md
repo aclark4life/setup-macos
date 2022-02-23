@@ -104,30 +104,30 @@ up
 - Alex Clark → Login Items → + Jumpcut
 - Login Options → Automatic Login → Alex Clark
 
+### Terminal
+
+- ⌘ ++++
+- Terminal → Shell → Use Settings as Default
+
 ### Terminal → Preferences…
 
 #### General
 
 - New tabs open with: [Default Working Directory]
 
-#### Profiles → Text
-
-- ⌘ ++++
-- Terminal → Shell → Use Settings as Default
-
 #### Profiles → Window
 
-- 80x24 → 120x36
-- Terminal → Shell → Use Settings as Default
+- Window Size → Columns → 120
+- Window Size → Rows → 36
 
 #### Profiles → Shell
 
 - Terminal → Preferences → Profile → Default → Shell → [Close the window] When the shell exits
 - Terminal → Preferences → Profile → Default → Shell → [Never] Ask before closing
 
-#### Profiles → Advanced
+#### Profiles → Advanced → Bell
 
-- Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Audible bell 
-- Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Visual bell 
-- Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Badge app and window Dock 
-- Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Bounce app icon when in background 
+- ☐ Audible bell 
+- ☐ Visual bell 
+- ☐ Badge app and window Dock 
+- ☐ Bounce app icon when in background 
