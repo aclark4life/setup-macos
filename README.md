@@ -62,6 +62,18 @@ up
 
 OK, I lied! More steps.
 
+### Homebrew Formulae & Casks
+
+```
+make install
+```
+
+### `defaults`
+
+```
+make defaults
+```
+
 ### System Preferences
 
 #### Accessibility
