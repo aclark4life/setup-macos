@@ -67,7 +67,7 @@ up
 
 #### Battery
 
-- Battery → Turn display off after [Never]
+- Battery → Turn display off after `[Never]`
 - Battery → ☐ Slightly dim the display when on battery power (hell no!)
 - Battery → ☐ Enable Power Nap while on battery power
 
