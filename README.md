@@ -73,6 +73,10 @@ up
 - Power Adapter → Turn display off after [Never]
 - Power Adapter → ☐ Enable Power Nap while plugged into a power adapter
 
+#### Desktop & Screen Saver
+
+- Desktop
+
 #### Displays
 
 - ☐ Automatically adjust brightness
