@@ -112,7 +112,7 @@ up
 
 #### Profiles → Text
 
-- ⌘ ++++++++
+- ⌘ ++++
 - Terminal → Shell → Use Settings as Default
 
 #### Profiles → Window
