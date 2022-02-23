@@ -60,7 +60,7 @@ up
 
 ## System Preferences
 
-OK I lied. More manual steps.
+OK, I lied! Here are more manual steps. Some of these are [automated](setup.mk) and more could be automated but, yeah.
 
 ### Accessibility
 
