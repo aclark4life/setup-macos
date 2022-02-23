@@ -1,5 +1,5 @@
 git clone https://aclark4life@github.com/aclark4life/dotfiles.git Dotfiles
-dotfiles -sf
+.local/bin/dotfiles -sf
 rm ~/.git
 chmod 600 ~/.ssh/*
 cd ~/Dotfiles
