@@ -122,8 +122,8 @@ up
 
 ##### Profiles → Shell
 
-- Terminal → Preferences → Profile → Default → Shell → [Close the window] When the shell exits
-- Terminal → Preferences → Profile → Default → Shell → [Never] Ask before closing
+- [Close the window] When the shell exits
+- [Never] Ask before closing
 
 ##### Profiles → Advanced → Bell
 
