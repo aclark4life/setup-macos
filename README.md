@@ -65,13 +65,13 @@ OK, I lied! More steps.
 ### Homebrew Formulae & Casks
 
 ```
-make brew-install
+make brew-bundle
 ```
 
 ### `defaults`
 
 ```
-make defaults-install
+make defaults-write
 ```
 
 ### System Preferences
