@@ -62,7 +62,7 @@ up
 
 OK, I lied! More steps.
 
-### Homebrew Formulae & Casks
+### Brewfile
 
 ```
 make brew-bundle
