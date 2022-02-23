@@ -152,10 +152,3 @@ make defaults-write
 
 - Window Size → Columns → 120
 - Window Size → Rows → 36
-
-## Developer
-
-```
-pipx install awscli
-pipx install awsebcli
-```
