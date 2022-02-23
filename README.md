@@ -98,12 +98,6 @@ up
 
 - More Gestures → ☐ Swipe between pages
 
-#### Users & Groups
-
-- Users & Groups → Alex Clark → Login Items → + pCloud Drive
-- Users & Groups → Alex Clark → Login Items → + Jumpcut
-- Users & Groups → Login Options → Automatic Login → Alex Clark
-
 #### Terminal → Preferences…
 
 ##### General
@@ -131,3 +125,9 @@ up
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Visual bell 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Badge app and window Dock 
 - Terminal → Preferences → Profile → Default → Advanced → Bell → ☐ Bounce app icon when in background 
+
+#### Users & Groups
+
+- Alex Clark → Login Items → + pCloud Drive
+- Alex Clark → Login Items → + Jumpcut
+- Login Options → Automatic Login → Alex Clark
