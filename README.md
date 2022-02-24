@@ -77,6 +77,8 @@ make defaults-write
 
 ### System Preferences
 
+Click your way through these and you are done.
+
 #### Accessibility
 
 - Zoom → ☑︎ Use scroll gesture with modifier keys to zoom: [^Control]
