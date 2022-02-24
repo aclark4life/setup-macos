@@ -88,6 +88,10 @@ make defaults-write
 - Power Adapter → Turn display off after [Never]
 - Power Adapter → ☐ Enable Power Nap while plugged into a power adapter
 
+#### Bluetooth
+
+- ☑︎ Show Bluetooth in menu bar
+
 #### Desktop & Screen Saver
 
 - Desktop
