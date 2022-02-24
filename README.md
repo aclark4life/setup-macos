@@ -69,7 +69,7 @@ make brew-bundle
 make brew-services
 ```
 
-### `defaults`
+### User defaults
 
 ```
 make defaults-write
