@@ -159,3 +159,5 @@ Click your way to the finish.
 
 - Window Size → Columns → 120
 - Window Size → Rows → 36
+
+![systempreferences](systempreferences.png)
