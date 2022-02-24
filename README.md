@@ -77,9 +77,9 @@ make defaults-write
 
 ### System Preferences
 
-![systempreferences](systempreferences.png)
-
 Click your way to the finish.
+
+![systempreferences](systempreferences.png)
 
 #### Accessibility
 
