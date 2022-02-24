@@ -9,3 +9,5 @@ defaults-write:
 	defaults write net.sf.Jumpcut SUCheckAtStartup 1
 brew-bundle:
 	brew bundle install
+brew-services:
+	brew services start postgresql
