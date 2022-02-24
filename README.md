@@ -125,9 +125,9 @@ make defaults-write
 
 #### Users & Groups
 
-- Alex Clark → Login Items → + pCloud Drive
-- Alex Clark → Login Items → + Jumpcut
-- Login Options → Automatic Login → Alex Clark
+- alexclark → Login Items → + Jumpcut
+- alexclark → Login Items → + pCloud Drive
+- Login Options → Automatic Login → alexclark
 
 ### Terminal
 
