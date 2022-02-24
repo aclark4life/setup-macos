@@ -62,10 +62,11 @@ up
 
 OK, I lied! More steps.
 
-### Brewfile
+### Homebrew
 
 ```
 make brew-bundle
+make brew-services
 ```
 
 ### `defaults`
