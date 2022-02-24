@@ -77,7 +77,7 @@ make defaults-write
 
 ### System Preferences
 
-Click your way to the end.
+Click your way to the finish.
 
 #### Accessibility
 
