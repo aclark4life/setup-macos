@@ -7,5 +7,5 @@ defaults-write:
 	defaults write net.sf.Jumpcut rememberNum 99
 	defaults write net.sf.Jumpcut loadOnStartup 1
 	defaults write net.sf.Jumpcut SUCheckAtStartup 1
-brew-install:
+brew-bundle:
 	brew bundle install
