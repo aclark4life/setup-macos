@@ -18,12 +18,14 @@ Second, install Oh My ZSH.
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## Python + pipx
+## Python
 
-Third, install Python via pipx. 
+Third, install Python via pipx dependency then use pipx to install dotfiles and checkoutmanager.
 
 ```console
 brew install pipx
+.local/bin/pipx install dotfiles
+.local/bin/pipx install checkoutmanager
 ```
 
 ## Everything Else
@@ -43,7 +45,6 @@ brew install --cask firefox
 Requires [dotfiles](https://pypi.org/project/dotfiles) and GitHub Personal access token from [GitHub → Settings → Developer settings → Personal access tokens](https://github.com/settings/tokens).
 
 ```console
-pipx install dotfiles
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup/main/dotfiles.sh)"
 ```
 
