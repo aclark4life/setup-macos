@@ -24,6 +24,8 @@ Third, install Python via pipx dependency then use pipx to install dotfiles and 
 
 ```console
 brew install pipx
+.local/bin/pipx install awscli
+.local/bin/pipx install awsebcli
 .local/bin/pipx install dotfiles
 .local/bin/pipx install checkoutmanager
 ```
