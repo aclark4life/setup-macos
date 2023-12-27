@@ -166,3 +166,6 @@ Click your way to the finish.
 - Window Size → Columns → 120
 - Window Size → Rows → 36
 
+### Extensions
+
+- [Measure-it](https://addons.mozilla.org/en-US/firefox/addon/measure-it/)
