@@ -35,9 +35,9 @@ brew install pipx
 
 Just a few more steps! Hang in there.
 
-### Firefox + LastPass
+### Firefox + BitWarden
 
-Install Firefox then install the [LastPass Password Manager Add-On](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager).
+Install Firefox then install the [Bitwarden Password Manager Add-On](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
 
 ```console
 brew install --cask firefox
