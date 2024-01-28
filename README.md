@@ -29,6 +29,7 @@ brew install pipx
 .local/bin/pipx install dotfiles
 .local/bin/pipx install checkoutmanager
 .local/bin/pipx install gcalcli
+.local/bin/pipx install lorem-text
 ```
 
 ## Everything Else
