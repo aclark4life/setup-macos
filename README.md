@@ -26,10 +26,20 @@ Third, install Python via pipx dependency then use pipx to install dotfiles and 
 brew install pipx
 .local/bin/pipx install awscli
 .local/bin/pipx install awsebcli
-.local/bin/pipx install dotfiles
+.local/bin/pipx install black
 .local/bin/pipx install checkoutmanager
+.local/bin/pipx install dotfiles
+.local/bin/pipx install djlint
+.local/bin/pipx install flake8
 .local/bin/pipx install gcalcli
+.local/bin/pipx install isort
 .local/bin/pipx install lorem-text
+.local/bin/pipx install pypistats
+.local/bin/pipx install ruff
+.local/bin/pipx install tmp
+.local/bin/pipx install twarc
+.local/bin/pipx install twine
+.local/bin/pipx install uv
 ```
 
 ## Everything Else
