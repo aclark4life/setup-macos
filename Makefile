@@ -120,64 +120,64 @@ class UserViewSet(viewsets.ModelViewSet):
 endef
 
 define DJANGO_APP_TESTS
-from django.test import TestCase
-from django.urls import reverse
-from .models import YourModel
-from .forms import YourForm
+from django.test import TestCase  # noqa
+from django.urls import reverse  # noqa
+# from .models import YourModel
+# from .forms import YourForm
 
 
-class YourModelTest(TestCase):
-    def setUp(self):
-        self.instance = YourModel.objects.create(field1="value1", field2="value2")
-
-    def test_instance_creation(self):
-        self.assertIsInstance(self.instance, YourModel)
-        self.assertEqual(self.instance.field1, "value1")
-        self.assertEqual(self.instance.field2, "value2")
-
-    def test_str_method(self):
-        self.assertEqual(str(self.instance), "Expected String Representation")
-
-
-class YourViewTest(TestCase):
-    def setUp(self):
-        self.instance = YourModel.objects.create(field1="value1", field2="value2")
-
-    def test_view_url_exists_at_desired_location(self):
-        response = self.client.get("/your-url/")
-        self.assertEqual(response.status_code, 200)
-
-    def test_view_url_accessible_by_name(self):
-        response = self.client.get(reverse("your-view-name"))
-        self.assertEqual(response.status_code, 200)
-
-    def test_view_uses_correct_template(self):
-        response = self.client.get(reverse("your-view-name"))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, "your_template.html")
-
-    def test_view_context(self):
-        response = self.client.get(reverse("your-view-name"))
-        self.assertEqual(response.status_code, 200)
-        self.assertIn("context_variable", response.context)
-
-
-class YourFormTest(TestCase):
-    def test_form_valid_data(self):
-        form = YourForm(data={"field1": "value1", "field2": "value2"})
-        self.assertTrue(form.is_valid())
-
-    def test_form_invalid_data(self):
-        form = YourForm(data={"field1": "", "field2": "value2"})
-        self.assertFalse(form.is_valid())
-        self.assertIn("field1", form.errors)
-
-    def test_form_save(self):
-        form = YourForm(data={"field1": "value1", "field2": "value2"})
-        if form.is_valid():
-            instance = form.save()
-            self.assertEqual(instance.field1, "value1")
-            self.assertEqual(instance.field2, "value2")
+# class YourModelTest(TestCase):
+#     def setUp(self):
+#         self.instance = YourModel.objects.create(field1="value1", field2="value2")
+# 
+#     def test_instance_creation(self):
+#         self.assertIsInstance(self.instance, YourModel)
+#         self.assertEqual(self.instance.field1, "value1")
+#         self.assertEqual(self.instance.field2, "value2")
+# 
+#     def test_str_method(self):
+#         self.assertEqual(str(self.instance), "Expected String Representation")
+# 
+# 
+# class YourViewTest(TestCase):
+#     def setUp(self):
+#         self.instance = YourModel.objects.create(field1="value1", field2="value2")
+# 
+#     def test_view_url_exists_at_desired_location(self):
+#         response = self.client.get("/your-url/")
+#         self.assertEqual(response.status_code, 200)
+# 
+#     def test_view_url_accessible_by_name(self):
+#         response = self.client.get(reverse("your-view-name"))
+#         self.assertEqual(response.status_code, 200)
+# 
+#     def test_view_uses_correct_template(self):
+#         response = self.client.get(reverse("your-view-name"))
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed(response, "your_template.html")
+# 
+#     def test_view_context(self):
+#         response = self.client.get(reverse("your-view-name"))
+#         self.assertEqual(response.status_code, 200)
+#         self.assertIn("context_variable", response.context)
+# 
+# 
+# class YourFormTest(TestCase):
+#     def test_form_valid_data(self):
+#         form = YourForm(data={"field1": "value1", "field2": "value2"})
+#         self.assertTrue(form.is_valid())
+# 
+#     def test_form_invalid_data(self):
+#         form = YourForm(data={"field1": "", "field2": "value2"})
+#         self.assertFalse(form.is_valid())
+#         self.assertIn("field1", form.errors)
+# 
+#     def test_form_save(self):
+#         form = YourForm(data={"field1": "value1", "field2": "value2"})
+#         if form.is_valid():
+#             instance = form.save()
+#             self.assertEqual(instance.field1, "value1")
+#             self.assertEqual(instance.field2, "value2")
 endef
 
 define DJANGO_BACKEND_APPS
@@ -4229,8 +4229,10 @@ plone-install-default:
 .PHONY: plone-instance-default
 plone-instance-default:
 	mkwsgiinstance -d backend -u admin:admin
-	cat backend/etc/zope.ini | sed -e 's/host = 127.0.0.1/host = 0.0.0.0/; s/port = 8080/port = 8000/' > $(TMPDIR)/zope.ini
-	mv -f $(TMPDIR)/zope.ini backend/etc/zope.ini
+	@sed -i -e 's/host = 127.0.0.1/host = 0.0.0.0/; s/port = 8080/port = 8000/' backend/etc/zope.ini
+	@python -c "with open('backend/etc/zope.conf', 'r+') as f: lines = f.readlines(); f.seek(0);\
+		f.writelines([line + '     blob-dir \$$INSTANCE/blobstorage\n' if 'path \$$INSTANCE/var/Data.fs'\
+		in line else line for line in lines])"
 	-$(GIT_ADD) backend/etc/site.zcml
 	-$(GIT_ADD) backend/etc/zope.conf
 	-$(GIT_ADD) backend/etc/zope.ini
