@@ -24,7 +24,7 @@ DEL_FILE := rm -v
 DJANGO_ADMIN_CUSTOM_APPS_FILE := backend/apps.py
 DJANGO_ADMIN_CUSTOM_ADMIN_FILE := backend/admin.py
 DJANGO_CLEAN_DIRS = backend contactpage dist frontend home logging_demo model_form_demo \
-		     node_modules payments privacy search sitepage siteuser unit_test_demo
+		     node_modules payments privacypage search sitepage siteuser unit_test_demo
 DJANGO_CLEAN_FILES = .babelrc .browserslistrc .dockerignore .eslintrc .gitignore .nvmrc \
 		      .stylelintrc.json Dockerfile db.sqlite3 docker-compose.yml manage.py \
 		      package-lock.json package.json postcss.config.js requirements-test.txt \
@@ -198,10 +198,10 @@ define DJANGO_FRONTEND
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import 'bootstrap';
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
-import '@fortawesome/fontawesome-free/js/brands';
+// import '@fortawesome/fontawesome-free/js/fontawesome';
+// import '@fortawesome/fontawesome-free/js/solid';
+// import '@fortawesome/fontawesome-free/js/regular';
+// import '@fortawesome/fontawesome-free/js/brands';
 import getDataComponents from '../dataComponents';
 import UserContextProvider from '../context';
 import * as components from '../components';
@@ -685,14 +685,6 @@ define DJANGO_HOME_PAGE_MODELS
 from django.db import models  # noqa
 
 # Create your models here.
-endef
-
-define DJANGO_HOME_PAGE_TEMPLATE
-{% extends "base.html" %}
-{% block content %}
-    <main class="{% block main_class %}{% endblock %}">
-    </main>
-{% endblock %}
 endef
 
 define DJANGO_HOME_PAGE_URLS
@@ -1180,49 +1172,6 @@ class SearchForm(forms.Form):
 
 endef
 
-define DJANGO_SEARCH_SETTINGS
-SEARCH_MODELS = [
-    # Add search models here.
-]
-endef
-
-define DJANGO_SEARCH_TEMPLATE
-{% extends "base.html" %}
-{% block body_class %}template-searchresults{% endblock %}
-{% block title %}Search{% endblock %}
-{% block content %}
-    <h1>Search</h1>
-    <form action="{% url 'search' %}" method="get">
-        <input type="text"
-               name="query"
-               {% if search_query %}value="{{ search_query }}"{% endif %}>
-        <input type="submit" value="Search" class="button">
-    </form>
-    {% if search_results %}
-        <ul>
-            {% for result in search_results %}
-                <li>
-                    <h4>
-                        <a href="{% pageurl result %}">{{ result }}</a>
-                    </h4>
-                    {% if result.search_description %}{{ result.search_description }}{% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-        {% if search_results.has_previous %}
-            <a href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.previous_page_number }}">Previous</a>
-        {% endif %}
-        {% if search_results.has_next %}
-            <a href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.next_page_number }}">Next</a>
-        {% endif %}
-    {% elif search_query %}
-        No results found
-	{% else %}
-		No results found. Try a <a href="?query=test">test query</a>?
-    {% endif %}
-{% endblock %}
-endef
-
 define DJANGO_SEARCH_URLS
 from django.urls import path
 from .views import SearchView
@@ -1340,7 +1289,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 endef
 
 define DJANGO_SETTINGS_DATABASE
-DATABASE_URL = os.environ.get("DATABASE_URL", "postgres://:@:/$(PROJECT_NAME)")
+DATABASE_URL = os.environ.get("DATABASE_URL", "postgres://:@:/$(PACKAGE_NAME)")
 DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
 endef
 
@@ -1462,6 +1411,10 @@ REST_FRAMEWORK = {
 }
 endef
 
+define DJANGO_SETTINGS_SEARCH
+INSTALLED_APPS.append("search")  # noqa
+endef
+
 define DJANGO_SETTINGS_SITEUSER
 INSTALLED_APPS.append("siteuser")  # noqa
 AUTH_USER_MODEL = "siteuser.User"
@@ -1485,15 +1438,6 @@ from django.contrib import admin
 from .models import User
 
 admin.site.register(User, UserAdmin)
-endef
-
-define DJANGO_SITEUSER_EDIT_TEMPLATE
-{% extends 'base.html' %}
-{% load crispy_forms_tags %}
-{% block content %}
-    <h2>Edit User</h2>
-    {% crispy form %}
-{% endblock %}
 endef
 
 define DJANGO_SITEUSER_FORM
@@ -1580,7 +1524,7 @@ from .forms import SiteUserForm
 
 class UserProfileView(LoginRequiredMixin, DetailView):
     model = User
-    template_name = "profile.html"
+    template_name = "user.html"
 
     def get_object(self, queryset=None):
         return self.request.user
@@ -1612,21 +1556,6 @@ class UserEditView(LoginRequiredMixin, UpdateView):
     def get_success_url(self):
         # return reverse_lazy("user-profile", kwargs={"pk": self.object.pk})
         return reverse_lazy("user-profile")
-endef
-
-define DJANGO_SITEUSER_VIEW_TEMPLATE
-{% extends 'base.html' %}
-{% block content %}
-    <h2>User Profile</h2>
-    <div class="d-flex justify-content-end">
-        <a class="btn btn-outline-secondary"
-           href="{% url 'user-edit' pk=user.id %}">Edit</a>
-    </div>
-    <p>Username: {{ user.username }}</p>
-    <p>Theme: {{ user.user_theme_preference }}</p>
-    <p>Bio: {{ user.bio|default:""|safe }}</p>
-    <p>Rate: {{ user.rate|default:"" }}</p>
-{% endblock %}
 endef
 
 define DJANGO_TEMPLATE_ALLAUTH
@@ -1791,6 +1720,14 @@ define DJANGO_TEMPLATE_HEADER
 </div>
 endef 
 
+define DJANGO_TEMPLATE_HOME_PAGE
+{% extends "base.html" %}
+{% block content %}
+    <main class="{% block main_class %}{% endblock %}">
+    </main>
+{% endblock %}
+endef
+
 define DJANGO_TEMPLATE_OFFCANVAS
 <div class="offcanvas offcanvas-start bg-dark"
      tabindex="-1"
@@ -1830,6 +1767,46 @@ define DJANGO_TEMPLATE_OFFCANVAS
         </ul>
     </div>
 </div>
+endef
+
+define DJANGO_TEMPLATE_SEARCH
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Search Results</h1>
+    <form method="get">
+	{{ form.as_p }}
+	<button type="submit">Search</button>
+    </form>
+    <ul>
+	{% for result in results %}
+	    <li>{{ result }}</li>
+	{% endfor %}
+    </ul>
+{% endblock %}
+endef
+
+define DJANGO_TEMPLATE_SITEUSER_EDIT
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h2>Edit User</h2>
+    {% crispy form %}
+{% endblock %}
+endef
+
+define DJANGO_TEMPLATE_SITEUSER_VIEW
+{% extends 'base.html' %}
+{% block content %}
+    <h2>User Profile</h2>
+    <div class="d-flex justify-content-end">
+        <a class="btn btn-outline-secondary"
+           href="{% url 'user-edit' pk=user.id %}">Edit</a>
+    </div>
+    <p>Username: {{ user.username }}</p>
+    <p>Theme: {{ user.user_theme_preference }}</p>
+    <p>Bio: {{ user.bio|default:""|safe }}</p>
+    <p>Rate: {{ user.rate|default:"" }}</p>
+{% endblock %}
 endef
 
 define DJANGO_UNIT_TEST_DEMO_FORMS
@@ -2585,102 +2562,26 @@ define PYTHON_PROJECT_TOML
 endef
 
 define SEPARATOR
-.==========================================================================================================================================.
-|                                                                                                                                          |  
-| _|_|_|                        _|                        _|          _|      _|            _|                      _|_|  _|  _|           | 
-| _|    _|  _|  _|_|    _|_|          _|_|      _|_|_|  _|_|_|_|      _|_|  _|_|    _|_|_|  _|  _|      _|_|      _|          _|    _|_|   |
-| _|_|_|    _|_|      _|    _|  _|  _|_|_|_|  _|          _|          _|  _|  _|  _|    _|  _|_|      _|_|_|_|  _|_|_|_|  _|  _|  _|_|_|_| |
-| _|        _|        _|    _|  _|  _|        _|          _|          _|      _|  _|    _|  _|  _|    _|          _|      _|  _|  _|       |
-| _|        _|          _|_|    _|    _|_|_|    _|_|_|      _|_|      _|      _|    _|_|_|  _|    _|    _|_|_|    _|      _|  _|    _|_|_| |
-|                               _|                                                                                                         |
-|                             _|                                                                                                           |
-`=========================================================================================================================================='
-endef
-
-define WAGTAIL_BASE_TEMPLATE
-{% load static wagtailcore_tags wagtailuserbar webpack_loader %}
-<!DOCTYPE html>
-<html lang="en"
-      class="h-100"
-      data-bs-theme="{{ request.user.user_theme_preference|default:'light' }}">
-    <head>
-        <meta charset="utf-8" />
-        <title>
-            {% block title %}
-                {% if page.seo_title %}
-                    {{ page.seo_title }}
-                {% else %}
-                    {{ page.title }}
-                {% endif %}
-            {% endblock %}
-            {% block title_suffix %}
-                {% wagtail_site as current_site %}
-                {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
-            {% endblock %}
-        </title>
-        {% if page.search_description %}<meta name="description" content="{{ page.search_description }}" />{% endif %}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {# Force all links in the live preview panel to be opened in a new tab #}
-        {% if request.in_preview_panel %}<base target="_blank">{% endif %}
-        {% stylesheet_pack 'app' %}
-        {% block extra_css %}{# Override this in templates to add extra stylesheets #}{% endblock %}
-        <style>
-            .success {
-                background-color: #d4edda;
-                border-color: #c3e6cb;
-                color: #155724;
-            }
-
-            .info {
-                background-color: #d1ecf1;
-                border-color: #bee5eb;
-                color: #0c5460;
-            }
-
-            .warning {
-                background-color: #fff3cd;
-                border-color: #ffeeba;
-                color: #856404;
-            }
-
-            .danger {
-                background-color: #f8d7da;
-                border-color: #f5c6cb;
-                color: #721c24;
-            }
-        </style>
-        {% include 'favicon.html' %}
-        {% csrf_token %}
-    </head>
-    <body class="{% block body_class %}{% endblock %} d-flex flex-column h-100">
-        <main class="flex-shrink-0">
-            {% wagtailuserbar %}
-            <div id="app"></div>
-            {% include 'header.html' %}
-            {% if messages %}
-                <div class="messages container">
-                    {% for message in messages %}
-                        <div class="alert {{ message.tags }} alert-dismissible fade show"
-                             role="alert">
-                            {{ message }}
-                            <button type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                        </div>
-                    {% endfor %}
-                </div>
-            {% endif %}
-            <div class="container">
-                {% block content %}{% endblock %}
-            </div>
-        </main>
-        {% include 'footer.html' %}
-        {% include 'offcanvas.html' %}
-        {% javascript_pack 'app' %}
-        {% block extra_js %}{# Override this in templates to add extra javascript #}{% endblock %}
-    </body>
-</html>
+.======================================================================
+|                                                                      |
+| _|_|_|                        _|                        _|           |
+| _|    _|  _|  _|_|    _|_|          _|_|      _|_|_|  _|_|_|_|       |
+| _|_|_|    _|_|      _|    _|  _|  _|_|_|_|  _|          _|           |
+| _|        _|        _|    _|  _|  _|        _|          _|           |
+| _|        _|          _|_|    _|    _|_|_|    _|_|_|      _|_|       |
+|                               _|                                     |
+|                             _|                                       |
+|                                                                      |
+ ---------------------------------------------------------------------- 
+|                                                                      |  
+| _|      _|            _|                      _|_|  _|  _|           | 
+| _|_|  _|_|    _|_|_|  _|  _|      _|_|      _|          _|    _|_|   |
+| _|  _|  _|  _|    _|  _|_|      _|_|_|_|  _|_|_|_|  _|  _|  _|_|_|_| |
+| _|      _|  _|    _|  _|  _|    _|          _|      _|  _|  _|       |
+| _|      _|    _|_|_|  _|    _|    _|_|_|    _|      _|  _|    _|_|_| |
+|                                                                      |
+|                                                                      |
+ ======================================================================'
 endef
 
 define WAGTAIL_BLOCK_CAROUSEL
@@ -2733,11 +2634,6 @@ define WAGTAIL_BLOCK_MARKETING
 </div>
 endef
 
-define WAGTAIL_CONTACT_PAGE_TEMPLATE_LANDING
-{% extends 'base.html' %}
-{% block content %}<div class="container"><h1>Thank you!</h1></div>{% endblock %}
-endef
-
 define WAGTAIL_CONTACT_PAGE_MODEL
 from django.db import models
 from modelcluster.fields import ParentalKey
@@ -2772,20 +2668,6 @@ class ContactPage(AbstractEmailForm):
 
     class Meta:
         verbose_name = "Contact Page"
-endef
-
-define WAGTAIL_CONTACT_PAGE_TEMPLATE
-{% extends 'base.html' %}
-{% load crispy_forms_tags static wagtailcore_tags %}
-{% block content %}
-        <h1>{{ page.title }}</h1>
-        {{ page.intro|richtext }}
-        <form action="{% pageurl page %}" method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit">
-        </form>
-{% endblock %}
 endef
 
 define WAGTAIL_CONTACT_PAGE_TESTS
@@ -2925,18 +2807,6 @@ class HomePage(Page):
         verbose_name = "Home Page"
 endef
 
-define WAGTAIL_HOME_PAGE_TEMPLATE
-{% extends "base.html" %}
-{% load wagtailcore_tags %}
-{% block content %}
-    <main class="{% block main_class %}{% endblock %}">
-        {% for block in page.marketing_blocks %}
-            {% include_block block %}
-        {% endfor %}
-    </main>
-{% endblock %}
-endef
-
 define WAGTAIL_PRIVACY_PAGE_MODEL
 from wagtail.models import Page
 from wagtail.admin.panels import FieldPanel
@@ -2960,13 +2830,175 @@ class PrivacyPage(Page):
         verbose_name = "Privacy Page"
 endef
 
-define WAGTAIL_PRIVACY_PAGE_TEMPLATE
+define WAGTAIL_SEARCH_URLS
+from django.urls import path
+from .views import search
+
+urlpatterns = [path("", search, name="search")]
+endef
+
+define WAGTAIL_SETTINGS
+INSTALLED_APPS.append("wagtail_color_panel")
+INSTALLED_APPS.append("wagtail_modeladmin")
+INSTALLED_APPS.append("wagtail.contrib.settings")
+INSTALLED_APPS.append("wagtailmarkdown")
+INSTALLED_APPS.append("wagtailmenus")
+INSTALLED_APPS.append("wagtailseo")
+TEMPLATES[0]["OPTIONS"]["context_processors"].append(
+    "wagtail.contrib.settings.context_processors.settings"
+)
+TEMPLATES[0]["OPTIONS"]["context_processors"].append(
+    "wagtailmenus.context_processors.wagtailmenus"
+)
+endef
+
+define WAGTAIL_SETTINGS_CONTACT_PAGE
+INSTALLED_APPS.append("contactpage")  # noqa
+endef
+
+define WAGTAIL_SETTINGS_PRIVACY_PAGE
+INSTALLED_APPS.append("privacypage")  # noqa
+endef
+
+define WAGTAIL_SETTINGS_SITE_PAGE
+INSTALLED_APPS.append("sitepage")  # noqa
+endef
+
+define WAGTAIL_SITE_PAGE_MODEL
+from wagtail.models import Page
+
+
+class SitePage(Page):
+    template = "sitepage/site_page.html"
+
+    class Meta:
+        verbose_name = "Site Page"
+endef
+
+define WAGTAIL_TEMPLATE_BASE
+{% load static wagtailcore_tags wagtailuserbar webpack_loader %}
+<!DOCTYPE html>
+<html lang="en"
+      class="h-100"
+      data-bs-theme="{{ request.user.user_theme_preference|default:'light' }}">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+                {% if page.seo_title %}
+                    {{ page.seo_title }}
+                {% else %}
+                    {{ page.title }}
+                {% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+                {% wagtail_site as current_site %}
+                {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
+            {% endblock %}
+        </title>
+        {% if page.search_description %}<meta name="description" content="{{ page.search_description }}" />{% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {# Force all links in the live preview panel to be opened in a new tab #}
+        {% if request.in_preview_panel %}<base target="_blank">{% endif %}
+        {% stylesheet_pack 'app' %}
+        {% block extra_css %}{# Override this in templates to add extra stylesheets #}{% endblock %}
+        <style>
+            .success {
+                background-color: #d4edda;
+                border-color: #c3e6cb;
+                color: #155724;
+            }
+
+            .info {
+                background-color: #d1ecf1;
+                border-color: #bee5eb;
+                color: #0c5460;
+            }
+
+            .warning {
+                background-color: #fff3cd;
+                border-color: #ffeeba;
+                color: #856404;
+            }
+
+            .danger {
+                background-color: #f8d7da;
+                border-color: #f5c6cb;
+                color: #721c24;
+            }
+        </style>
+        {% include 'favicon.html' %}
+        {% csrf_token %}
+    </head>
+    <body class="{% block body_class %}{% endblock %} d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            {% wagtailuserbar %}
+            <div id="app"></div>
+            {% include 'header.html' %}
+            {% if messages %}
+                <div class="messages container">
+                    {% for message in messages %}
+                        <div class="alert {{ message.tags }} alert-dismissible fade show"
+                             role="alert">
+                            {{ message }}
+                            <button type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="container">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+        {% include 'footer.html' %}
+        {% include 'offcanvas.html' %}
+        {% javascript_pack 'app' %}
+        {% block extra_js %}{# Override this in templates to add extra javascript #}{% endblock %}
+    </body>
+</html>
+endef
+
+define WAGTAIL_TEMPLATE_CONTACT_PAGE
+{% extends 'base.html' %}
+{% load crispy_forms_tags static wagtailcore_tags %}
+{% block content %}
+        <h1>{{ page.title }}</h1>
+        {{ page.intro|richtext }}
+        <form action="{% pageurl page %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+{% endblock %}
+endef
+
+define WAGTAIL_TEMPLATE_CONTACT_PAGE_LANDING
+{% extends 'base.html' %}
+{% block content %}<div class="container"><h1>Thank you!</h1></div>{% endblock %}
+endef
+
+define WAGTAIL_TEMPLATE_HOME_PAGE
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% block content %}
+    <main class="{% block main_class %}{% endblock %}">
+        {% for block in page.marketing_blocks %}
+            {% include_block block %}
+        {% endfor %}
+    </main>
+{% endblock %}
+endef
+
+define WAGTAIL_TEMPLATE_PRIVACY_PAGE
 {% extends 'base.html' %}
 {% load wagtailmarkdown %}
 {% block content %}<div class="container">{{ page.body|markdown }}</div>{% endblock %}
 endef
 
-define WAGTAIL_SEARCH_TEMPLATE
+define WAGTAIL_TEMPLATE_SEARCH
 {% extends "base.html" %}
 {% load static wagtailcore_tags %}
 {% block body_class %}template-searchresults{% endblock %}
@@ -3004,44 +3036,7 @@ define WAGTAIL_SEARCH_TEMPLATE
 {% endblock %}
 endef
 
-define WAGTAIL_SEARCH_URLS
-from django.urls import path
-from .views import search
-
-urlpatterns = [path("", search, name="search")]
-endef
-
-define WAGTAIL_SETTINGS
-INSTALLED_APPS.append("wagtail_color_panel")
-INSTALLED_APPS.append("wagtail_modeladmin")
-INSTALLED_APPS.append("wagtail.contrib.settings")
-INSTALLED_APPS.append("wagtailmarkdown")
-INSTALLED_APPS.append("wagtailmenus")
-INSTALLED_APPS.append("wagtailseo")
-TEMPLATES[0]["OPTIONS"]["context_processors"].append(
-    "wagtail.contrib.settings.context_processors.settings"
-)
-TEMPLATES[0]["OPTIONS"]["context_processors"].append(
-    "wagtailmenus.context_processors.wagtailmenus"
-)
-endef
-
-define WAGTAIL_SETTINGS_CONTACT_PAGE
-INSTALLED_APPS.append("contactpage")  # noqa
-endef
-
-define WAGTAIL_SITEPAGE_MODEL
-from wagtail.models import Page
-
-
-class SitePage(Page):
-    template = "sitepage/site_page.html"
-
-    class Meta:
-        verbose_name = "Site Page"
-endef
-
-define WAGTAIL_SITEPAGE_TEMPLATE
+define WAGTAIL_TEMPLATE_SITE_PAGE
 {% extends 'base.html' %}
 {% block content %}
     <h1>{{ page.title }}</h1>
@@ -3203,7 +3198,6 @@ export DJANGO_API_SERIALIZERS \
         DJANGO_FRONTEND_USER_MENU \
         DJANGO_HOME_PAGE_ADMIN \
         DJANGO_HOME_PAGE_MODELS \
-        DJANGO_HOME_PAGE_TEMPLATE \
         DJANGO_HOME_PAGE_URLS \
         DJANGO_HOME_PAGE_VIEWS \
         DJANGO_LOGGING_DEMO_ADMIN \
@@ -3233,8 +3227,6 @@ export DJANGO_API_SERIALIZERS \
         DJANGO_PAYMENTS_URLS \
         DJANGO_PAYMENTS_VIEW \
         DJANGO_SEARCH_FORMS \
-        DJANGO_SEARCH_SETTINGS \
-        DJANGO_SEARCH_TEMPLATE \
         DJANGO_SEARCH_URLS \
         DJANGO_SEARCH_UTILS \
         DJANGO_SEARCH_VIEWS \
@@ -3251,22 +3243,25 @@ export DJANGO_API_SERIALIZERS \
         DJANGO_SETTINGS_PAYMENTS \
         DJANGO_SETTINGS_PROD \
         DJANGO_SETTINGS_REST_FRAMEWORK \
+        DJANGO_SETTINGS_SEARCH \
         DJANGO_SETTINGS_SITEUSER \
         DJANGO_SETTINGS_THEMES \
         DJANGO_SETTINGS_UNIT_TEST_DEMO \
         DJANGO_SITEUSER_ADMIN \
-        DJANGO_SITEUSER_EDIT_TEMPLATE \
         DJANGO_SITEUSER_FORM \
         DJANGO_SITEUSER_MODEL \
         DJANGO_SITEUSER_URLS \
         DJANGO_SITEUSER_VIEW \
-        DJANGO_SITEUSER_VIEW_TEMPLATE \
         DJANGO_TEMPLATE_ALLAUTH \
         DJANGO_TEMPLATE_BASE \
         DJANGO_TEMPLATE_FAVICON \
         DJANGO_TEMPLATE_FOOTER \
         DJANGO_TEMPLATE_HEADER \
+        DJANGO_TEMPLATE_HOME_PAGE \
         DJANGO_TEMPLATE_OFFCANVAS \
+        DJANGO_TEMPLATE_SEARCH \
+        DJANGO_TEMPLATE_SITEUSER_EDIT \
+        DJANGO_TEMPLATE_SITEUSER_VIEW \
         DJANGO_UNIT_TEST_DEMO_FORMS \
         DJANGO_UNIT_TEST_DEMO_MODELS \
         DJANGO_UNIT_TEST_DEMO_TESTS \
@@ -3290,26 +3285,21 @@ export DJANGO_API_SERIALIZERS \
         PYTHON_LICENSE_TXT \
         PYTHON_PROJECT_TOML \
         SEPARATOR \
-        WAGTAIL_BASE_TEMPLATE \
         WAGTAIL_BLOCK_CAROUSEL \
         WAGTAIL_BLOCK_MARKETING \
         WAGTAIL_CONTACT_PAGE_MODEL \
-        WAGTAIL_CONTACT_PAGE_TEMPLATE \
-        WAGTAIL_CONTACT_PAGE_TEMPLATE_LANDING \
         WAGTAIL_CONTACT_PAGE_TESTS \
         WAGTAIL_HOME_PAGE_MODEL \
-        WAGTAIL_HOME_PAGE_TEMPLATE \
         WAGTAIL_HOME_PAGE_URLS \
         WAGTAIL_HOME_PAGE_VIEWS \
         WAGTAIL_PRIVACY_PAGE_MODEL \
         WAGTAIL_PRIVACY_PAGE_MODEL \
-        WAGTAIL_PRIVACY_PAGE_TEMPLATE \
-        WAGTAIL_SEARCH_TEMPLATE \
         WAGTAIL_SEARCH_URLS \
         WAGTAIL_SETTINGS \
         WAGTAIL_SETTINGS_CONTACT_PAGE \
-        WAGTAIL_SITEPAGE_MODEL \
-        WAGTAIL_SITEPAGE_TEMPLATE \
+        WAGTAIL_SETTINGS_PRIVACY_PAGE \
+        WAGTAIL_SETTINGS_SITE_PAGE \
+        WAGTAIL_SITE_PAGE_MODEL \
         WAGTAIL_URLS \
         WAGTAIL_URLS_HOME \
         WEBPACK_CONFIG_JS \
@@ -3317,7 +3307,14 @@ export DJANGO_API_SERIALIZERS \
         WEBPACK_INDEX_JS \
         WEBPACK_REVEAL_CONFIG_JS \
         WEBPACK_REVEAL_INDEX_HTML \
-        WEBPACK_REVEAL_INDEX_JS
+        WEBPACK_REVEAL_INDEX_JS \
+        WAGTAIL_TEMPLATE_BASE \
+        WAGTAIL_TEMPLATE_CONTACT_PAGE \
+        WAGTAIL_TEMPLATE_CONTACT_PAGE_LANDING \
+        WAGTAIL_TEMPLATE_HOME_PAGE \
+        WAGTAIL_TEMPLATE_PRIVACY_PAGE \
+        WAGTAIL_TEMPLATE_SEARCH \
+        WAGTAIL_TEMPLATE_SITE_PAGE
 
 # ------------------------------------------------------------------------------
 # Multi-line phony target rules
@@ -3366,12 +3363,12 @@ aws-vpc-default: aws-check-env
 
 .PHONY: db-import-default
 db-import-default:
-	@psql $(DJANGO_DATABASE_NAME) < $(DJANGO_DATABASE_NAME).sql
+	@psql $(PACKAGE_NAME) < $(DJANGO_DATABASE_NAME).sql
 
 .PHONY: db-init-default
 db-init-default:
-	-dropdb $(PROJECT_NAME)
-	-createdb $(PROJECT_NAME)
+	-dropdb $(PACKAGE_NAME)
+	-createdb $(PACKAGE_NAME)
 
 .PHONY: db-init-mysql-default
 db-init-mysql-default:
@@ -3380,8 +3377,8 @@ db-init-mysql-default:
 
 .PHONY: db-init-test-default
 db-init-test-default:
-	-dropdb test_$(PROJECT_NAME)
-	-createdb test_$(PROJECT_NAME)
+	-dropdb test_$(PACKAGE_NAME)
+	-createdb test_$(PACKAGE_NAME)
 
 .PHONY: django-admin-custom-default
 django-admin-custom-default:
@@ -3453,24 +3450,25 @@ django-frontend-default: python-webpack-init
 django-graph-default:
 	python manage.py graph_models -a -o $(PROJECT_NAME).png
 
-.PHONY: django-home-default
-django-home-default:
+.PHONY: django-home-page-default
+django-home-page-default:
 	python manage.py startapp home
 	$(ADD_DIR) home/templates
 	@echo "$$DJANGO_HOME_PAGE_ADMIN" > home/admin.py
 	@echo "$$DJANGO_HOME_PAGE_MODELS" > home/models.py
-	@echo "$$DJANGO_HOME_PAGE_TEMPLATE" > home/templates/home.html
 	@echo "$$DJANGO_HOME_PAGE_VIEWS" > home/views.py
 	@echo "$$DJANGO_HOME_PAGE_URLS" > home/urls.py
 	@echo "$$DJANGO_URLS_HOME_PAGE" >> $(DJANGO_URLS_FILE)
 	@echo "$$DJANGO_SETTINGS_HOME_PAGE" >> $(DJANGO_SETTINGS_BASE_FILE)
+	@echo "$$DJANGO_TEMPLATE_HOME_PAGE" > home/templates/home.html
 	-$(GIT_ADD) home/*.py
 	-$(GIT_ADD) home/migrations/*.py
-	-$(GIT_ADD) home/templates
+	-$(GIT_ADD) home/templates/
 
 .PHONY: django-init-default
 django-init-default: separator \
 	db-init \
+	django-clean \
 	django-install \
 	django-project \
 	django-utils \
@@ -3488,11 +3486,12 @@ django-init-default: separator \
 	django-urls \
 	django-urls-debug-toolbar \
 	django-allauth \
+	django-search \
 	django-settings-base \
 	django-settings-dev \
 	django-settings-prod \
 	django-siteuser \
-	django-home \
+	django-home-page \
 	django-api-views \
 	django-api-serializers \
 	django-urls-api \
@@ -3507,6 +3506,7 @@ django-init-default: separator \
 .PHONY: django-init-minimal-default
 django-init-minimal-default: separator \
 	db-init \
+	django-clean \
 	django-install-minimal \
 	django-project \
 	django-settings-directory \
@@ -3525,7 +3525,7 @@ django-init-minimal-default: separator \
 	django-urls \
 	django-urls-debug-toolbar \
 	django-settings-prod \
-	django-home \
+	django-home-page \
 	django-utils \
 	django-frontend \
 	npm-install-react \
@@ -3538,6 +3538,7 @@ django-init-minimal-default: separator \
 .PHONY: django-init-wagtail-default
 django-init-wagtail-default: separator \
 	db-init \
+	django-clean \
 	django-install \
 	wagtail-install \
 	wagtail-project \
@@ -3568,6 +3569,8 @@ django-init-wagtail-default: separator \
 	django-logging-demo \
 	django-payments-demo \
 	wagtail-contact-page \
+	wagtail-privacy-page \
+	wagtail-site-page \
 	django-api-views \
 	django-api-serializers \
 	django-urls-api \
@@ -3747,16 +3750,15 @@ django-project-default:
 django-search-default:
 	python manage.py startapp search
 	$(ADD_DIR) search/templates
-	@echo "$$DJANGO_SEARCH_TEMPLATE" > search/templates/search.html
+	@echo "$$DJANGO_TEMPLATE_SEARCH" > search/templates/search.html
 	-$(GIT_ADD) search/templates
 	@echo "$$DJANGO_SEARCH_FORMS" > search/forms.py
 	@echo "$$DJANGO_SEARCH_URLS" > search/urls.py
 	@echo "$$DJANGO_SEARCH_UTILS" > search/utils.py
 	@echo "$$DJANGO_SEARCH_VIEWS" > search/views.py
+	@echo "$$DJANGO_SETTINGS_SEARCH" >> $(DJANGO_SETTINGS_BASE_FILE)
 	-$(GIT_ADD) search/*.py
-	@echo "$$DJANGO_SEARCH_SETTINGS" >> $(DJANGO_SETTINGS_BASE_FILE)
-	@echo "INSTALLED_APPS.append('search')" >> $(DJANGO_SETTINGS_BASE_FILE)
-	@echo "urlpatterns += [path('search/', include('search.urls'))]" >> $(DJANGO_URLS_FILE)
+	-$(GIT_ADD) search/migrations/*.py
 
 .PHONY: django-secret-key-default
 django-secret-key-default:
@@ -3813,11 +3815,10 @@ django-siteuser-default:
 	@echo "$$DJANGO_SITEUSER_ADMIN" > siteuser/admin.py
 	@echo "$$DJANGO_SITEUSER_VIEW" > siteuser/views.py
 	@echo "$$DJANGO_SITEUSER_URLS" > siteuser/urls.py
-	@echo "$$DJANGO_SITEUSER_VIEW_TEMPLATE" > siteuser/templates/profile.html
-	@echo "$$DJANGO_SITEUSER_TEMPLATE" > siteuser/templates/user.html
-	@echo "$$DJANGO_SITEUSER_EDIT_TEMPLATE" > siteuser/templates/user_edit.html
 	@echo "$$DJANGO_URLS_SITEUSER" >> $(DJANGO_URLS_FILE)
 	@echo "$$DJANGO_SETTINGS_SITEUSER" >> $(DJANGO_SETTINGS_BASE_FILE)
+	@echo "$$DJANGO_TEMPLATE_SITEUSER_EDIT" > siteuser/templates/user_edit.html
+	@echo "$$DJANGO_TEMPLATE_SITEUSER_VIEW" > siteuser/templates/user.html
 	-$(GIT_ADD) siteuser/templates
 	-$(GIT_ADD) siteuser/*.py
 	python manage.py makemigrations siteuser
@@ -3860,7 +3861,7 @@ django-template-offcanvas-default:
 	-$(GIT_ADD) backend/templates/offcanvas.html
 
 .PHONY: django-test-default
-django-test-default: npm-install django-static pip-install-test
+django-test-default:
 	python manage.py test
 
 .PHONY: django-unit-test-demo-default
@@ -4157,7 +4158,7 @@ jenkins-init-default:
 .PHONY: make-default
 make-default:
 	-$(GIT_ADD) Makefile
-	-@$(GIT_COMMIT) -a -m $(call GIT_COMMIT_MESSAGE,"Add/update $(PROJECT_NAME) files")
+	-@$(GIT_COMMIT) Makefile -m $(call GIT_COMMIT_MESSAGE,"Add/update $(PROJECT_NAME) Makefile")
 	-$(GIT_PUSH)
 
 .PHONY: makefile-list-commands-default
@@ -4201,15 +4202,16 @@ npm-install-default:
 	npm install
 	-$(GIT_ADD) package-lock.json
 
+# Skip these for now due to GitHub Actions authentication issues
+# @fortawesome/fontawesome-svg-core \
+# @fortawesome/react-fontawesome \
+# @fortawesome/fontawesome-free \
+# @fortawesome/free-brands-svg-icons \
+# @fortawesome/free-solid-svg-icons \
 .PHONY: npm-install-react-default
 npm-install-react-default:
 	npm install \
-        @fortawesome/fontawesome-free \
-        @fortawesome/fontawesome-svg-core \
-        @fortawesome/free-brands-svg-icons \
-        @fortawesome/free-solid-svg-icons \
-        @fortawesome/react-fontawesome \
-        	bootstrap \
+        bootstrap \
         camelize \
         date-fns \
         history \
@@ -4360,6 +4362,13 @@ python-serve-default:
 	@echo "\n\tServing HTTP on http://0.0.0.0:8000\n"
 	$(PYTHON_HTTP_SERVER)
 
+
+.PHONY: python-venv-check-default
+python-venv-check-default:
+ifndef VIRTUAL_ENV
+	$(error VIRTUAL_ENV is not set)
+endif
+
 .PHONY: python-webpack-init-default
 python-webpack-init-default:
 	python manage.py webpack_init --no-input
@@ -4451,7 +4460,7 @@ sphinx-theme-default:
 
 .PHONY: wagtail-base-template-default
 wagtail-base-template-default:
-	@echo "$$WAGTAIL_BASE_TEMPLATE" > backend/templates/base.html
+	@echo "$$WAGTAIL_TEMPLATE_BASE" > backend/templates/base.html
 
 .PHONY: wagtail-contact-page-default
 wagtail-contact-page-default:
@@ -4459,8 +4468,8 @@ wagtail-contact-page-default:
 	@echo "$$WAGTAIL_CONTACT_PAGE_MODEL" > contactpage/models.py
 	@echo "$$WAGTAIL_CONTACT_PAGE_TESTS" > contactpage/tests.py
 	$(ADD_DIR) contactpage/templates/contactpage/
-	@echo "$$WAGTAIL_CONTACT_PAGE_TEMPLATE" > contactpage/templates/contactpage/contact_page.html
-	@echo "$$WAGTAIL_CONTACT_PAGE_TEMPLATE_LANDING" > contactpage/templates/contactpage/contact_page_landing.html
+	@echo "$$WAGTAIL_TEMPLATE_CONTACT_PAGE" > contactpage/templates/contactpage/contact_page.html
+	@echo "$$WAGTAIL_TEMPLATE_CONTACT_PAGE_LANDING" > contactpage/templates/contactpage/contact_page_landing.html
 	-$(GIT_ADD) contactpage/templates/
 	@echo "$$WAGTAIL_SETTINGS_CONTACT_PAGE" >> $(DJANGO_SETTINGS_BASE_FILE)
 	python manage.py makemigrations contactpage
@@ -4474,13 +4483,13 @@ wagtail-header-prefix-template-default:
 .PHONY: wagtail-home-default
 wagtail-home-default:
 	@echo "$$WAGTAIL_HOME_PAGE_MODEL" > home/models.py
-	@echo "$$WAGTAIL_HOME_PAGE_TEMPLATE" > home/templates/home/home_page.html
+	@echo "$$WAGTAIL_TEMPLATE_HOME_PAGE" > home/templates/home/home_page.html
 	$(ADD_DIR) home/templates/blocks
 	@echo "$$WAGTAIL_BLOCK_MARKETING" > home/templates/blocks/marketing_block.html
 	@echo "$$WAGTAIL_BLOCK_CAROUSEL" > home/templates/blocks/carousel_block.html
 	-$(GIT_ADD) home/templates
-	-$(GIT_ADD) home/*.py
 	python manage.py makemigrations home
+	-$(GIT_ADD) home/*.py
 	-$(GIT_ADD) home/migrations/*.py
 
 .PHONY: wagtail-install-default
@@ -4498,16 +4507,16 @@ wagtail-install-default: pip-ensure
         xhtml2pdf
 
 .PHONY: wagtail-private-default
-wagtail-privacy-default:
-	python manage.py startapp privacy
-	@echo "$$WAGTAIL_PRIVACY_PAGE_MODEL" > privacy/models.py
-	$(ADD_DIR) privacy/templates
-	@echo "$$WAGTAIL_PRIVACY_PAGE_TEMPLATE" > privacy/templates/privacy_page.html
-	@echo "INSTALLED_APPS.append('privacy')" >> $(DJANGO_SETTINGS_BASE_FILE)
-	python manage.py makemigrations privacy
-	-$(GIT_ADD) privacy/templates
-	-$(GIT_ADD) privacy/*.py
-	-$(GIT_ADD) privacy/migrations/*.py
+wagtail-privacy-page-default:
+	python manage.py startapp privacypage
+	@echo "$$WAGTAIL_PRIVACY_PAGE_MODEL" > privacypage/models.py
+	$(ADD_DIR) privacypage/templates
+	@echo "$$WAGTAIL_TEMPLATE_PRIVACY_PAGE" > privacypage/templates/privacy_page.html
+	-$(GIT_ADD) privacypage/templates
+	@echo "$$WAGTAIL_SETTINGS_PRIVACY_PAGE" >> $(DJANGO_SETTINGS_BASE_FILE)
+	python manage.py makemigrations privacypage
+	-$(GIT_ADD) privacypage/*.py
+	-$(GIT_ADD) privacypage/migrations/*.py
 
 .PHONY: wagtail-project-default
 wagtail-project-default:
@@ -4523,25 +4532,25 @@ wagtail-project-default:
 
 .PHONY: wagtail-search-default
 wagtail-search-default:
-	@echo "$$WAGTAIL_SEARCH_TEMPLATE" > search/templates/search/search.html
+	@echo "$$WAGTAIL_TEMPLATE_SEARCH" > search/templates/search/search.html
+	-$(GIT_ADD) search/templates
 	@echo "$$WAGTAIL_SEARCH_URLS" > search/urls.py
 	-$(GIT_ADD) search/*.py
-	-$(GIT_ADD) search/templates
 
 .PHONY: wagtail-settings-default
 wagtail-settings-default:
 	@echo "$$WAGTAIL_SETTINGS" >> $(DJANGO_SETTINGS_BASE_FILE)
 
-.PHONY: wagtail-sitepage-default
-wagtail-sitepage-default:
+.PHONY: wagtail-site-page-default
+wagtail-site-page-default:
 	python manage.py startapp sitepage
-	@echo "$$WAGTAIL_SITEPAGE_MODEL" > sitepage/models.py
-	-$(GIT_ADD) sitepage/*.py
+	@echo "$$WAGTAIL_SITE_PAGE_MODEL" > sitepage/models.py
 	$(ADD_DIR) sitepage/templates/sitepage/
-	@echo "$$WAGTAIL_SITEPAGE_TEMPLATE" > sitepage/templates/sitepage/site_page.html
+	@echo "$$WAGTAIL_TEMPLATE_SITE_PAGE" > sitepage/templates/sitepage/site_page.html
 	-$(GIT_ADD) sitepage/templates
-	@echo "INSTALLED_APPS.append('sitepage')" >> $(DJANGO_SETTINGS_BASE_FILE)
+	@echo "$$WAGTAIL_SETTINGS_SITE_PAGE" >> $(DJANGO_SETTINGS_BASE_FILE)
 	python manage.py makemigrations sitepage
+	-$(GIT_ADD) sitepage/*.py
 	-$(GIT_ADD) sitepage/migrations/*.py
 
 .PHONY: wagtail-urls-default
@@ -4616,6 +4625,9 @@ cp-default: git-commit-message git-push
 .PHONY: db-dump-default
 db-dump-default: eb-export
 
+.PHONY: db-export-default
+db-export-default: eb-export
+
 .PHONY: dbshell-default
 dbshell-default: django-db-shell
 
@@ -4656,7 +4668,7 @@ h-default: help
 ignore-default: git-commit-message-ignore git-push
 
 .PHONY: init-default
-init-default: django-init-wagtail django-serve
+init-default: python-venv-check django-init-wagtail django-serve
 
 .PHONY: install-default
 install-default: pip-install
@@ -4690,6 +4702,9 @@ migrations-default: django-migrations-make
 
 .PHONY: migrations-show-default
 migrations-show-default: django-migrations-show
+
+.PHONY: mk-default
+mk-default: git-commit-message-mk git-push
 
 .PHONY: o-default
 o-default: django-open
@@ -4725,7 +4740,7 @@ static-default: django-static
 su-default: django-su
 
 .PHONY: test-default
-test-default: django-test
+test-default: npm-install django-static pip-install-test
 
 .PHONY: t-default
 t-default: test
