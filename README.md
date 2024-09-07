@@ -1,6 +1,6 @@
 # Setup macOS
 
-In just a few easy steps. Kidding! Never too easy but not too bad either.
+In just a few easy steps. Kidding! Never easy but never too hard.
 
 ## Homebrew
 
