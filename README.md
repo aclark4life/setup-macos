@@ -24,8 +24,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup-macos/ma
 
 ## Everything Else
 
-Just a few more steps! Hang in there.
-
 ### Firefox + BitWarden
 
 Install Firefox then install the [Bitwarden Password Manager Add-On](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
