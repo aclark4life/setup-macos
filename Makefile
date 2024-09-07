@@ -4,15 +4,15 @@
 #
 # https://github.com/aclark4life/project-makefile
 #
-# --------------------------------------------------------------------------------
+# ================================================================================
 # Set the default goal to be `git commit -a -m $(GIT_COMMIT_MESSAGE)` and `git push`
-# --------------------------------------------------------------------------------
+# ================================================================================
 
 .DEFAULT_GOAL := git-commit-push
 
-# --------------------------------------------------------------------------------
+# ================================================================================
 # Single line variables to be used by phony target rules
-# --------------------------------------------------------------------------------
+# ================================================================================
 
 ADD_DIR := mkdir -pv
 ADD_FILE := touch
@@ -29,10 +29,6 @@ DJANGO_CLEAN_FILES = .babelrc .browserslistrc .dockerignore .eslintrc .gitignore
 		      .stylelintrc.json Dockerfile db.sqlite3 docker-compose.yml manage.py \
 		      package-lock.json package.json postcss.config.js requirements-test.txt \
 		      requirements.txt
-DJANGO_DATABASE_HOST = $(call DJANGO_DATABASE,HOST)
-DJANGO_DATABASE_NAME = $(call DJANGO_DATABASE,NAME)
-DJANGO_DATABASE_PASS = $(call DJANGO_DATABASE,PASSWORD)
-DJANGO_DATABASE_USER = $(call DJANGO_DATABASE,USER)
 DJANGO_FRONTEND_FILES = .babelrc .browserslistrc .eslintrc .nvmrc .stylelintrc.json \
 			frontend package-lock.json \
 			package.json postcss.config.js
@@ -42,8 +38,12 @@ DJANGO_SETTINGS_DEV_FILE = $(DJANGO_SETTINGS_DIR)/dev.py
 DJANGO_SETTINGS_PROD_FILE = $(DJANGO_SETTINGS_DIR)/production.py
 DJANGO_SETTINGS_SECRET_KEY = $(shell openssl rand -base64 48)
 DJANGO_URLS_FILE = backend/urls.py
-EB_DATABASE_URL = $(shell eb ssh -c "source /opt/elasticbeanstalk/deployment/custom_env_var; \
+EB_DJANGO_DATABASE_HOST = $(call EB_DJANGO_DATABASE,HOST)
+EB_DJANGO_DATABASE_NAME = $(call EB_DJANGO_DATABASE,NAME)
+EB_DJANGO_DATABASE_PASS = $(call EB_DJANGO_DATABASE,PASSWORD)
+EB_DJANGO_DATABASE_URL = $(shell eb ssh -c "source /opt/elasticbeanstalk/deployment/custom_env_var; \
 	    env | grep DATABASE_URL" | awk -F= '{print $$2}')
+EB_DJANGO_DATABASE_USER = $(call EB_DJANGO_DATABASE,USER)
 EB_DIR_NAME := .elasticbeanstalk
 EB_ENV_NAME ?= $(PROJECT_NAME)-$(GIT_BRANCH)-$(GIT_REV)
 EB_PLATFORM ?= "Python 3.11 running on 64bit Amazon Linux 2023"
@@ -58,6 +58,7 @@ GIT_BRANCH = $(shell git branch --show-current)
 GIT_BRANCHES = $(shell git branch -a) 
 GIT_CHECKOUT = git checkout
 GIT_COMMIT = git commit
+GIT_COMMIT_IGNORE_FILE = .gitignore
 GIT_PUSH = git push
 GIT_PUSH_FORCE = $(GIT_PUSH) --force-with-lease
 GIT_REV = $(shell git rev-parse --short HEAD)
@@ -78,17 +79,23 @@ RANDIR := $(shell openssl rand -base64 12 | sed 's/\///g')
 TMPDIR := $(shell mktemp -d)
 UNAME := $(shell uname)
 
-# --------------------------------------------------------------------------------
+# ================================================================================
 # Include $(PROJECT_CUSTOM_FILE) if it exists
-# --------------------------------------------------------------------------------
+# ================================================================================
 
 ifneq ($(wildcard $(PROJECT_CUSTOM_FILE)),)
     include $(PROJECT_CUSTOM_FILE)
 endif
 
-# --------------------------------------------------------------------------------
+# ================================================================================
 # Multi-line variables to be used by phony target rules
-# --------------------------------------------------------------------------------
+# ================================================================================
+
+# ----------------------------------------------------------------
+#  Django Custom Admin Demo
+#
+#  https://docs.djangoproject.com/en/5.1/ref/contrib/admin/#overriding-the-default-admin-site
+# ----------------------------------------------------------------
 
 define DJANGO_ADMIN_CUSTOM_ADMIN
 from django.contrib.admin import AdminSite
@@ -141,10 +148,6 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 endef
 
-define DJANGO_DATABASE
-$(shell echo $(EB_DATABASE_URL) | python -c 'import dj_database_url; url = input(); url = dj_database_url.parse(url); print(url["$1"])')
-endef
-
 define DJANGO_DOCKER_COMPOSE
 version: '3'
 
@@ -193,6 +196,12 @@ RUN npm-20 install; npm-20 run build
 RUN python3.11 manage.py collectstatic --noinput --clear
 CMD set -xe; pg_ctl -D /var/lib/pgsql/data -l /tmp/logfile start; python3.11 manage.py migrate --noinput; gunicorn backend.wsgi:application
 endef
+
+# ----------------------------------------------------------------
+#  Django Frontend
+#
+#  For use with python-webpack-boilerplate
+# ----------------------------------------------------------------
 
 define DJANGO_FRONTEND
 import React from 'react';
@@ -636,9 +645,7 @@ const UserMenu = ({ isAuthenticated, isSuperuser, textColor }) => {
     <div> 
       {isAuthenticated ? (
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i className="fa-solid fa-circle-user"></i>
-          </a>
+          <a className="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
           <ul className="dropdown-menu">
             <li><a className="dropdown-item" href="/user/profile/">Profile</a></li>
             <li><a className="dropdown-item" href="/model-form-demo/">Model Form Demo</a></li>
@@ -659,7 +666,7 @@ const UserMenu = ({ isAuthenticated, isSuperuser, textColor }) => {
         </li>
       ) : (
         <li className="nav-item">
-          <a className={`nav-link text-$${textColor}`} href="/accounts/login"><i className="fa-solid fa-circle-user"></i></a>
+          <a className="nav-link dropdown-toggle" type="button" aria-expanded="false" href="/accounts/login/"></a>
         </li>
       )}
     </div>
@@ -674,6 +681,12 @@ UserMenu.propTypes = {
 
 export default UserMenu;
 endef
+
+# ----------------------------------------------------------------
+#  Django Home Page for Django Minimal
+#
+#  Wagtail projects includes a home page model, Django does not.
+# ----------------------------------------------------------------
 
 define DJANGO_HOME_PAGE_ADMIN
 from django.contrib import admin  # noqa
@@ -701,6 +714,10 @@ from django.views.generic import TemplateView
 class HomeView(TemplateView):
     template_name = "home.html"
 endef
+
+# ----------------------------------------------------------------
+#  Django Logging Demo
+# ----------------------------------------------------------------
 
 define DJANGO_LOGGING_DEMO_ADMIN
 # Register your models here.
@@ -744,6 +761,11 @@ define DJANGO_MANAGE_PY
 import os
 import sys
 
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
 
 def main():
     """Run administrative tasks."""
@@ -762,6 +784,10 @@ def main():
 if __name__ == "__main__":
     main()
 endef
+
+# ----------------------------------------------------------------
+#  Django Model Form Demo
+# ----------------------------------------------------------------
 
 define DJANGO_MODEL_FORM_DEMO_ADMIN
 from django.contrib import admin
@@ -903,6 +929,10 @@ class ModelFormDemoDetailView(DetailView):
     template_name = "model_form_demo_detail.html"
     context_object_name = "model_form_demo"
 endef
+
+# ----------------------------------------------------------------
+#  Django Payments Demo
+# ----------------------------------------------------------------
 
 define DJANGO_PAYMENTS_ADMIN
 from django.contrib import admin
@@ -1163,6 +1193,12 @@ class CancelView(TemplateView):
     template_name = "payments/cancel.html"
 endef
 
+# ----------------------------------------------------------------
+#  Django Search for Django Minimal
+#
+#  Wagtail projects includes a search view, Django does not.
+# ----------------------------------------------------------------
+
 define DJANGO_SEARCH_FORMS
 from django import forms
 
@@ -1235,6 +1271,10 @@ class SearchView(ListView):
         return context
 endef
 
+# ----------------------------------------------------------------
+#  Django Settings
+# ----------------------------------------------------------------
+
 define DJANGO_SETTINGS_AUTHENTICATION_BACKENDS
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
@@ -1264,23 +1304,10 @@ WEBPACK_LOADER = {
 }
 STATICFILES_DIRS.append(os.path.join(BASE_DIR, "frontend/build"))
 TEMPLATES[0]["DIRS"].append(os.path.join(PROJECT_DIR, "templates"))
-endef
-
-define DJANGO_SETTINGS_BASE_MINIMAL
-# $(PROJECT_NAME)
-import os  # noqa
-import dj_database_url  # noqa
-
-INSTALLED_APPS.append("debug_toolbar")
-INSTALLED_APPS.append("webpack_boilerplate")
-PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = os.path.dirname(PROJECT_DIR)
-STATICFILES_DIRS = []
-STATICFILES_DIRS.append(os.path.join(BASE_DIR, "frontend/build"))
-TEMPLATES[0]["DIRS"].append(os.path.join(PROJECT_DIR, "templates"))
-WEBPACK_LOADER = {
-    "MANIFEST_FILE": os.path.join(BASE_DIR, "frontend/build/manifest.json"),
-}
+THEMES = [
+    ("light", "Light Theme"),
+    ("dark", "Dark Theme"),
+]
 endef
 
 define DJANGO_SETTINGS_CRISPY_FORMS
@@ -1420,16 +1447,17 @@ INSTALLED_APPS.append("siteuser")  # noqa
 AUTH_USER_MODEL = "siteuser.User"
 endef
 
-define DJANGO_SETTINGS_THEMES
-THEMES = [
-    ("light", "Light Theme"),
-    ("dark", "Dark Theme"),
-]
-endef
-
 define DJANGO_SETTINGS_UNIT_TEST_DEMO
 INSTALLED_APPS.append("unit_test_demo")  # noqa
 endef
+
+# ----------------------------------------------------------------
+#  Django SiteUser
+#
+#  A custom user model for Django
+#
+#  https://docs.djangoproject.com/en/5.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project
+# ----------------------------------------------------------------
 
 define DJANGO_SITEUSER_ADMIN
 from django.contrib.auth.admin import UserAdmin
@@ -1557,6 +1585,10 @@ class UserEditView(LoginRequiredMixin, UpdateView):
         # return reverse_lazy("user-profile", kwargs={"pk": self.object.pk})
         return reverse_lazy("user-profile")
 endef
+
+# ----------------------------------------------------------------
+#  Django Templates
+# ----------------------------------------------------------------
 
 define DJANGO_TEMPLATE_ALLAUTH
 {% extends 'base.html' %}
@@ -1809,6 +1841,10 @@ define DJANGO_TEMPLATE_SITEUSER_VIEW
 {% endblock %}
 endef
 
+# ----------------------------------------------------------------
+#  Django Unit Test Demo
+# ----------------------------------------------------------------
+
 define DJANGO_UNIT_TEST_DEMO_FORMS
 from django import forms
 from .models import UnitTestDemoModel
@@ -1891,6 +1927,10 @@ class UnitTestDemoFormTest(TestCase):
              self.assertEqual(instance.field1, "value1")
              self.assertEqual(instance.field2, "value2")
 endef
+
+# ----------------------------------------------------------------
+#  Django URLs
+# ----------------------------------------------------------------
 
 define DJANGO_URLS
 from django.contrib import admin
@@ -2022,11 +2062,11 @@ EOF
 rm -f /opt/elasticbeanstalk/deployment/*.bak
 endef
 
-define GIT_COMMIT_MESSAGE
-$(1)
+define EB_DJANGO_DATABASE
+$(shell echo $(EB_DJANGO_DATABASE_URL) | python -c 'import dj_database_url; url = input(); url = dj_database_url.parse(url); print(url["$1"])')
 endef
 
-define GIT_IGNORE
+define GIT_COMMIT_IGNORE
 __pycache__
 *.pyc
 dist/
@@ -2037,6 +2077,11 @@ db.sqlite3
 static/
 backend/inituser
 backend/var
+.venv/
+endef
+
+define GIT_COMMIT_MESSAGE
+$(1)
 endef
 
 define JENKINS_FILE
@@ -2533,7 +2578,7 @@ define PROJECT_CUSTOM
 # PROJECT_NAME := my-new-project
 endef
 
-define PYTHON_LICENSE_TXT
+define LICENSE_TXT
 MIT License
 
 Copyright (c) [YEAR] [OWNER NAME]
@@ -2875,6 +2920,10 @@ class SitePage(Page):
         verbose_name = "Site Page"
 endef
 
+# ------------------------------------------------------------------------------
+#  Wagtail Templates
+# ------------------------------------------------------------------------------
+
 define WAGTAIL_TEMPLATE_BASE
 {% load static wagtailcore_tags wagtailuserbar webpack_loader %}
 <!DOCTYPE html>
@@ -3043,6 +3092,10 @@ define WAGTAIL_TEMPLATE_SITE_PAGE
 {% endblock %}
 endef
 
+# ------------------------------------------------------------------------------
+#  Wagtail URLs
+# ------------------------------------------------------------------------------
+
 define WAGTAIL_URLS
 from django.conf import settings
 from django.urls import include, path
@@ -3080,6 +3133,12 @@ urlpatterns += [
     #    path("pages/", include("wagtail.urls"),
 ]
 endef
+
+# ------------------------------------------------------------------------------
+#  Webpack Configuration
+#
+#  For use with python-webpack-boilerplate
+# ------------------------------------------------------------------------------
 
 define WEBPACK_CONFIG_JS
 const path = require('path');
@@ -3171,9 +3230,9 @@ import RevealNotes from 'reveal.js/plugin/notes/notes.js';
 Reveal.initialize({ slideNumber: true, plugins: [ RevealNotes ]});
 endef
 
-# ------------------------------------------------------------------------------  
+# ==============================================================================
 # Export variables used by phony target rules
-# ------------------------------------------------------------------------------  
+# ==============================================================================
 
 export DJANGO_API_SERIALIZERS \
         DJANGO_API_VIEWS \
@@ -3232,7 +3291,6 @@ export DJANGO_API_SERIALIZERS \
         DJANGO_SEARCH_VIEWS \
         DJANGO_SETTINGS_AUTHENTICATION_BACKENDS \
         DJANGO_SETTINGS_BASE \
-        DJANGO_SETTINGS_BASE_MINIMAL \
         DJANGO_SETTINGS_CRISPY_FORMS \
         DJANGO_SETTINGS_DATABASE \
         DJANGO_SETTINGS_DEV \
@@ -3245,7 +3303,6 @@ export DJANGO_API_SERIALIZERS \
         DJANGO_SETTINGS_REST_FRAMEWORK \
         DJANGO_SETTINGS_SEARCH \
         DJANGO_SETTINGS_SITEUSER \
-        DJANGO_SETTINGS_THEMES \
         DJANGO_SETTINGS_UNIT_TEST_DEMO \
         DJANGO_SITEUSER_ADMIN \
         DJANGO_SITEUSER_FORM \
@@ -3272,17 +3329,18 @@ export DJANGO_API_SERIALIZERS \
         DJANGO_URLS_HOME_PAGE \
         DJANGO_URLS_LOGGING_DEMO \
         DJANGO_URLS_MODEL_FORM_DEMO \
+        DJANGO_URLS_PAYMENTS \
         DJANGO_URLS_SITEUSER \
         DJANGO_UTILS \
         EB_CUSTOM_ENV_EC2_USER \
         EB_CUSTOM_ENV_VAR_FILE \
+        GIT_COMMIT_IGNORE \
         GIT_COMMIT_MESSAGE \
-        GIT_IGNORE \
         JENKINS_FILE \
+        LICENSE_TXT \
         PROJECT_CUSTOM \
         PIP_INSTALL_REQUIREMENTS_TEST \
         PROGRAMMING_INTERVIEW \
-        PYTHON_LICENSE_TXT \
         PYTHON_PROJECT_TOML \
         SEPARATOR \
         WAGTAIL_BLOCK_CAROUSEL \
@@ -3316,9 +3374,9 @@ export DJANGO_API_SERIALIZERS \
         WAGTAIL_TEMPLATE_SEARCH \
         WAGTAIL_TEMPLATE_SITE_PAGE
 
-# ------------------------------------------------------------------------------
+# ==============================================================================
 # Multi-line phony target rules
-# ------------------------------------------------------------------------------
+# ==============================================================================
 
 .PHONY: aws-check-env-profile-default
 aws-check-env-profile-default:
@@ -3363,7 +3421,7 @@ aws-vpc-default: aws-check-env
 
 .PHONY: db-import-default
 db-import-default:
-	@psql $(PACKAGE_NAME) < $(DJANGO_DATABASE_NAME).sql
+	@psql $(PACKAGE_NAME) < $(EB_DJANGO_DATABASE_NAME).sql
 
 .PHONY: db-init-default
 db-init-default:
@@ -3465,6 +3523,9 @@ django-home-page-default:
 	-$(GIT_ADD) home/migrations/*.py
 	-$(GIT_ADD) home/templates/
 
+# --------------------------------------------------------------------------------
+#  Install Django
+# --------------------------------------------------------------------------------
 .PHONY: django-init-default
 django-init-default: separator \
 	db-init \
@@ -3500,20 +3561,21 @@ django-init-default: separator \
 	npm-install-react-dev \
 	npm-audit-fix \
 	django-migrate \
-	git-ignore \
+	.gitignore \
 	django-su
 
+# --------------------------------------------------------------------------------
+#  Install Django with minimal dependencies
+# --------------------------------------------------------------------------------
 .PHONY: django-init-minimal-default
 django-init-minimal-default: separator \
 	db-init \
 	django-clean \
 	django-install-minimal \
 	django-project \
-	django-settings-directory \
-	django-settings-base-minimal \
-	django-settings-dev \
 	pip-freeze \
 	pip-init-test \
+	django-settings-directory \
 	django-admin-custom \
 	django-dockerfile \
 	django-template-base \
@@ -3524,7 +3586,11 @@ django-init-minimal-default: separator \
 	django-manage-py \
 	django-urls \
 	django-urls-debug-toolbar \
+	django-allauth \
+	django-settings-base \
+	django-settings-dev \
 	django-settings-prod \
+	django-siteuser \
 	django-home-page \
 	django-utils \
 	django-frontend \
@@ -3532,8 +3598,12 @@ django-init-minimal-default: separator \
 	npm-install-react-dev \
 	npm-audit-fix \
 	django-migrate \
-	git-ignore \
+	.gitignore \
 	django-su
+
+# --------------------------------------------------------------------------------
+#  Install Wagtail
+# --------------------------------------------------------------------------------
 
 .PHONY: django-init-wagtail-default
 django-init-wagtail-default: separator \
@@ -3545,8 +3615,8 @@ django-init-wagtail-default: separator \
 	django-utils \
 	pip-freeze \
 	pip-init-test \
-        django-admin-custom \
-        django-dockerfile \
+	django-admin-custom \
+	django-dockerfile \
 	wagtail-header-prefix-template \
 	wagtail-base-template \
 	django-template-favicon \
@@ -3580,63 +3650,64 @@ django-init-wagtail-default: separator \
 	npm-install-react-dev \
 	npm-audit-fix \
 	django-migrate \
-	git-ignore \
+	.gitignore \
 	django-su
 
 .PHONY: django-install-default
 django-install-default: pip-ensure
 	$(PIP_INSTALL) \
 	Django \
-        Faker \
-        boto3 \
+	Faker \
+	boto3 \
 	build \
-        crispy-bootstrap5 \
-        djangorestframework \
-        django-allauth \
-        django-after-response \
-        django-ckeditor \
-        django-colorful \
-        django-cors-headers \
-        django-countries \
-        django-crispy-forms \
-        django-debug-toolbar \
-        django-extensions \
-        django-hijack \
-        django-honeypot \
-        django-imagekit \
-        django-import-export \
-        django-ipware \
-        django-multiselectfield \
-        django-ninja \
-        django-phonenumber-field \
-        django-recurrence \
-        django-recaptcha \
-        django-registration \
-        django-richtextfield \
-        django-sendgrid-v5 \
-        django-social-share \
-        django-sql-explorer \
-        django-storages \
-        django-tables2 \
-        django-timezone-field \
+	crispy-bootstrap5 \
+	djangorestframework \
+	django-allauth \
+	django-after-response \
+	django-ckeditor \
+	django-colorful \
+	django-cors-headers \
+	django-countries \
+	django-crispy-forms \
+	django-debug-toolbar \
+	django-extensions \
+	django-hijack \
+	django-honeypot \
+	django-imagekit \
+	django-import-export \
+	django-ipware \
+	django-multiselectfield \
+	django-ninja \
+	django-phonenumber-field \
+	django-recurrence \
+	django-recaptcha \
+	django-registration \
+	django-richtextfield \
+	django-sendgrid-v5 \
+	django-social-share \
+	django-sql-explorer \
+	django-storages \
+	django-tables2 \
+	django-timezone-field \
 	django-widget-tweaks \
-        dj-database-url \
-        dj-rest-auth \
-        dj-stripe \
-        docutils \
-        enmerkar \
-        gunicorn \
-        html2docx \
-        icalendar \
-        mailchimp-marketing \
-        mailchimp-transactional \
-        phonenumbers \
-        psycopg2-binary \
-        pydotplus \
-        python-webpack-boilerplate \
-        python-docx \
-        reportlab \
-        texttable \
+	dj-database-url \
+	dj-rest-auth \
+	dj-stripe \
+	docutils \
+	enmerkar \
+	gunicorn \
+	html2docx \
+	icalendar \
+	mailchimp-marketing \
+	mailchimp-transactional \
+	phonenumbers \
+	psycopg2-binary \
+	pydotplus \
+	python-webpack-boilerplate \
+	python-docx \
+	reportlab \
+	texttable \
+	python-dotenv \
 	wheel
 
 .PHONY: django-install-minimal-default
@@ -3645,7 +3716,16 @@ django-install-minimal-default: pip-ensure
 	Django \
 	dj-database-url \
 	django-debug-toolbar \
-	python-webpack-boilerplate
+	python-webpack-boilerplate \
+	django-allauth \
+	django-crispy-forms \
+	crispy-bootstrap5 \
+	django-extensions \
+	django-recaptcha \
+	djangorestframework \
+	django-sql-explorer \
+	psycopg2-binary \
+	python-dotenv
 
 .PHONY: django-lint-default
 django-lint-default:
@@ -3774,15 +3854,10 @@ django-settings-base-default:
 	@echo "$$DJANGO_SETTINGS_BASE" >> $(DJANGO_SETTINGS_BASE_FILE)
 	@echo "$$DJANGO_SETTINGS_AUTHENTICATION_BACKENDS" >> $(DJANGO_SETTINGS_BASE_FILE)
 	@echo "$$DJANGO_SETTINGS_REST_FRAMEWORK" >> $(DJANGO_SETTINGS_BASE_FILE)
-	@echo "$$DJANGO_SETTINGS_THEMES" >> $(DJANGO_SETTINGS_BASE_FILE)
 	@echo "$$DJANGO_SETTINGS_DATABASE" >> $(DJANGO_SETTINGS_BASE_FILE)
 	@echo "$$DJANGO_SETTINGS_INSTALLED_APPS" >> $(DJANGO_SETTINGS_BASE_FILE)
 	@echo "$$DJANGO_SETTINGS_MIDDLEWARE" >> $(DJANGO_SETTINGS_BASE_FILE)
 	@echo "$$DJANGO_SETTINGS_CRISPY_FORMS" >> $(DJANGO_SETTINGS_BASE_FILE)
-
-.PHONY: django-settings-base-minimal-default
-django-settings-base-minimal-default:
-	@echo "$$DJANGO_SETTINGS_BASE_MINIMAL" >> $(DJANGO_SETTINGS_BASE_FILE)
 
 .PHONY: django-settings-dev-default
 django-settings-dev-default:
@@ -3983,8 +4058,8 @@ eb-export-default:
         echo "Directory $(EB_DIR_NAME) does not exist"; \
         else \
         echo "Found $(EB_DIR_NAME) directory"; \
-        eb ssh --quiet -c "export PGPASSWORD=$(DJANGO_DATABASE_PASS); pg_dump -U $(DJANGO_DATABASE_USER) -h $(DJANGO_DATABASE_HOST) $(DJANGO_DATABASE_NAME)" > $(DJANGO_DATABASE_NAME).sql; \
-        echo "Wrote $(DJANGO_DATABASE_NAME).sql"; \
+        eb ssh --quiet -c "export PGPASSWORD=$(EB_DJANGO_DATABASE_PASS); pg_dump -U $(EB_DJANGO_DATABASE_USER) -h $(EB_DJANGO_DATABASE_HOST) $(EB_DJANGO_DATABASE_NAME)" > $(EB_DJANGO_DATABASE_NAME).sql; \
+        echo "Wrote $(EB_DJANGO_DATABASE_NAME).sql"; \
         fi
 
 .PHONY: eb-init-default
@@ -3993,7 +4068,7 @@ eb-init-default: aws-check-env-profile
 
 .PHONY: eb-list-databases-default
 eb-list-databases-default:
-	@eb ssh --quiet -c "export PGPASSWORD=$(DJANGO_DATABASE_PASS); psql -l -U $(DJANGO_DATABASE_USER) -h $(DJANGO_DATABASE_HOST) $(DJANGO_DATABASE_NAME)"
+	@eb ssh --quiet -c "export PGPASSWORD=$(EB_DJANGO_DATABASE_PASS); psql -l -U $(EB_DJANGO_DATABASE_USER) -h $(EB_DJANGO_DATABASE_HOST) $(EB_DJANGO_DATABASE_NAME)"
 
 .PHONY: eb-list-platforms-default
 eb-list-platforms-default:
@@ -4089,9 +4164,13 @@ git-commit-message-init-default:
 git-commit-message-lint-default:
 	-@$(GIT_COMMIT) -a -m $(call GIT_COMMIT_MESSAGE,"Lint")
 
-.PHONY: git-commit-message-mk-default
-git-commit-message-mk-default:
+.PHONY: git-commit-message-project-custom-default
+git-commit-message-project-custom-default:
 	-@$(GIT_COMMIT) project.mk -m $(call GIT_COMMIT_MESSAGE,"Add/update $(PROJECT_CUSTOM_FILE)")
+
+.PHONY: git-commit-message-readme-default
+git-commit-message-readme-default:
+	-@$(GIT_COMMIT) -a -m $(call GIT_COMMIT_MESSAGE,"Update readme")
 
 .PHONY: git-commit-message-rename-default
 git-commit-message-rename-default:
@@ -4108,11 +4187,6 @@ git-commit-message-sort-default:
 .PHONY: git-commit-message-typo-default
 git-commit-message-typo-default:
 	-@$(GIT_COMMIT) -a -m $(call GIT_COMMIT_MESSAGE,"Fix typo")
-
-.PHONY: git-ignore-default
-git-ignore-default:
-	@echo "$$GIT_IGNORE" > .gitignore
-	-$(GIT_ADD) .gitignore
 
 .PHONY: git-prune-default
 git-prune-default:
@@ -4144,16 +4218,30 @@ git-status-default:
 
 .PHONY: help-default
 help-default:
-	@echo "Project Makefile 🤷"
-	@echo "Usage: make [options] [target] ..."
+	@echo "Project Makefile"
+	@echo ""
+	@echo "\"I like to type make <target> to perform tasks 🤷.\" —Alex"
+	@echo ""
+	@echo "Usage: make <target1> [target2 ...]"
 	@echo "Examples:"
 	@echo "   make help                   Print this message"
-	@echo "   make list-defines  list all defines in the Makefile"
-	@echo "   make list-commands  list all targets in the Makefile"
+	@echo "   make list-targets           List all targets"
+	@echo "   make django-init            Install Django"
+	@echo "   make django-init-minimal    Install Django with minimal dependencies"
+	@echo "   make django-init-wagtail    Install Wagtail"
 
 .PHONY: jenkins-init-default
 jenkins-init-default:
 	@echo "$$JENKINS_FILE" > Jenkinsfile
+
+.PHONY: license-default
+license-default:
+	@echo "$$LICENSE_TXT" > LICENSE.txt
+	-$(GIT_ADD) LICENSE.txt
+
+# --------------------------------------------------------------------------------
+# Makefile-specific targets
+# --------------------------------------------------------------------------------
 
 .PHONY: make-default
 make-default:
@@ -4161,10 +4249,10 @@ make-default:
 	-@$(GIT_COMMIT) Makefile -m $(call GIT_COMMIT_MESSAGE,"Add/update $(PROJECT_NAME) Makefile")
 	-$(GIT_PUSH)
 
-.PHONY: makefile-list-commands-default
-makefile-list-commands-default:
+.PHONY: make-list-targets-default
+make-list-targets-default:
 	@for makefile in $(MAKEFILE_LIST); do \
-        echo "Commands from $$makefile:"; \
+        echo "-- $$makefile --"; \
         $(MAKE) -pRrq -f $$makefile : 2>/dev/null | \
         awk -v RS= -F: '/^# File/,/^# Finished Make data base/ { \
             if ($$1 !~ "^[#.]") { sub(/-default$$/, "", $$1); print $$1 } }' | \
@@ -4175,13 +4263,17 @@ makefile-list-commands-default:
         echo; \
     	done | $(PAGER)
 
-.PHONY: makefile-list-defines-default
-makefile-list-defines-default:
+.PHONY: make-list-defines-default
+make-list-defines-default:
 	@grep '^define [A-Za-z_][A-Za-z0-9_]*' Makefile
 
-.PHONY: makefile-list-targets-default
-makefile-list-targets-default:
+.PHONY: make-list-targets-deps-default
+make-list-targets-deps-default:
 	@perl -ne 'print if /^\s*\.PHONY:/ .. /^[a-zA-Z0-9_-]+:/;' Makefile | grep -v .PHONY
+
+# --------------------------------------------------------------------------------
+#  npm targets
+# --------------------------------------------------------------------------------
 
 .PHONY: npm-audit-fix-default
 npm-audit-fix-default:
@@ -4254,6 +4346,10 @@ npm-serve-default:
 npm-test-default:
 	npm run test
 
+# --------------------------------------------------------------------------------
+#  pip targets
+# --------------------------------------------------------------------------------
+
 .PHONY: pip-deps-default
 pip-deps-default: pip-ensure
 	$(PIP_DEPS)
@@ -4305,6 +4401,10 @@ pip-uninstall-default: pip-ensure
 pip-upgrade-default: pip-ensure
 	$(PIP_INSTALL) -U pip
 
+# --------------------------------------------------------------------------------
+#  Plone targets
+# --------------------------------------------------------------------------------
+
 .PHONY: plone-clean-default
 plone-clean-default:
 	$(DEL_DIR) $(PROJECT_NAME)
@@ -4338,15 +4438,9 @@ programming-interview-default:
 	@echo "Created interview.py!"
 	-$(GIT_ADD) interview.py > /dev/null 2>&1
 
-# .NOT_PHONY!
-$(PROJECT_CUSTOM_FILE):
-	@echo "$$PROJECT_CUSTOM" > $(PROJECT_CUSTOM_FILE)
-	-$(GIT_ADD) $(PROJECT_CUSTOM_FILE)
-
-.PHONY: python-license-default
-python-license-default:
-	@echo "$(PYTHON_LICENSE_TXT)" > LICENSE.txt
-	-$(GIT_ADD) LICENSE.txt
+# --------------------------------------------------------------------------------
+#  python targets
+# --------------------------------------------------------------------------------
 
 .PHONY: python-project-default
 python-project-default:
@@ -4377,8 +4471,8 @@ python-webpack-init-default:
 rand-default:
 	@openssl rand -base64 12 | sed 's/\///g'
 
-.PHONY: readme-default
-readme-default:
+.PHONY: readme-init-default
+readme-init-default:
 	@echo "# $(PROJECT_NAME)" > README.md
 	-$(GIT_ADD) README.md
 
@@ -4416,6 +4510,10 @@ endif
 .PHONY: separator-default
 separator-default:
 	@echo "$$SEPARATOR"
+
+# --------------------------------------------------------------------------------
+#  Sphinx targets
+# --------------------------------------------------------------------------------
 
 .PHONY: sphinx-build-default
 sphinx-build-default:
@@ -4457,6 +4555,10 @@ sphinx-theme-default:
 	    $(ADD_DIR) $$SPHINX_THEME/static/js; \
 	    $(ADD_FILE) $$SPHINX_THEME/static/js/script.js; \
 	    $(GIT_ADD) $$SPHINX_THEME/static
+
+# --------------------------------------------------------------------------------
+#  Wagtail targets
+# --------------------------------------------------------------------------------
 
 .PHONY: wagtail-base-template-default
 wagtail-base-template-default:
@@ -4561,6 +4663,10 @@ wagtail-urls-default:
 wagtail-urls-home-default:
 	@echo "$$WAGTAIL_URLS_HOME" >> $(DJANGO_URLS_FILE)
 
+# --------------------------------------------------------------------------------
+#  Webpack targets
+# --------------------------------------------------------------------------------
+
 .PHONY: webpack-init-default
 webpack-init-default: npm-init
 	@echo "$$WEBPACK_CONFIG_JS" > webpack.config.js
@@ -4583,13 +4689,12 @@ webpack-init-reveal-default: npm-init
 	@echo "$$WEBPACK_REVEAL_INDEX_HTML" > index.html
 	-$(GIT_ADD) index.html
 
-# --------------------------------------------------------------------------------
+# =================================================================================
 # Title-case single-line phony target rules
-# --------------------------------------------------------------------------------
-# Use Title case for some phony targets
-#    
-# E.g. `make lint` performs linting and can't be used to commit & push the
-# results. Use Lint instead for such cases.
+#
+# Use Title case for some phony targets E.g. `make lint` performs linting and
+# can't be used to commit & push the results. Use Lint instead for such cases.
+# =================================================================================
 
 .PHONY: Clean-default
 Clean-default: git-commit-message-clean git-push
@@ -4600,10 +4705,10 @@ Init-default: git-commit-message-init git-push
 .PHONY: Lint-default
 Lint-default: git-commit-message-lint git-push
 
-# --------------------------------------------------------------------------------
+# =================================================================================
 # Single-line phony target rules
-# --------------------------------------------------------------------------------
-#
+# =================================================================================
+
 .PHONY: actions-default
 actions-default: git-commit-message-actions git-push
 
@@ -4618,6 +4723,9 @@ ce-default: git-commit-edit git-push
 
 .PHONY: clean-default
 clean-default: django-clean
+
+.PHONY: comment-default
+comment-default: git-commit-message-comment git-push
 
 .PHONY: cp-default
 cp-default: git-commit-message git-push
@@ -4658,8 +4766,8 @@ freeze-default: pip-freeze git-push
 .PHONY: git-commit-push-default
 git-commit-push-default: git-commit git-push
 
-.PHONY: gitignore-default
-gitignore-default: git-ignore
+.PHONY: git-up-default
+git-up-default: git-set-upstream
 
 .PHONY: h-default
 h-default: help
@@ -4677,7 +4785,7 @@ install-default: pip-install
 i-default: install
 
 .PHONY: l-default
-l-default: makefile-list-commands
+l-default: make-list-targets
 
 .PHONY: last-default
 last-default: git-commit-last git-push
@@ -4685,14 +4793,14 @@ last-default: git-commit-last git-push
 .PHONY: lint-default
 lint-default: django-lint
 
-.PHONY: list-commands-default
-list-commands-default: makefile-list-commands
+.PHONY: list-targets-default
+list-targets-default: make-list-targets
+
+.PHONY: list-targets-deps-default
+list-targets-deps-default: make-list-targets-deps
 
 .PHONY: list-defines-default
-list-defines-default: makefile-list-defines
-
-.PHONY: list-targets-default
-list-targets-default: makefile-list-targets
+list-defines-default: make-list-defines
 
 .PHONY: migrate-default
 migrate-default: django-migrate
@@ -4704,16 +4812,16 @@ migrations-default: django-migrations-make
 migrations-show-default: django-migrations-show
 
 .PHONY: mk-default
-mk-default: git-commit-message-mk git-push
-
-.PHONY: o-default
-o-default: django-open
+mk-default: git-commit-message-project-custom git-push
 
 .PHONY: open-default
 open-default: open
 
-.PHONY: r-default
-r-default: review
+.PHONY: o-default
+o-default: django-open
+
+.PHONY: readme-default
+readme-default: git-commit-message-readme git-push
 
 .PHONY: rename-default
 rename-default: git-commit-message-rename git-push
@@ -4740,7 +4848,7 @@ static-default: django-static
 su-default: django-su
 
 .PHONY: test-default
-test-default: npm-install django-static pip-install-test
+test-default: npm-install django-static pip-install-test django-test
 
 .PHONY: t-default
 t-default: test
@@ -4748,22 +4856,25 @@ t-default: test
 .PHONY: typo-default
 typo-default: git-commit-message-typo git-push
 
-.PHONY: u-default
-u-default: help
-
-.PHONY: upstream-default
-upstream-default: git-set-upstream
-
 .PHONY: urls-default
 urls-default: django-urls-show
 
-.PHONY: wagtail-init-default
-wagtail-init-default: django-init-wagtail
+# =================================================================================
+# .NOT_PHONY!
+# =================================================================================
 
-# --------------------------------------------------------------------------------
+$(PROJECT_CUSTOM_FILE):
+	@echo "$$PROJECT_CUSTOM" > $@
+	-$(GIT_ADD) $@
+
+$(GIT_COMMIT_IGNORE_FILE):
+	@echo "$$GIT_COMMIT_IGNORE" > $@
+	-$(GIT_ADD) $@
+
+# =================================================================================
 # Allow customizing rules defined in this Makefile with rules defined in
 # $(PROJECT_CUSTOM_FILE)
-# --------------------------------------------------------------------------------
+# =================================================================================
 
 %: %-default  # https://stackoverflow.com/a/49804748
 	@ true
