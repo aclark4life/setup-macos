@@ -34,10 +34,6 @@ brew install --cask firefox
 
 ### Developer
 
-Update dotfiles and repositories defined in [.checkoutmanager.cfg](https://github.com/reinout/checkoutmanager/blob/master/checkoutmanager/sample.cfg) via ``up`` alias.
-
-![screenshot](screenshot.png)
-
 ```console
 pipx install checkoutmanager
 up
