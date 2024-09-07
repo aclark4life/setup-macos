@@ -1,3 +1,5 @@
+PROJECT_NAME := setup-macos
+
 defaults-write:
 	# defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
 	# defaults write com.apple.finder NewWindowTarget "PfHm"
