@@ -12,6 +12,7 @@ In just a few easy steps. Kidding! Never too easy but not too bad either.
 
 ```console
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
 ## Dotfiles
 
