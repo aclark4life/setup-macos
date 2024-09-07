@@ -1,10 +1,8 @@
 # Setup macOS
 
-In just a few easy steps! Kidding. Never easy enough, but not too bad either.
+In just a few easy steps. Kidding! Never too easy but not too bad either.
 
 ## Homebrew
-
-First, install Homebrew.
 
 ```console
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -12,35 +10,16 @@ First, install Homebrew.
 
 ## Oh My Zsh
 
-Second, install Oh My ZSH.
-
 ```console
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+## Dotfiles
+
+```console
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup-macos/main/dotfiles.sh)"
 ```
 
 ## Python
-
-Third, install Python via pipx dependency then use pipx to install dotfiles and checkoutmanager.
-
-```console
-brew install pipx
-.local/bin/pipx install awscli
-.local/bin/pipx install awsebcli
-.local/bin/pipx install black
-.local/bin/pipx install checkoutmanager
-.local/bin/pipx install dotfiles
-.local/bin/pipx install djlint
-.local/bin/pipx install flake8
-.local/bin/pipx install gcalcli
-.local/bin/pipx install isort
-.local/bin/pipx install lorem-text
-.local/bin/pipx install pypistats
-.local/bin/pipx install ruff
-.local/bin/pipx install tmp
-.local/bin/pipx install twarc
-.local/bin/pipx install twine
-.local/bin/pipx install uv
-```
 
 ## Everything Else
 
@@ -52,14 +31,6 @@ Install Firefox then install the [Bitwarden Password Manager Add-On](https://add
 
 ```console
 brew install --cask firefox
-```
-
-### Dotfiles
-
-Requires [dotfiles](https://pypi.org/project/dotfiles) and GitHub Personal access token from [GitHub → Settings → Developer settings → Personal access tokens](https://github.com/settings/tokens).
-
-```console
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/aclark4life/setup-macos/main/dotfiles.sh)"
 ```
 
 ### Developer
